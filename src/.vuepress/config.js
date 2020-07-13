@@ -1,6 +1,6 @@
 module.exports = {
   // 基础配置
-  base: '/javascript/', // 部署站点的基础路径
+  base: '/Web-Jvascript/', // 部署站点的基础路径
   description: 'JavaScript相关知识点',
   locales: {
     // 默认标题
