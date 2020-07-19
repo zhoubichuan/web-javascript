@@ -60,8 +60,8 @@ module.exports = {
         nav: [{
             text: '基础知识',
             items: [{
-                text: '1.构建基础篇',
-                link: '/base/build/1.config'
+                text: '1.必备基础',
+                link: '/base/necessary/1.config'
               },
               {
                 text: '2.项目功能点',
@@ -103,7 +103,7 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/base/build/': ['1.config', '2.webpack', '3.file', '4.single', '5.page', '7.module', '8.project', '9.utils', '10.ui', '11.data', '12.skill', '13.com', '14.data', '15.api'],
+          '/base/necessary/': ['1.config', '2.webpack', '3.file', '4.single', '5.page', '7.module', '8.project', '9.utils', '10.ui', '11.data', '12.skill', '13.com', '14.data', '15.api'],
           '/base/function/': ['skill', 'bug', 'webpack', 'vscode', 'test', 'prem', 'i18n'],
           '/senior/use/': ['1.recursionAndDynamics', '2.extend', '3.componentCommunication', '4.render', '5.api', '6.form', '7.checkBox', '8.active', '9.alert', '10.table', '11.tree'],
           '/senior/npm/': [],
