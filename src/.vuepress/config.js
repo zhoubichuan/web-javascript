@@ -72,7 +72,7 @@ module.exports = {
           {
             text: '高级知识',
             items: [{
-                text: '1.组件精讲',
+                text: '1.前端性能优化',
                 link: '/senior/use/1.recursionAndDynamics'
               },
               {
