@@ -110,8 +110,28 @@ module.exports = {
         nav: [{
             text: '基础知识',
             items: [{
-                text: '1.必备基础',
-                link: '/base/necessary/1.config'
+                text: '一、堆栈内存和闭包作用域',
+                link: '/base/stack/1.dataType'
+              },
+              {
+                text: '二、面向对象程序设计',
+                link: '/base/oop/1.obj'
+              },
+              {
+                text: '三、同步异步编程及浏览器渲染机制',
+                link: '/base/stack/1.config'
+              },
+              {
+                text: '四、DOM事件及设计模式',
+                link: '/base/stack/1.config'
+              },
+              {
+                text: '五、ES6+核心知识和源码分析',
+                link: '/base/stack/1.config'
+              },
+              {
+                text: '六、AJAX/HTTP前后端数据通信',
+                link: '/base/stack/1.config'
               },
               {
                 text: '2.H5开发基础',
@@ -153,7 +173,8 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/base/necessary/': ['1.config', '2.webpack', '3.file', '4.single', '5.page', '7.module', '8.project', '9.utils', '10.ui', '11.data', '12.skill', '13.com', '14.data', '15.api'],
+          '/base/stack/': stack(),
+          '/base/oop/': ['1.obj'],
           '/base/h5/': ['skill', 'bug', 'webpack', 'vscode', 'test', 'prem', 'i18n'],
           '/senior/performance/': ['1.recursionAndDynamics', '2.extend', '3.componentCommunication', '4.render', '5.api', '6.form', '7.checkBox', '8.active', '9.alert', '10.table', '11.tree', '12.webpack'],
           '/senior/npm/': [],
@@ -164,9 +185,28 @@ module.exports = {
             'Form', 'FormItem', 'Tabs', 'TabPane', 'Tag', 'Tree', 'Alert', 'Slider', 'Icon', 'Row', 'Col', 'Upload', 'Progress',
             'Spinner', 'Badge', 'Card', 'Rate', 'Steps', 'Step', 'Carousel', 'Scrollbar', 'CarouselItem', 'Collapse', 'CollapseItem', 'Cascader', 'ColorPicker', 'Transfer',
             'Container', 'Header', 'Aside', 'Main', 'Footer', 'Timeline', 'TimelineItem', 'Link', 'Divider', 'Image', 'Calendar', 'Backtop', 'PageHeader', 'CascaderPanel', 'Avatar', 'Drawer', 'Popconfirm', 'CollapseTransition', 'MessageBox'
-          ],
+          ]
         }
       }
     }
   },
+}
+
+function stack() {
+  return [
+    '1.dataType',
+    '2.webpack',
+    '3.file',
+    '4.single',
+    '5.page',
+    '7.module',
+    '8.project',
+    '9.utils',
+    '10.ui',
+    '11.data',
+    '12.skill',
+    '13.com',
+    '14.data',
+    '15.api'
+  ]
 }
