@@ -30,7 +30,14 @@ module.exports = {
       'link',
       {
         rel: 'icon',
-        href: ''
+        href: '/favicon.ico'
+      }
+    ],
+    [
+      'link',
+      {
+        rel: 'manifest',
+        href: '/manifest.json'
       }
     ],
     [
