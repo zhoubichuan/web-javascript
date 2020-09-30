@@ -147,7 +147,7 @@ module.exports = {
               },
               {
                 text: '2.TypeScript',
-                link: '/senior/typeScript'
+                link: '/senior/typeScript/15.api'
               },
             ]
           },
@@ -243,7 +243,9 @@ module.exports = {
             '11.tree',
             '12.webpack'
           ],
-          '/senior/npm/': [],
+          '/senior/npm/': [
+            '1.recursionAndDynamics8'
+          ],
           '/source/vue/': [
             '1.preparation',
             '2.dataDriven',
