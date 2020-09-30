@@ -244,7 +244,7 @@ module.exports = {
             '12.webpack'
           ],
           '/senior/npm/': [
-            '1.recursionAndDynamics8'
+            '1.recursionAndDynamics'
           ],
           '/source/vue/': [
             '1.preparation',
