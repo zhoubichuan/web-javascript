@@ -34,13 +34,6 @@ module.exports = {
       }
     ],
     [
-      'link',
-      {
-        rel: 'manifest',
-        href: '/manifest.json'
-      }
-    ],
-    [
       'meta',
       {
         name: 'apple-mobile-web-app-capable',
