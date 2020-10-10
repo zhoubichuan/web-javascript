@@ -103,27 +103,27 @@ module.exports = {
         nav: [{
             text: '基础知识',
             items: [{
-                text: '一、堆栈内存和闭包作用域',
+                text: '堆栈内存和闭包作用域',
                 link: '/base/stack/1.dataType'
               },
               {
-                text: '二、面向对象程序设计',
+                text: '面向对象程序设计',
                 link: '/base/oop/1.objectOriented'
               },
               {
-                text: '三、同步异步编程及浏览器渲染机制',
+                text: '同步异步及浏览器渲染机制',
                 link: '/base/async/1.browser'
               },
               {
-                text: '四、DOM事件及设计模式',
+                text: 'DOM事件及设计模式',
                 link: '/base/dom/1.event'
               },
               {
-                text: '五、ES6+核心知识和源码分析',
+                text: 'ES6+核心源码分析',
                 link: '/base/es6/1.let'
               },
               {
-                text: '六、AJAX/HTTP前后端数据通信',
+                text: 'AJAX/HTTP数据通信',
                 link: '/base/http/1.http'
               },
               {
@@ -150,14 +150,14 @@ module.exports = {
                 text: '1.vue源码解析',
                 link: '/source/vue/1.preparation'
               },
-              {
-                text: '2.vuex源码解析',
-                link: '/source/vuex'
-              },
-              {
-                text: '3.vue-router源码解析',
-                link: '/source/vue-router'
-              },
+              // {
+              //   text: '2.vuex源码解析',
+              //   link: '/source/vuex'
+              // },
+              // {
+              //   text: '3.vue-router源码解析',
+              //   link: '/source/vue-router'
+              // },
               {
                 text: '4.element源码解析',
                 link: '/source/element/Pagination'
@@ -212,6 +212,11 @@ module.exports = {
           ],
           '/base/http/': [ //六、AJAX/HTTP前后端数据通信
             '1.http',
+            '2.https',
+            '3.tcp',
+            '4.catch',
+            '5.dns',
+            '6.http',
           ],
           '/base/h5/': [
             'skill',
