@@ -104,31 +104,31 @@ module.exports = {
             text: '基础知识',
             items: [{
                 text: '堆栈内存和闭包作用域',
-                link: '/base/stack/1.dataType'
+                link: '/basicKnowledge/stack/1.dataType'
               },
               {
                 text: '面向对象程序设计',
-                link: '/base/oop/1.objectOriented'
+                link: '/basicKnowledge/oop/1.objectOriented'
               },
               {
                 text: '同步异步及浏览器渲染机制',
-                link: '/base/async/1.browser'
+                link: '/basicKnowledge/async/1.browser'
               },
               {
                 text: 'DOM事件及设计模式',
-                link: '/base/dom/1.event'
+                link: '/basicKnowledge/dom/1.event'
               },
               {
                 text: 'ES6+核心源码分析',
-                link: '/base/es6/1.let'
+                link: '/basicKnowledge/es6/1.let'
               },
               {
                 text: 'AJAX/HTTP数据通信',
-                link: '/base/http/1.http'
+                link: '/basicKnowledge/http/1.http'
               },
               {
                 text: '2.H5开发基础',
-                link: '/base/h5/skill',
+                link: '/basicKnowledge/h5/skill',
               }
             ]
           },
@@ -136,11 +136,11 @@ module.exports = {
             text: '高级知识',
             items: [{
                 text: '1.前端性能优化',
-                link: '/senior/performance/1.recursionAndDynamics'
+                link: '/advancedKnowledge/performance/1.recursionAndDynamics'
               },
               {
                 text: '2.TypeScript',
-                link: '/senior/typeScript/15.api'
+                link: '/advancedKnowledge/typeScript/15.api'
               },
             ]
           },
@@ -148,25 +148,25 @@ module.exports = {
             text: '源码知识',
             items: [{
                 text: '1.vue源码解析',
-                link: '/source/vue/1.preparation'
+                link: '/principleKnowledge/vue/1.preparation'
               },
               // {
               //   text: '2.vuex源码解析',
-              //   link: '/source/vuex'
+              //   link: '/principleKnowledge/vuex'
               // },
               // {
               //   text: '3.vue-router源码解析',
-              //   link: '/source/vue-router'
+              //   link: '/principleKnowledge/vue-router'
               // },
               {
                 text: '4.element源码解析',
-                link: '/source/element/Pagination'
+                link: '/principleKnowledge/element/Pagination'
               },
             ]
           }
         ],
         sidebar: {
-          '/base/stack/': [ //一、堆栈内存和闭包作用域
+          '/basicKnowledge/stack/': [ //一、堆栈内存和闭包作用域
             '1.dataType', //9 种数据类型区别及相互转换
             '2.lexicalAnalysis',
             '3.heapStack',
@@ -182,7 +182,7 @@ module.exports = {
             '14.data',
             '15.api'
           ],
-          '/base/oop/': [ //二、面向对象程序设计
+          '/basicKnowledge/oop/': [ //二、面向对象程序设计
             '1.objectOriented',
             '2.constructor',
             '3.prototype',
@@ -193,7 +193,7 @@ module.exports = {
             '8.jQuery',
             '9.lodash'
           ],
-          '/base/async/': [ //三、同步异步编程及浏览器渲染机制
+          '/basicKnowledge/async/': [ //三、同步异步编程及浏览器渲染机制
             '1.browser',
             '2.tree',
             '3.reflow',
@@ -204,13 +204,13 @@ module.exports = {
             '8.skeleton',
             '9.test'
           ],
-          '/base/dom/': [ //四、DOM事件及设计模式
+          '/basicKnowledge/dom/': [ //四、DOM事件及设计模式
             '1.event'
           ],
-          '/base/es6/': [ //五、ES6+核心知识和源码分析
+          '/basicKnowledge/es6/': [ //五、ES6+核心知识和源码分析
             '1.let',
           ],
-          '/base/http/': [ //六、AJAX/HTTP前后端数据通信
+          '/basicKnowledge/http/': [ //六、AJAX/HTTP前后端数据通信
             '1.http',
             '2.https',
             '3.tcp',
@@ -218,7 +218,7 @@ module.exports = {
             '5.dns',
             '6.http',
           ],
-          '/base/h5/': [
+          '/basicKnowledge/h5/': [
             'skill',
             'bug',
             'webpack',
@@ -227,7 +227,7 @@ module.exports = {
             'prem',
             'i18n'
           ],
-          '/senior/performance/': [
+          '/advancedKnowledge/performance/': [
             '1.recursionAndDynamics',
             '2.extend',
             '3.componentCommunication',
@@ -241,10 +241,10 @@ module.exports = {
             '11.tree',
             '12.webpack'
           ],
-          '/senior/npm/': [
+          '/advancedKnowledge/npm/': [
             '1.recursionAndDynamics'
           ],
-          '/source/vue/': [
+          '/principleKnowledge/vue/': [
             '1.preparation',
             '2.dataDriven',
             '3.componentization',
@@ -254,7 +254,7 @@ module.exports = {
             '7.vueRouter',
             '8.vuex'
           ],
-          '/source/element/': [
+          '/principleKnowledge/element/': [
             'Pagination',
             'Dialog',
             'Autocomplete',
