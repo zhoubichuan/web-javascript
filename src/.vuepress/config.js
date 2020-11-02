@@ -136,12 +136,16 @@ module.exports = {
             text: '高级知识',
             items: [{
                 text: '1.前端性能优化',
-                link: '/advancedKnowledge/performance/1.recursionAndDynamics'
+                link: '/advancedKnowledge/performance/1.CDN'
               },
               {
                 text: '2.TypeScript',
                 link: '/advancedKnowledge/typeScript/15.api'
               },
+              {
+                text: '2.monitor',
+                link: '/advancedKnowledge/monitor/13.jiankong'
+              }
             ]
           },
           {
@@ -227,23 +231,26 @@ module.exports = {
             'prem',
             'i18n'
           ],
-          '/advancedKnowledge/performance/': [
-            '1.recursionAndDynamics',
-            '2.extend',
+          '/advancedKnowledge/performance/': [ //性能优化
+            '1.CDN', //cdn
+            '2.cache', //缓存
             '3.componentCommunication',
             '4.render',
             '5.api',
             '6.form',
             '7.checkBox',
-            '8.active',
+            '8.EventLoop',
             '9.alert',
-            '10.table',
-            '11.tree',
+            '10.serviceRender', //服务端渲染
+            '11.debounceAndThrottle', //防抖与节流
             '12.webpack'
           ],
-          '/advancedKnowledge/npm/': [
-            '1.recursionAndDynamics'
+          '/advancedKnowledge/typeScript/': [
+            '15.api'
           ],
+          // '/advancedKnowledge/npm/': [
+          //   '1.recursionAndDynamics'
+          // ],
           '/principleKnowledge/vue/': [
             '1.preparation',
             '2.dataDriven',
