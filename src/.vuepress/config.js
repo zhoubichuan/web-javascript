@@ -13,18 +13,6 @@ module.exports = {
     lineNumbers: true // 代码块显示行号
   },
   head: [
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js'
-    }],
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js'
-    }],
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js'
-    }],
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js'
-    }],
     // 添加链接 pwa 的 manifest 如果需要
     [
       'link',
@@ -54,37 +42,6 @@ module.exports = {
         content: '#000000'
       }
     ]
-  ],
-  plugins: [
-    'demo-block',
-    // you can use this plugin multiple times
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'right',
-        defaultTitle: '',
-      },
-    ],
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'theorem',
-        before: info => `<div class="theorem"><p class="title">${info}</p>`,
-        after: '</div>',
-      },
-    ],
-
-    // this is how VuePress Default Theme use this plugin
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'tip',
-        defaultTitle: {
-          '/': 'TIP',
-          '/zh/': '提示',
-        },
-      },
-    ],
   ],
   port: 3009,
   dest: 'dist', // 指定 vuepress build 的输出目录
@@ -135,7 +92,7 @@ module.exports = {
           {
             text: '高级知识',
             items: [{
-                text: '1.前端性能优化',
+                text: '性能优化专题',
                 link: '/advancedKnowledge/performance/1.CDN'
               },
               {
@@ -143,7 +100,7 @@ module.exports = {
                 link: '/advancedKnowledge/typeScript/15.api'
               },
               {
-                text: '2.monitor',
+                text: '前端监控专题',
                 link: '/advancedKnowledge/monitor/13.jiankong'
               }
             ]
@@ -247,6 +204,9 @@ module.exports = {
           ],
           '/advancedKnowledge/typeScript/': [
             '15.api'
+          ],
+          '/advancedKnowledge/monitor/': [ //前端监控
+            '13.jiankong'
           ],
           // '/advancedKnowledge/npm/': [
           //   '1.recursionAndDynamics'
