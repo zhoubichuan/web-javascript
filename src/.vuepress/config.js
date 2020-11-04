@@ -145,6 +145,10 @@ module.exports = {
               {
                 text: '前端监控专题',
                 link: '/advancedKnowledge/monitor/13.jiankong'
+              },
+              {
+                text: '安全防范专题',
+                link: '/advancedKnowledge/security/1.xss'
               }
             ]
           },
@@ -254,6 +258,12 @@ module.exports = {
           // '/advancedKnowledge/npm/': [
           //   '1.recursionAndDynamics'
           // ],
+          '/advancedKnowledge/security/': [ //前端安全
+            '1.xss',
+            '2.csrf',
+            '3.doos',
+            '4.http'
+          ],
           '/principleKnowledge/vue/': [
             '1.preparation',
             '2.dataDriven',
