@@ -125,51 +125,59 @@ module.exports = {
               {
                 text: 'AJAX/HTTP数据通信',
                 link: '/basicKnowledge/http/1.http'
-              },
-              {
-                text: '2.H5开发基础',
-                link: '/basicKnowledge/h5/skill',
               }
             ]
           },
           {
-            text: '高级知识',
+            text: '专项知识',
             items: [{
                 text: '性能优化专题',
-                link: '/advancedKnowledge/performance/1.CDN'
+                link: '/specialKnowledge/performance/1.CDN'
               },
               {
-                text: '2.TypeScript',
-                link: '/advancedKnowledge/typeScript/15.api'
+                text: 'TypeScript',
+                link: '/specialKnowledge/typeScript/15.api'
               },
               {
                 text: '前端监控专题',
-                link: '/advancedKnowledge/monitor/13.jiankong'
+                link: '/specialKnowledge/monitor/13.jiankong'
               },
               {
                 text: '安全防范专题',
-                link: '/advancedKnowledge/security/1.xss'
+                link: '/specialKnowledge/security/1.xss'
+              },
+              {
+                text: '上传下载专题',
+                link: '/specialKnowledge/security/1.xss'
+              },
+              {
+                text: 'H5开发',
+                link: '/specialKnowledge/h5/skill',
               }
             ]
           },
           {
-            text: '源码知识',
+            text: '阅读书籍',
             items: [{
-                text: '1.vue源码解析',
+                text: 'JavaScript高级程序设计',
                 link: '/principleKnowledge/vue/1.preparation'
               },
-              // {
-              //   text: '2.vuex源码解析',
-              //   link: '/principleKnowledge/vuex'
-              // },
-              // {
-              //   text: '3.vue-router源码解析',
-              //   link: '/principleKnowledge/vue-router'
-              // },
               {
-                text: '4.element源码解析',
+                text: 'JavaScript DOM 编程艺术',
+                link: '/principleKnowledge/vuex'
+              },
+              {
+                text: '你不知道的JavaScript',
+                link: '/principleKnowledge/vue-router'
+              },
+              {
+                text: 'JavaScript设计模式与开发实践',
                 link: '/principleKnowledge/element/Pagination'
               },
+              {
+                text: '高性能JavaScript',
+                link: '/principleKnowledge/element/Pagination'
+              }
             ]
           }
         ],
@@ -226,7 +234,7 @@ module.exports = {
             '5.dns',
             '6.http',
           ],
-          '/basicKnowledge/h5/': [
+          '/specialKnowledge/h5/': [
             'skill',
             'bug',
             'webpack',
@@ -235,7 +243,7 @@ module.exports = {
             'prem',
             'i18n'
           ],
-          '/advancedKnowledge/performance/': [ //性能优化
+          '/specialKnowledge/performance/': [ //性能优化
             '1.CDN', //cdn
             '2.cache', //缓存
             '3.componentCommunication',
@@ -249,16 +257,16 @@ module.exports = {
             '11.debounceAndThrottle', //防抖与节流
             '12.webpack'
           ],
-          '/advancedKnowledge/typeScript/': [
+          '/specialKnowledge/typeScript/': [
             '15.api'
           ],
-          '/advancedKnowledge/monitor/': [ //前端监控
+          '/specialKnowledge/monitor/': [ //前端监控
             '13.jiankong'
           ],
-          // '/advancedKnowledge/npm/': [
+          // '/specialKnowledge/npm/': [
           //   '1.recursionAndDynamics'
           // ],
-          '/advancedKnowledge/security/': [ //前端安全
+          '/specialKnowledge/security/': [ //前端安全
             '1.xss',
             '2.csrf',
             '3.doos',
