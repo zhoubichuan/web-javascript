@@ -131,7 +131,7 @@ module.exports = {
           {
             text: '专项知识',
             items: [{
-                text: '性能优化专题',
+                text: '前端性能优化',
                 link: '/specialKnowledge/performance/1.CDN'
               },
               {
@@ -139,19 +139,19 @@ module.exports = {
                 link: '/specialKnowledge/typeScript/15.api'
               },
               {
-                text: '前端监控专题',
+                text: '前端监控',
                 link: '/specialKnowledge/monitor/13.jiankong'
               },
               {
-                text: '安全防范专题',
+                text: '安全防范',
                 link: '/specialKnowledge/security/1.xss'
               },
               {
-                text: '上传下载专题',
+                text: '文件上传下载',
                 link: '/specialKnowledge/security/1.xss'
               },
               {
-                text: 'H5开发',
+                text: '移动端开发',
                 link: '/specialKnowledge/h5/skill',
               }
             ]
