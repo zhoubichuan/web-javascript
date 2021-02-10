@@ -160,7 +160,7 @@ module.exports = {
             text: '阅读书籍',
             items: [{
                 text: 'JavaScript高级程序设计',
-                link: '/principleKnowledge/vue/1.preparation'
+                link: '/principleKnowledge/book1/1.preparation'
               },
               {
                 text: 'JavaScript DOM 编程艺术',
@@ -272,7 +272,7 @@ module.exports = {
             '3.doos',
             '4.http'
           ],
-          '/principleKnowledge/vue/': [
+          '/principleKnowledge/book1/': [
             '1.preparation',
             '2.dataDriven',
             '3.componentization',
