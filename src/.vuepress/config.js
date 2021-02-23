@@ -103,27 +103,27 @@ module.exports = {
         nav: [{
             text: '基础知识',
             items: [{
-                text: '堆栈内存和闭包作用域',
+                text: '一、堆栈内存和闭包作用域',
                 link: '/basicKnowledge/stack/1.dataType'
               },
               {
-                text: '面向对象程序设计',
+                text: '二、面向对象程序设计',
                 link: '/basicKnowledge/oop/1.objectOriented'
               },
               {
-                text: '同步异步及浏览器渲染机制',
+                text: '三、浏览器渲染机制',
                 link: '/basicKnowledge/async/1.browser'
               },
               {
-                text: 'DOM事件及设计模式',
+                text: '四、DOM事件及设计模式',
                 link: '/basicKnowledge/dom/1.event'
               },
               {
-                text: 'ES6+核心源码分析',
+                text: '五、ES6+核心源码分析',
                 link: '/basicKnowledge/es6/1.let'
               },
               {
-                text: 'AJAX/HTTP数据通信',
+                text: '六、AJAX/HTTP数据通信',
                 link: '/basicKnowledge/http/1.http'
               }
             ]
@@ -131,27 +131,27 @@ module.exports = {
           {
             text: '专项知识',
             items: [{
-                text: '前端性能优化',
+                text: '一、前端性能优化',
                 link: '/specialKnowledge/performance/1.CDN'
               },
               {
-                text: 'TypeScript',
+                text: '二、TypeScript',
                 link: '/specialKnowledge/typeScript/15.api'
               },
               {
-                text: '前端监控',
+                text: '三、前端监控',
                 link: '/specialKnowledge/monitor/13.jiankong'
               },
               {
-                text: '安全防范',
+                text: '四、安全防范',
                 link: '/specialKnowledge/security/1.xss'
               },
               {
-                text: '文件上传下载',
+                text: '五、文件上传下载',
                 link: '/specialKnowledge/security/1.xss'
               },
               {
-                text: '移动端开发',
+                text: '六、移动端开发',
                 link: '/specialKnowledge/h5/skill',
               }
             ]
@@ -159,23 +159,23 @@ module.exports = {
           {
             text: '阅读书籍',
             items: [{
-                text: 'JavaScript高级程序设计',
+                text: '一、JavaScript高级程序设计',
                 link: '/principleKnowledge/book1/1.preparation'
               },
               {
-                text: 'JavaScript DOM 编程艺术',
+                text: '二、JavaScript DOM 编程艺术',
                 link: '/principleKnowledge/vuex'
               },
               {
-                text: '你不知道的JavaScript',
+                text: '三、你不知道的JavaScript',
                 link: '/principleKnowledge/vue-router'
               },
               {
-                text: 'JavaScript设计模式与开发实践',
+                text: '四、JavaScript设计模式与开发实践',
                 link: '/principleKnowledge/element/Pagination'
               },
               {
-                text: '高性能JavaScript',
+                text: '五、高性能JavaScript',
                 link: '/principleKnowledge/element/Pagination'
               }
             ]
