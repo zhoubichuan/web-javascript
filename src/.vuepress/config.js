@@ -112,7 +112,7 @@ module.exports = {
               },
               {
                 text: '三、浏览器渲染机制',
-                link: '/basicKnowledge/async/1.browser'
+                link: '/basicKnowledge/3.browser/1.browser'
               },
               {
                 text: '四、DOM事件及设计模式',
@@ -209,7 +209,7 @@ module.exports = {
             '8.jQuery',
             '9.lodash'
           ],
-          '/basicKnowledge/async/': [ //三、同步异步编程及浏览器渲染机制
+          '/basicKnowledge/3.browser/': [ //三、同步异步编程及浏览器渲染机制
             '1.browser',
             '2.tree',
             '3.reflow',
