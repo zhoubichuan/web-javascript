@@ -124,7 +124,7 @@ module.exports = {
               },
               {
                 text: '六、AJAX/HTTP数据通信',
-                link: '/basicKnowledge/http/1.http'
+                link: '/basicKnowledge/6.http/1.http'
               }
             ]
           },
@@ -226,7 +226,7 @@ module.exports = {
           '/basicKnowledge/es6/': [ //五、ES6+核心知识和源码分析
             '1.let',
           ],
-          '/basicKnowledge/http/': [ //六、AJAX/HTTP前后端数据通信
+          '/basicKnowledge/6.http/': [ //六、AJAX/HTTP前后端数据通信
             '1.http',
             '2.https',
             '3.tcp',
