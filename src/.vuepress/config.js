@@ -131,28 +131,28 @@ module.exports = {
           {
             text: '专项知识',
             items: [{
-                text: '一、前端性能优化',
+                text: '一、性能优化',
                 link: '/specialKnowledge/performance/1.CDN'
               },
               {
-                text: '二、TypeScript',
-                link: '/specialKnowledge/typeScript/15.api'
+                text: '二、代码规范',
+                link: '/specialKnowledge/standard/1.base'
               },
               {
                 text: '三、前端监控',
-                link: '/specialKnowledge/monitor/13.jiankong'
+                link: '/specialKnowledge/monitor/1.base'
               },
               {
                 text: '四、安全防范',
                 link: '/specialKnowledge/security/1.xss'
               },
               {
-                text: '五、文件上传下载',
-                link: '/specialKnowledge/security/1.xss'
+                text: '五、上传下载',
+                link: '/specialKnowledge/fileLoadDown/1.base'
               },
               {
-                text: '六、移动端开发',
-                link: '/specialKnowledge/h5/skill',
+                text: '六、移动端',
+                link: '/specialKnowledge/mobile/skill',
               }
             ]
           },
@@ -164,19 +164,19 @@ module.exports = {
               },
               {
                 text: '二、JavaScript DOM 编程艺术',
-                link: '/principleKnowledge/vuex'
+                link: '/principleKnowledge/book2/Dropdown'
               },
               {
                 text: '三、你不知道的JavaScript',
-                link: '/principleKnowledge/vue-router'
+                link: '/principleKnowledge/book3/Slider'
               },
               {
                 text: '四、JavaScript设计模式与开发实践',
-                link: '/principleKnowledge/element/Pagination'
+                link: '/principleKnowledge/book4/Alert'
               },
               {
                 text: '五、高性能JavaScript',
-                link: '/principleKnowledge/element/Pagination'
+                link: '/principleKnowledge/book5/Carousel'
               }
             ]
           }
@@ -234,19 +234,10 @@ module.exports = {
             '5.dns',
             '6.http',
           ],
-          '/specialKnowledge/h5/': [
-            'skill',
-            'bug',
-            'webpack',
-            'vscode',
-            'test',
-            'prem',
-            'i18n'
-          ],
           '/specialKnowledge/performance/': [ //性能优化
             '1.CDN', //cdn
             '2.cache', //缓存
-            '3.componentCommunication',
+            '3.store',
             '4.render',
             '5.api',
             '6.form',
@@ -257,20 +248,32 @@ module.exports = {
             '11.debounceAndThrottle', //防抖与节流
             '12.webpack'
           ],
-          '/specialKnowledge/typeScript/': [
-            '15.api'
+          '/specialKnowledge/standard/': [
+            '1.base'
           ],
           '/specialKnowledge/monitor/': [ //前端监控
-            '13.jiankong'
+            '1.base'
           ],
           // '/specialKnowledge/npm/': [
           //   '1.recursionAndDynamics'
           // ],
+          '/specialKnowledge/fileLoadDown/': [ //文件上传下载
+            '1.base'
+          ],
           '/specialKnowledge/security/': [ //前端安全
             '1.xss',
             '2.csrf',
             '3.doos',
             '4.http'
+          ],
+          '/specialKnowledge/mobile/': [//移动端开发
+            'skill',
+            'bug',
+            'webpack',
+            'vscode',
+            'test',
+            'prem',
+            'i18n'
           ],
           '/principleKnowledge/book1/': [
             '1.preparation',
@@ -282,7 +285,7 @@ module.exports = {
             '7.vueRouter',
             '8.vuex'
           ],
-          '/principleKnowledge/element/': [
+          '/principleKnowledge/book4/': [
             'Pagination',
             'Dialog',
             'Autocomplete',
