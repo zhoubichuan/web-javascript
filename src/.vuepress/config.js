@@ -159,23 +159,23 @@ module.exports = {
           {
             text: '阅读书籍',
             items: [{
-                text: '一、JavaScript高级程序设计',
+                text: '一、JS高级4',
                 link: '/principleKnowledge/book1/1.preparation'
               },
               {
-                text: '二、JavaScript DOM 编程艺术',
+                text: '二、JS编程艺术',
                 link: '/principleKnowledge/book2/Dropdown'
               },
               {
-                text: '三、你不知道的JavaScript',
+                text: '三、你不知道的JS',
                 link: '/principleKnowledge/book3/Slider'
               },
               {
-                text: '四、JavaScript设计模式与开发实践',
+                text: '四、JS设计模式与开发实践',
                 link: '/principleKnowledge/book4/Alert'
               },
               {
-                text: '五、高性能JavaScript',
+                text: '五、高性能JS',
                 link: '/principleKnowledge/book5/Carousel'
               }
             ]
