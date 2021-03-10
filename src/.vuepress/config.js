@@ -159,11 +159,11 @@ module.exports = {
           {
             text: '阅读书籍',
             items: [{
-                text: '一、JS高级4',
+                text: '一、高程4',
                 link: '/principleKnowledge/book1/1.preparation'
               },
               {
-                text: '二、JS编程艺术',
+                text: '二、编程艺术',
                 link: '/principleKnowledge/book2/Dropdown'
               },
               {
@@ -171,7 +171,7 @@ module.exports = {
                 link: '/principleKnowledge/book3/Slider'
               },
               {
-                text: '四、JS设计模式与开发实践',
+                text: '四、JS设计与开发',
                 link: '/principleKnowledge/book4/Alert'
               },
               {
