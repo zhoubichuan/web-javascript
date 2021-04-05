@@ -153,6 +153,10 @@ module.exports = {
               {
                 text: '六、移动端',
                 link: '/specialKnowledge/mobile/skill',
+              },
+              {
+                text: '七、设计模式',
+                link: '/specialKnowledge/design/inde',
               }
             ]
           },
@@ -274,6 +278,32 @@ module.exports = {
             'test',
             'prem',
             'i18n'
+          ],
+          '/specialKnowledge/design/': [//设计模式
+            'inde',
+            '1.factory',
+            '2.abstract',
+            '3.single',
+            '4.prototype',
+            '5.made',
+            '6.adapter',
+            '7.decorator',
+            '8.proxy',
+            '9.appearance',
+            '10.pickup',
+            '11.combination',
+            '12.flyweight',
+            '13.strategy',
+            '14.module',
+            '15.observer',
+            '16.iterator',
+            '17.chain',
+            '18.command',
+            '19.memorandum',
+            '20.state',
+            '21.visitor',
+            '22.mediator',
+            '23.interpreter'
           ],
           '/principleKnowledge/book1/': [
             '1.preparation',
