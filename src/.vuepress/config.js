@@ -104,7 +104,7 @@ module.exports = {
             text: '基础知识',
             items: [{
                 text: '一、堆栈内存和闭包作用域',
-                link: '/basicKnowledge/stack/1.dataType'
+                link: '/basicKnowledge/1.stack/1.dataType'
               },
               {
                 text: '二、面向对象程序设计',
@@ -186,7 +186,7 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/basicKnowledge/stack/': [ //一、堆栈内存和闭包作用域
+          '/basicKnowledge/1.stack/': [ //一、堆栈内存和闭包作用域
             '1.dataType', //9 种数据类型区别及相互转换
             '2.lexicalAnalysis',
             '3.heapStack',
