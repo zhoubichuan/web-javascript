@@ -156,7 +156,7 @@ module.exports = {
               },
               {
                 text: '七、设计模式',
-                link: '/specialKnowledge/design/inde',
+                link: '/specialKnowledge/design/index',
               }
             ]
           },
@@ -164,23 +164,23 @@ module.exports = {
             text: '阅读书籍',
             items: [{
                 text: '一、高程4',
-                link: '/principleKnowledge/book1/1.preparation'
+                link: '/principleKnowledge/book1/index'
               },
               {
                 text: '二、编程艺术',
-                link: '/principleKnowledge/book2/Dropdown'
+                link: '/principleKnowledge/book2/index'
               },
               {
                 text: '三、你不知道的JS',
-                link: '/principleKnowledge/book3/Slider'
+                link: '/principleKnowledge/book3/index'
               },
               {
                 text: '四、JS设计与开发',
-                link: '/principleKnowledge/book4/Alert'
+                link: '/principleKnowledge/book4/index'
               },
               {
                 text: '五、高性能JS', 
-                link: '/principleKnowledge/book5/Carousel'
+                link: '/principleKnowledge/book5/index'
               }
             ]
           }
@@ -280,7 +280,7 @@ module.exports = {
             'i18n'
           ],
           '/specialKnowledge/design/': [//设计模式
-            'inde',
+            'index',
             '1.factory',
             '2.abstract',
             '3.single',
@@ -306,7 +306,7 @@ module.exports = {
             '23.interpreter'
           ],
           '/principleKnowledge/book1/': [
-            '1.preparation',
+            'index',
             '2.dataDriven',
             '3.componentization',
             '4.deepResponsePrinciple',
@@ -315,85 +315,18 @@ module.exports = {
             '7.vueRouter',
             '8.vuex'
           ],
+          '/principleKnowledge/book2/': [
+            'index',
+          ],
+          '/principleKnowledge/book3/': [
+            'index',
+          ],
           '/principleKnowledge/book4/': [
-            'Pagination',
-            'Dialog',
-            'Autocomplete',
-            'Dropdown',
-            'DropdownMenu',
-            'DropdownItem',
-            'Menu',
-            'Submenu',
-            'MenuItem',
-            'MenuItemGroup',
-            'Input',
-            'InputNumber',
-            'Radio',
-            'RadioGroup',
-            'RadioButton',
-            'Checkbox',
-            'CheckboxButton',
-            'CheckboxGroup',
-            'Switch',
-            'Option',
-            'OptionGroup',
-            'Button',
-            'ButtonGroup',
-            'Table',
-            'TableColumn',
-            'DatePicker',
-            'TimeSelect',
-            'TimePicker',
-            'Popover',
-            'Tooltip',
-            'Breadcrumb',
-            'BreadcrumbItem',
-            'Form',
-            'FormItem',
-            'Tabs',
-            'TabPane',
-            'Tag',
-            'Tree',
-            'Alert',
-            'Slider',
-            'Icon',
-            'Row',
-            'Col',
-            'Upload',
-            'Progress',
-            'Spinner',
-            'Badge',
-            'Card',
-            'Rate',
-            'Steps',
-            'Step',
-            'Carousel',
-            'Scrollbar',
-            'CarouselItem',
-            'Collapse',
-            'CollapseItem',
-            'Cascader',
-            'ColorPicker',
-            'Transfer',
-            'Container',
-            'Header',
-            'Aside',
-            'Main',
-            'Footer',
-            'Timeline',
-            'TimelineItem',
-            'Link', 'Divider',
-            'Image',
-            'Calendar',
-            'Backtop',
-            'PageHeader',
-            'CascaderPanel',
-            'Avatar',
-            'Drawer',
-            'Popconfirm',
-            'CollapseTransition',
-            'MessageBox'
-          ]
+            'index',
+          ],
+          '/principleKnowledge/book5/': [
+            'index',
+          ],
         }
       }
     }
