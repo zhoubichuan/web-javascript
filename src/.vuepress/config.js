@@ -156,7 +156,7 @@ module.exports = {
               },
               {
                 text: '七、设计模式',
-                link: '/specialKnowledge/design/index',
+                link: '/specialKnowledge/design/inde',
               }
             ]
           },
@@ -164,23 +164,23 @@ module.exports = {
             text: '阅读书籍',
             items: [{
                 text: '一、高程4',
-                link: '/principleKnowledge/book1/index'
+                link: '/principleKnowledge/book1/inde'
               },
               {
                 text: '二、编程艺术',
-                link: '/principleKnowledge/book2/index'
+                link: '/principleKnowledge/book2/inde'
               },
               {
                 text: '三、你不知道的JS',
-                link: '/principleKnowledge/book3/index'
+                link: '/principleKnowledge/book3/inde'
               },
               {
                 text: '四、JS设计与开发',
-                link: '/principleKnowledge/book4/index'
+                link: '/principleKnowledge/book4/inde'
               },
               {
                 text: '五、高性能JS', 
-                link: '/principleKnowledge/book5/index'
+                link: '/principleKnowledge/book5/inde'
               }
             ]
           }
@@ -280,7 +280,7 @@ module.exports = {
             'i18n'
           ],
           '/specialKnowledge/design/': [//设计模式
-            'index',
+            'inde',
             '1.factory',
             '2.abstract',
             '3.single',
@@ -306,7 +306,7 @@ module.exports = {
             '23.interpreter'
           ],
           '/principleKnowledge/book1/': [
-            'index',
+            'inde',
             '2.dataDriven',
             '3.componentization',
             '4.deepResponsePrinciple',
@@ -316,16 +316,16 @@ module.exports = {
             '8.vuex'
           ],
           '/principleKnowledge/book2/': [
-            'index',
+            'inde',
           ],
           '/principleKnowledge/book3/': [
-            'index',
+            'inde',
           ],
           '/principleKnowledge/book4/': [
-            'index',
+            'inde',
           ],
           '/principleKnowledge/book5/': [
-            'index',
+            'inde',
           ],
         }
       }
