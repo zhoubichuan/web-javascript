@@ -179,7 +179,7 @@ module.exports = {
                 link: '/principleKnowledge/book4/Alert'
               },
               {
-                text: '五、高性能JS',
+                text: '五、高性能JS', 
                 link: '/principleKnowledge/book5/Carousel'
               }
             ]
