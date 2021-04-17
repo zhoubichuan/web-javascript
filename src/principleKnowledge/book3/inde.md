@@ -8,4 +8,4 @@ meta:
     content: vuepress,最新技术文档,vuepress主题
 ---
 
-# 四十、Slider
+# 你不知道的js

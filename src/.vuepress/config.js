@@ -132,7 +132,7 @@ module.exports = {
             text: '专项知识',
             items: [{
                 text: '一、性能优化',
-                link: '/specialKnowledge/performance/1.CDN'
+                link: '/specialKnowledge/performance/inde'
               },
               {
                 text: '二、代码规范',
@@ -239,6 +239,7 @@ module.exports = {
             '6.http',
           ],
           '/specialKnowledge/performance/': [ //性能优化
+            'inde',
             '1.CDN', //cdn
             '2.cache', //缓存
             '3.store',
