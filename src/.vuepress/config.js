@@ -157,6 +157,10 @@ module.exports = {
               {
                 text: '七、设计模式',
                 link: '/specialKnowledge/design/inde',
+              },
+              {
+                text: '八、跨域',
+                link: '/specialKnowledge/crossDomain/inde',
               }
             ]
           },
@@ -305,6 +309,19 @@ module.exports = {
             '21.visitor',
             '22.mediator',
             '23.interpreter'
+          ],
+          '/specialKnowledge/crossDomain/': [//跨域
+            'inde',
+            '1.demote',
+            '2.cors',
+            '3.nginx',
+            '4.http-proxy-middleware',
+            '5.jsonp',
+            '6.domain',
+            '7.name',
+            '8.hash',
+            '9.postMessage',
+            '10.webSocket',
           ],
           '/principleKnowledge/book1/': [
             'inde',
