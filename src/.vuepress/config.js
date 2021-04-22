@@ -103,64 +103,72 @@ module.exports = {
         nav: [{
             text: '基础知识',
             items: [{
-                text: '一、堆栈内存和闭包作用域',
-                link: '/basicKnowledge/1.stack/1.dataType'
+                text: '一.堆栈内存和闭包作用域',
+                link: '/base/1.stack/1.dataType'
               },
               {
-                text: '二、面向对象程序设计',
-                link: '/basicKnowledge/oop/1.objectOriented'
+                text: '二.面向对象',
+                link: '/base/oop/1.objectOriented'
               },
               {
-                text: '三、浏览器渲染机制',
-                link: '/basicKnowledge/3.browser/1.browser'
+                text: '三.移动端',
+                link: '/base/mobile/skill',
               },
               {
-                text: '四、DOM事件及设计模式',
-                link: '/basicKnowledge/dom/1.event'
+                text: '四.DOM事件',
+                link: '/base/dom/1.event'
               },
               {
-                text: '五、ES6+核心源码分析',
-                link: '/basicKnowledge/es6/1.let'
+                text: '五.ES6',
+                link: '/base/es6/1.let'
               },
               {
-                text: '六、AJAX/HTTP数据通信',
-                link: '/basicKnowledge/6.http/1.http'
+                text: '六.网络请求',
+                link: '/base/6.http/1.http'
               }
             ]
           },
           {
             text: '专项知识',
             items: [{
-                text: '一、性能优化',
-                link: '/specialKnowledge/performance/inde'
+                text: '一.性能优化',
+                link: '/senior/performance/inde'
               },
               {
-                text: '二、代码规范',
-                link: '/specialKnowledge/standard/1.base'
+                text: '二.代码规范',
+                link: '/senior/standard/1.base'
               },
               {
-                text: '三、前端监控',
-                link: '/specialKnowledge/monitor/1.base'
+                text: '三.前端监控',
+                link: '/senior/monitor/1.base'
               },
               {
-                text: '四、安全防范',
-                link: '/specialKnowledge/security/1.xss'
+                text: '四.安全防范',
+                link: '/senior/security/1.xss'
               },
               {
-                text: '五、上传下载',
-                link: '/specialKnowledge/fileLoadDown/1.base'
+                text: '五.断点续传',
+                link: '/senior/fileLoadDown/1.base'
               },
               {
-                text: '六、移动端',
-                link: '/specialKnowledge/mobile/skill',
+                text: '六.设计模式',
+                link: '/senior/design/inde',
               },
               {
-                text: '七、设计模式',
-                link: '/specialKnowledge/design/inde',
+                text: '七.跨域',
+                link: '/senior/crossDomain/inde',
+              }
+            ]
+          },
+          {
+            text: '前端相关原理',
+            items: [{
+                text: '一.Promise',
+                link: '/source/promise/inde'
               },
               {
-                text: '八、跨域',
-                link: '/specialKnowledge/crossDomain/inde',
+                text: '二.浏览器渲染机制',
+                link: '/source/browser/1.browser'
               }
             ]
           },
@@ -168,29 +176,29 @@ module.exports = {
             text: '阅读书籍',
             items: [{
                 text: '一、高程4',
-                link: '/principleKnowledge/book1/inde'
+                link: '/read/book1/inde'
               },
               {
                 text: '二、编程艺术',
-                link: '/principleKnowledge/book2/inde'
+                link: '/read/book2/inde'
               },
               {
                 text: '三、你不知道的JS',
-                link: '/principleKnowledge/book3/inde'
+                link: '/read/book3/inde'
               },
               {
                 text: '四、JS设计与开发',
-                link: '/principleKnowledge/book4/inde'
+                link: '/read/book4/inde'
               },
               {
                 text: '五、高性能JS', 
-                link: '/principleKnowledge/book5/inde'
+                link: '/read/book5/inde'
               }
             ]
           }
         ],
         sidebar: {
-          '/basicKnowledge/1.stack/': [ //一、堆栈内存和闭包作用域
+          '/base/1.stack/': [ //一、堆栈内存和闭包作用域
             '1.dataType', //9 种数据类型区别及相互转换
             '2.lexicalAnalysis',
             '3.heapStack',
@@ -206,7 +214,7 @@ module.exports = {
             '14.data',
             '15.api'
           ],
-          '/basicKnowledge/oop/': [ //二、面向对象程序设计
+          '/base/oop/': [ //二、面向对象程序设计
             '1.objectOriented',
             '2.constructor',
             '3.prototype',
@@ -217,7 +225,7 @@ module.exports = {
             '8.jQuery',
             '9.lodash'
           ],
-          '/basicKnowledge/3.browser/': [ //三、同步异步编程及浏览器渲染机制
+          '/base/3.browser/': [ //三、同步异步编程及浏览器渲染机制
             '1.browser',
             '2.tree',
             '3.reflow',
@@ -228,13 +236,13 @@ module.exports = {
             '8.skeleton',
             '9.test'
           ],
-          '/basicKnowledge/dom/': [ //四、DOM事件及设计模式
+          '/base/dom/': [ //四、DOM事件及设计模式
             '1.event'
           ],
-          '/basicKnowledge/es6/': [ //五、ES6+核心知识和源码分析
+          '/base/es6/': [ //五、ES6+核心知识和源码分析
             '1.let',
           ],
-          '/basicKnowledge/6.http/': [ //六、AJAX/HTTP前后端数据通信
+          '/base/6.http/': [ //六、AJAX/HTTP前后端数据通信
             '1.http',
             '2.https',
             '3.tcp',
@@ -242,7 +250,7 @@ module.exports = {
             '5.dns',
             '6.http',
           ],
-          '/specialKnowledge/performance/': [ //性能优化
+          '/senior/performance/': [ //性能优化
             'inde',
             '1.CDN', //cdn
             '2.cache', //缓存
@@ -257,25 +265,25 @@ module.exports = {
             '11.debounceAndThrottle', //防抖与节流
             '12.webpack'
           ],
-          '/specialKnowledge/standard/': [
+          '/senior/standard/': [
             '1.base'
           ],
-          '/specialKnowledge/monitor/': [ //前端监控
+          '/senior/monitor/': [ //前端监控
             '1.base'
           ],
-          // '/specialKnowledge/npm/': [
+          // '/senior/npm/': [
           //   '1.recursionAndDynamics'
           // ],
-          '/specialKnowledge/fileLoadDown/': [ //文件上传下载
+          '/senior/fileLoadDown/': [ //文件上传下载
             '1.base'
           ],
-          '/specialKnowledge/security/': [ //前端安全
+          '/senior/security/': [ //前端安全
             '1.xss',
             '2.csrf',
             '3.doos',
             '4.http'
           ],
-          '/specialKnowledge/mobile/': [//移动端开发
+          '/senior/mobile/': [//移动端开发
             'skill',
             'bug',
             'webpack',
@@ -284,7 +292,7 @@ module.exports = {
             'prem',
             'i18n'
           ],
-          '/specialKnowledge/design/': [//设计模式
+          '/senior/design/': [//设计模式
             'inde',
             '1.factory',
             '2.abstract',
@@ -310,7 +318,7 @@ module.exports = {
             '22.mediator',
             '23.interpreter'
           ],
-          '/specialKnowledge/crossDomain/': [//跨域
+          '/senior/crossDomain/': [//跨域
             'inde',
             '1.demote',
             '2.cors',
@@ -323,7 +331,7 @@ module.exports = {
             '9.postMessage',
             '10.webSocket',
           ],
-          '/principleKnowledge/book1/': [
+          '/read/book1/': [
             'inde',
             '2.dataDriven',
             '3.componentization',
@@ -333,16 +341,16 @@ module.exports = {
             '7.vueRouter',
             '8.vuex'
           ],
-          '/principleKnowledge/book2/': [
+          '/read/book2/': [
             'inde',
           ],
-          '/principleKnowledge/book3/': [
+          '/read/book3/': [
             'inde',
           ],
-          '/principleKnowledge/book4/': [
+          '/read/book4/': [
             'inde',
           ],
-          '/principleKnowledge/book5/': [
+          '/read/book5/': [
             'inde',
           ],
         }
