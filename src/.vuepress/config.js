@@ -111,7 +111,7 @@ module.exports = {
                 link: '/base/oop/1.objectOriented'
               },
               {
-                text: '三.移动端',
+                text: '三.移动WebApp',
                 link: '/base/mobile/skill',
               },
               {
@@ -157,11 +157,19 @@ module.exports = {
               {
                 text: '七.跨域',
                 link: '/senior/crossDomain/inde',
+              },
+              {
+                text: '八.测试',
+                link: '/senior/crossDomain/inde',
+              },
+              {
+                text: '九.相关工具',
+                link: '/senior/utils/inde',
               }
             ]
           },
           {
-            text: '前端相关原理',
+            text: '原理知识',
             items: [{
                 text: '一.Promise',
                 link: '/source/promise/inde'
