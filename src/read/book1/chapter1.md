@@ -7,5 +7,4 @@ meta:
   - name: keywords
     content: vuepress,最新技术文档,vuepress语法,markdown语法
 ---
-
-# 八、Vuex
+# 第一章总结

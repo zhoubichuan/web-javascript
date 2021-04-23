@@ -183,7 +183,7 @@ module.exports = {
           {
             text: '阅读书籍',
             items: [{
-                text: '一、高程4',
+                text: '一.JavaScript高级程序设计',
                 link: '/read/book1/inde'
               },
               {
@@ -341,13 +341,13 @@ module.exports = {
           ],
           '/read/book1/': [
             'inde',
-            '2.dataDriven',
-            '3.componentization',
-            '4.deepResponsePrinciple',
-            '5.compile',
-            '6.extend',
-            '7.vueRouter',
-            '8.vuex'
+            'chapter1',
+            'chapter2',
+            'chapter3',
+            'chapter4',
+            'chapter5',
+            'chapter6',
+            'chapter7'
           ],
           '/read/book2/': [
             'inde',
