@@ -24,7 +24,7 @@ meta:
   * [7.装饰器模式](./7.decorator.html)
   * [8.代理模式](./8.proxy.html)
   * [9.外观模式](./9.appearance.html)
-  * [10.巧接模式](./10.pickup.html)
+  * [10.桥接模式](./10.pickup.html)
   * [11.组合模式](./11.combination.html)
   * [12.享元模式](./12.flyweight.html)
 
