@@ -233,7 +233,7 @@ module.exports = {
             '8.jQuery',
             '9.lodash'
           ],
-          '/base/3.browser/': [ //三、同步异步编程及浏览器渲染机制
+          '/source/browser/': [ //三、同步异步编程及浏览器渲染机制
             '1.browser',
             '2.tree',
             '3.reflow',
