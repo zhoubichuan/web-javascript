@@ -244,6 +244,25 @@ module.exports = {
             '8.skeleton',
             '9.test'
           ],
+          '/base/mobile/': [//移动端开发
+            'skill',
+            '1',
+            '2',
+            '3',
+            '4',
+            '5',
+            '6',
+            '7',
+            '8',
+            '9',
+            '10',
+            'bug',
+            'webpack',
+            'vscode',
+            'test',
+            'prem',
+            'i18n'
+          ],
           '/base/dom/': [ //四、DOM事件及设计模式
             '1.event'
           ],
@@ -290,15 +309,6 @@ module.exports = {
             '2.csrf',
             '3.doos',
             '4.http'
-          ],
-          '/senior/mobile/': [//移动端开发
-            'skill',
-            'bug',
-            'webpack',
-            'vscode',
-            'test',
-            'prem',
-            'i18n'
           ],
           '/senior/design/': [//设计模式
             'inde',
