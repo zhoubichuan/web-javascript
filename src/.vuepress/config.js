@@ -132,6 +132,46 @@ module.exports = {
             text: '专项知识',
             items: [{
                 text: '一.性能优化',
+                link: '/special/performance/inde'
+              },
+              {
+                text: '二.代码规范',
+                link: '/special/standard/1.base'
+              },
+              {
+                text: '三.前端监控',
+                link: '/special/monitor/1.base'
+              },
+              {
+                text: '四.安全防范',
+                link: '/special/security/1.xss'
+              },
+              {
+                text: '五.断点续传',
+                link: '/special/fileLoadDown/1.base'
+              },
+              {
+                text: '六.设计模式',
+                link: '/special/design/inde',
+              },
+              {
+                text: '七.跨域',
+                link: '/special/crossDomain/inde',
+              },
+              {
+                text: '八.测试',
+                link: '/special/crossDomain/inde',
+              },
+              {
+                text: '九.相关工具',
+                link: '/special/utils/inde',
+              }
+            ]
+          },
+          {
+            text: '高级知识',
+            items: [{
+                text: '一.性能优化',
                 link: '/senior/performance/inde'
               },
               {
@@ -276,6 +316,78 @@ module.exports = {
             '4.catch',
             '5.dns',
             '6.http',
+          ],
+          '/special/performance/': [ //性能优化
+            'inde',
+            '1.CDN', //cdn
+            '2.cache', //缓存
+            '3.store',
+            '4.render',
+            '5.api',
+            '6.form',
+            '7.checkBox',
+            '8.EventLoop',
+            '9.alert',
+            '10.serviceRender', //服务端渲染
+            '11.debounceAndThrottle', //防抖与节流
+            '12.webpack'
+          ],
+          '/special/standard/': [
+            '1.base'
+          ],
+          '/special/monitor/': [ //前端监控
+            '1.base'
+          ],
+          // '/special/npm/': [
+          //   '1.recursionAndDynamics'
+          // ],
+          '/special/fileLoadDown/': [ //文件上传下载
+            '1.base'
+          ],
+          '/special/security/': [ //前端安全
+            '1.xss',
+            '2.csrf',
+            '3.doos',
+            '4.http'
+          ],
+          '/special/design/': [//设计模式
+            'inde',
+            '1.factory',
+            '2.abstract',
+            '3.single',
+            '4.prototype',
+            '5.made',
+            '6.adapter',
+            '7.decorator',
+            '8.proxy',
+            '9.appearance',
+            '10.pickup',
+            '11.combination',
+            '12.flyweight',
+            '13.strategy',
+            '14.module',
+            '15.observer',
+            '16.iterator',
+            '17.chain',
+            '18.command',
+            '19.memorandum',
+            '20.state',
+            '21.visitor',
+            '22.mediator',
+            '23.interpreter'
+          ],
+          '/special/crossDomain/': [//跨域
+            'inde',
+            '1.demote',
+            '2.cors',
+            '3.nginx',
+            '4.http-proxy-middleware',
+            '5.jsonp',
+            '6.domain',
+            '7.name',
+            '8.hash',
+            '9.postMessage',
+            '10.webSocket',
           ],
           '/senior/performance/': [ //性能优化
             'inde',
