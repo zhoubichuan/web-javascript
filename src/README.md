@@ -24,6 +24,10 @@ meta:
             <p>熟练掌握性能优化、监控、安全、测试、设计模式、跨域</p>
         </div>
         <div class="feature">
+            <h2>高级知识</h2> 
+            <p>掌握浏览器、Promise等相关原理</p>
+        </div>
+        <div class="feature">
             <h2>原理知识</h2> 
             <p>掌握浏览器、Promise等相关原理</p>
         </div>
