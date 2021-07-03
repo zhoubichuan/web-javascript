@@ -223,7 +223,7 @@ module.exports = {
           {
             text: '阅读书籍',
             items: [{
-                text: '一.JavaScript高级程序设计',
+                text: '一.JavaScript高级程序设计第4版',
                 link: '/read/book1/inde'
               },
               {
