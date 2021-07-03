@@ -8,4 +8,4 @@ meta:
     content: vuepress,最新技术文档,vuepress语法,markdown语法
 ---
 
-# 第二章总结
+# 第二章：HTML中的JavaScript
