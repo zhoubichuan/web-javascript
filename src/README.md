@@ -33,7 +33,7 @@ meta:
         </div>
         <div class="feature">
             <h2>阅读书籍</h2> 
-            <p>总结高程4、编程艺术、你不知道的js、js设计开发、高性能js经验</p>
+            <p>总结《JavaScript高级程序设计第4版》、编程艺术、你不知道的js、js设计开发、高性能js经验</p>
         </div>
         </div>
     </div>
