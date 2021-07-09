@@ -20,4 +20,47 @@ meta:
   - parseInt:更专注于字符串是否包含数值模式。字符串最前面的空格会被忽略，从第一个非空格字符开始转换。如果第一个字符不是数值字符、加号、减号，parseInt立即返回NaN。这就意味着字符串也是返回NaN。如果第一个字符为数值字符、加号、减号，则继续依次检测每个字符，直到字符串末尾，或碰到非数值字符。
   - parseFloat:和parseInt函数类似，都是从位置0开始检测每个字符，同样，它也是解析到字符串末尾或者解析到一个无效的浮点数值字符为止。这意味着第一次出现的小数点是有效的，但第二次出现的小数点就无效了，此时字符串的剩余字符都会被忽略；它的另一个不同之处在于，它始终忽略字符串开头的零。这个函数能识别前面讨论的所有浮点格式，以及十进制。十六进制数值始终会返回0，因为parseFloat只解析十进制，因此不能指定底数
 - Symbol:for-of循环会在相关对象上使用Symbol.iterator属性，那么可以通过在自定义对象上重新定义Symbol.iterator的值，来改变for-of在迭代该对象时的行为。这些内置符号属性都是不可写、不可枚举、不可配置的。
-  - Symbol.asyncIterator
+  - Symbol.asyncIterator：一个方法，该方法返回对象默认的AsyncIterator。由for-await-of语句使用
+    ```js
+    class Emitter{
+      constructor(max){
+        this.max = max
+        this.asyncIdx = 0
+      }
+      async *[Symbol.asyncIterator](){
+        while(this.asyncIdx < this.max){
+          yield new Promise((resolve) => resolve(this.asyncIdx++))
+        }
+      }
+    }
+    async function asyncCount(){
+      let emitter = new Emitter(5)
+      for await(const x of emitter){
+        conosle.log(x)
+      }
+    }
+    asyncCount()
+    ```
+    :::warning
+    Symbol.asyncIterator是ES2018 规范定义的，因此只有版本非常新的浏览器支持它。
+    :::
+  - Symbol.hasInstance：一个方法，该方法决定一个构造器对象是否认可一个对象是他的实例。在ES6中，instanceof操作符会使用 Symbol.hasInstance 函数来确定关系。
+    ```js
+    function Foo(){
+      let f = new Foo()
+      console.log(f instanceof Foo) // true
+      // console.log(Foo[Symbol.hasInstance](f))
+    }
+    ```
+    这个属性定义在Function 的原型上，因此默认在所有函数和类上都可以调用。由于instanceof操作符会在原型链上寻找这个属性定义，就跟在原型链上寻找其他属性一样，因此可以子啊继承的类上通过静态方法重新定义这个函数。
+    ```js
+    class Bar {}
+    class Baz extends Bar {
+      static [Symbol.hasInstance] () {
+        return false
+      }
+    }
+    let b = new Baz()
+    console.log(b instanceof Bar)  // true
+    console.log(Baz[Symbol.hasInstace](b)) //false
+    ```
