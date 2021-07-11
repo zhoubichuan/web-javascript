@@ -125,4 +125,77 @@ meta:
 
     console.log('barfoobaz'.replace(new StringReplacer('foo'),'qux'))
     ```
-  - Symbol.search
+  - Symbol.search:一个正则表达式方法，该方法返回字符串中匹配正则表达式的索引。由String.prototype.search(）方法使用
+    ```js
+    class FooSearcher {
+      constructor(str){
+        this.str = str
+      }
+
+      [Symbol.search](target){
+        return target.indexOf('foo')
+      }
+    }
+    console.log('foobar'.search(new StringSearcher('foo'))) // 0
+    ```
+  - Symbol.species:一个函数值，该函数作为创建派生对象的构造函数
+    ```js
+    class Baz extends Array {
+      static get [Symbol.species](){
+        return Array
+      }
+    }
+
+    console.log(baz instanceof Baz) // false
+    ```
+  - Symbol.split:一个正则表达式方法，该方法在匹配正则表达式的索引位置拆分字符串。由String.prototype.split()方法使用。
+  - Symbol.toPrimitive:一个方法，该方法将对象转换为相应的原始值。由ToPrimitive抽象操作使用
+    ```js
+    class Bar {
+      constructor(){
+        this[Symbol.toPrimitive] = function(hint){
+          switch(hint){
+            case 'number':
+              return 3;
+            case 'string':
+              return 'string bar';
+            case 'default':
+            default:
+              return 'default bar' 
+          }
+        }
+      }
+    }
+    let bar = new Bar()
+    console.log(3 + bar) // "3default bar"
+    ```
+  - Symbol.toStringTag:一个字符串，该字符串用于创建对象的默认字符串描述。内置方法Object.prototype.toString()使用。
+    ```js
+    class Bar{
+      constructor(){
+        this[Symbol.toStringTag] = 'Bar'
+      }
+    }
+
+    let bar = new Bar()
+    conosle,.log(bar.toString()) //[object Bar]
+    ```
+  - Symbol.unscopables:一个对象，该对象所有的以及继承的属性，都会从关联对象的witch环境绑定中排除。设置这个符号并让其映射对应属性的键值为true,就可以阻止该属性出现在with环境绑定中
+    ```js
+    let o = { foo: 'bar'}
+    
+    with (o) {
+      console.log(foo) //bar
+    }
+
+    o[Symbol.unscopables] = {
+      foo: true
+    }
+
+    with (o) {
+      console.log(foo) // ReferenceError
+    }
+    ```
+    ::: warning
+    不推荐使用witch,因此也不推荐使用Symbol.unscopables
+    :::
