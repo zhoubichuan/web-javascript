@@ -118,28 +118,20 @@ module.exports = {
             text: "基础知识",
             items: [
               {
-                text: "一.堆栈内存和闭包作用域",
+                text: "一.HTML",
                 link: "/base/1.stack/1.dataType",
               },
               {
-                text: "二.面向对象",
+                text: "二.CSS",
                 link: "/base/oop/1.objectOriented",
               },
               {
-                text: "三.移动WebApp",
-                link: "/base/mobile/skill",
+                text: "三.JavaScript",
+                link: "/base/1.stack/1.dataType",
               },
               {
-                text: "四.DOM事件",
-                link: "/base/dom/1.event",
-              },
-              {
-                text: "五.ES6",
+                text: "四.ES6",
                 link: "/base/es6/1.let",
-              },
-              {
-                text: "六.网络请求",
-                link: "/base/6.http/1.http",
               },
             ],
           },
@@ -155,11 +147,11 @@ module.exports = {
                 link: "/special/standard/1.base",
               },
               {
-                text: "三.前端监控",
+                text: "三.监控",
                 link: "/special/monitor/1.base",
               },
               {
-                text: "四.安全防范",
+                text: "四.安全",
                 link: "/special/security/1.xss",
               },
               {
@@ -172,7 +164,7 @@ module.exports = {
               },
               {
                 text: "七.跨域",
-                link: "/special/crossDomain/inde",
+                link: "/special/cross/inde",
               },
               {
                 text: "八.测试",
@@ -188,40 +180,16 @@ module.exports = {
             text: "高级知识",
             items: [
               {
-                text: "一.性能优化",
-                link: "/senior/performance/inde",
+                text: "五.网络请求",
+                link: "/base/6.http/1.http",
               },
               {
-                text: "二.代码规范",
-                link: "/senior/standard/1.base",
+                text: "六.WebApp",
+                link: "/base/mobile/skill",
               },
               {
-                text: "三.前端监控",
-                link: "/senior/monitor/1.base",
-              },
-              {
-                text: "四.安全防范",
-                link: "/senior/security/1.xss",
-              },
-              {
-                text: "五.断点续传",
-                link: "/senior/fileLoadDown/1.base",
-              },
-              {
-                text: "六.设计模式",
-                link: "/senior/design/inde",
-              },
-              {
-                text: "七.跨域",
-                link: "/senior/crossDomain/inde",
-              },
-              {
-                text: "八.测试",
-                link: "/senior/crossDomain/inde",
-              },
-              {
-                text: "九.相关工具",
-                link: "/senior/utils/inde",
+                text: "七.Sass",
+                link: "/base/dom/1.event",
               },
             ],
           },
@@ -405,7 +373,7 @@ module.exports = {
             "22.mediator",
             "23.interpreter",
           ],
-          "/special/crossDomain/": [
+          "/special/cross/": [
             //跨域
             "inde",
             "1.demote",

@@ -17,15 +17,15 @@ meta:
         <div class="features">
         <div class="feature">
             <h2>基础知识</h2> 
-            <p>掌握HTML5、CSS3、JavaScript、ES6、网络请求、移动WebApp、Sass</p>
+            <p>掌握HTML5、CSS3、JavaScript、ES6</p>
         </div>
         <div class="feature">
             <h2>专项知识</h2> 
-            <p>熟练掌握性能优化、监控、安全、测试、设计模式、跨域</p>
+            <p>熟练掌握性能优化、代码规范、监控、安全、断点续传、设计模式、跨域、测试、相关工具</p>
         </div>
         <div class="feature">
             <h2>高级知识</h2> 
-            <p>掌握浏览器、Promise等相关原理</p>
+            <p>掌握网络请求、WebApp、Sass</p>
         </div>
         <div class="feature">
             <h2>原理知识</h2> 
@@ -33,7 +33,7 @@ meta:
         </div>
         <div class="feature">
             <h2>阅读书籍</h2> 
-            <p>总结《JavaScript高级程序设计第4版》、编程艺术、你不知道的js、js设计开发、高性能js经验</p>
+            <p>《JavaScript高级程序设计第4版》、编程艺术、你不知道的js、js设计开发、高性能js经验</p>
         </div>
         </div>
     </div>
