@@ -8,7 +8,7 @@ meta:
     content: vuepress,最新技术文档,vuepress语法,markdown语法
 ---
 
-# 第三章 语言基础
+# 第三章: 语言基础
 - undefined:
   - 包含undefined值的变量跟未定义变量是有区别的，变量被声明了，只是没有赋值，为undefined;输出一个未声明的变量，会导致报错
   - 无论是声明还是未声明，typeof 返回的都是字符串undefined
@@ -64,3 +64,65 @@ meta:
     console.log(b instanceof Bar)  // true
     console.log(Baz[Symbol.hasInstace](b)) //false
     ```
+  - Symbol.isConcatSpreadable:一个布尔值，如果是true,则意味着对象应该用Array.prototype.concat()打平其数组元素。
+  - Symbol.iterator:一个方法，该方法返回对象默认的迭代器。由for-of语句使用
+    ```js
+    class Emitter {
+      constructor(max){
+        this.max = max
+        this.idx = 0
+      }
+
+      *[Symbol.iterator](){
+        while(this.idx < this.max) {
+          yield this.idx ++
+        }
+      }
+    }
+
+    function count(){
+      let emitter = new Emitter(5)
+
+      for(const x of emitter){
+        console.log(x)
+      }
+    }
+
+    count()
+    ```
+  - Symbol.match:一个正则表达式方法，该方法用正则表达式去匹配字符串。由String.prototype.match()方法使用
+    ```js
+    class FooMatcher {
+      static [Symbol.match](target) {
+        return target.includes('foo')
+      }
+    }
+    console.log('foobar'.match(FooMatcher)) //true
+
+    class StringMatcher {
+      constructor(str){
+        this.str = str
+      }
+
+      [Symbol.match](target){
+        return target.includes(this.str)
+      }
+    }
+
+    console.log('foobar'.match(new StringMatcher('foo'))) //true
+    ```
+  - Symbol.replace:一个表达式的方法，该方法替换一个字符串中匹配的子串。由String.prototype.replace()方法使用
+    ```js
+    class StringReplacer {
+      constructor(str){
+        this.str = str
+      }
+
+      [Symbol.replace](target, replacement) {
+        return target.split(this.str).join(replacement)
+      }
+    }
+
+    console.log('barfoobaz'.replace(new StringReplacer('foo'),'qux'))
+    ```
+  - Symbol.search
