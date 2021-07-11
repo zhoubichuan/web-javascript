@@ -199,3 +199,10 @@ meta:
     ::: warning
     不推荐使用witch,因此也不推荐使用Symbol.unscopables
     :::
+- Object 类型
+  - hasOwnProperty:用于判断当前对象实例（不是原型）上是否存在给定的属性。要检查的属性名必须是字符串（如o.hasOwnProperty('name')）或符号。
+  - isPrototypeOf:用于判断当前对象是否为另一个对象的原型。
+  - propertyIsEnumerable:用于判断给定的属性是否可以使用。与hasOwnProperty一样，属性名必须是字符串。
+  - toLocaleString():返回对象的字符串表示，该字符串反映对象所在的本地化执行环境。
+  - toString():返回对象的字符串表示。
+  - valueOf():返回对象对应的字符串、数值或布尔值表示。通常与toSting()的返回值相同。
