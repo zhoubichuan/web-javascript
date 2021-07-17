@@ -216,5 +216,20 @@ meta:
       s1++ // 值变为数值3
       ```
 - 语句
-  - 标签语句
+  - for-in语句：一种严格的迭代语句，用于枚举对象中的非符号键属性
+  - for-of语句：一种严格的迭代语句，用于遍历可迭代对象的元素
+  - 标签语句：用于给语句加上标签
+    ```js
+    label: statement
+    ```
+  - with语句：主要场景是针对一个对象反复操作，这时候将代码作用域设置为该对象能提供便利
+    ```js
+    let qs = location.search.substring(1)
+    let hostName = location.hostname
+    with(location){
+      let qs = search.substring(1)
+      let hostName = hostname
+    }
+    ```
+
 

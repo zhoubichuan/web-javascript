@@ -8,4 +8,4 @@ meta:
     content: vuepress,最新技术文档,vuepress语法,markdown语法
 ---
 
-# 第四章总结
+# 第四章：变量、作用域与内存
