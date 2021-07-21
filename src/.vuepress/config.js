@@ -131,7 +131,7 @@ module.exports = {
               },
               {
                 text: "四.ES6",
-                link: "/base/es6/1.let",
+                link: "/base/es6/1.scope",
               },
             ],
           },
@@ -300,7 +300,16 @@ module.exports = {
           ],
           "/base/es6/": [
             //五、ES6+核心知识和源码分析
-            "1.let",
+            "1.scope",
+            "2.constant",
+            "3.deconstruction",
+            "4.string",
+            "5.function",
+            "6.object",
+            "7.class",
+            "8.general",
+            "9.collect",
+            "10.module"
           ],
           "/base/6.http/": [
             //六、AJAX/HTTP前后端数据通信
