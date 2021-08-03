@@ -180,15 +180,15 @@ module.exports = {
             text: "高级知识",
             items: [
               {
-                text: "五.网络请求",
+                text: "一.网络请求",
                 link: "/base/6.http/1.http",
               },
               {
-                text: "六.WebApp",
+                text: "二.WebApp",
                 link: "/base/mobile/skill",
               },
               {
-                text: "七.Sass",
+                text: "三.Sass",
                 link: "/base/dom/1.event",
               },
             ],
@@ -198,7 +198,7 @@ module.exports = {
             items: [
               {
                 text: "一.Promise",
-                link: "/source/promise/inde",
+                link: "/source/promise/1.index",
               },
               {
                 text: "二.浏览器渲染机制",
@@ -261,6 +261,9 @@ module.exports = {
             "7.extends",
             "8.jQuery",
             "9.lodash",
+          ],
+          "/source/promise/": [
+            "1.index",
           ],
           "/source/browser/": [
             //三、同步异步编程及浏览器渲染机制
