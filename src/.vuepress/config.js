@@ -101,149 +101,117 @@ module.exports = {
         editLinkText: '在github上编辑此页',
         lastUpdated: '上次更新', // 获取每个文件最后一次 git 提交的时间戳
         nav: [{
-            text: '基础知识',
-            items: [{
-                text: '一.堆栈内存和闭包作用域',
-                link: '/base/1.stack/1.dataType'
-              },
-              {
-                text: '二.面向对象',
-                link: '/base/oop/1.objectOriented'
-              },
-              {
-                text: '三.移动WebApp',
-                link: '/base/mobile/skill',
-              },
-              {
-                text: '四.DOM事件',
-                link: '/base/dom/1.event'
-              },
-              {
-                text: '五.ES6',
-                link: '/base/es6/1.let'
-              },
-              {
-                text: '六.网络请求',
-                link: '/base/6.http/1.http'
-              }
-            ]
+          text: '基础知识',
+          items: [{
+            text: '一.堆栈内存和闭包作用域',
+            link: '/base/1.stack/1.dataType'
           },
           {
-            text: '专项知识',
-            items: [{
-                text: '一.性能优化',
-                link: '/special/performance/inde'
-              },
-              {
-                text: '二.代码规范',
-                link: '/special/standard/1.base'
-              },
-              {
-                text: '三.前端监控',
-                link: '/special/monitor/1.base'
-              },
-              {
-                text: '四.安全防范',
-                link: '/special/security/1.xss'
-              },
-              {
-                text: '五.断点续传',
-                link: '/special/fileLoadDown/1.base'
-              },
-              {
-                text: '六.设计模式',
-                link: '/special/design/inde',
-              },
-              {
-                text: '七.跨域',
-                link: '/special/crossDomain/inde',
-              },
-              {
-                text: '八.测试',
-                link: '/special/crossDomain/inde',
-              },
-              {
-                text: '九.相关工具',
-                link: '/special/utils/inde',
-              }
-            ]
+            text: '二.面向对象',
+            link: '/base/oop/1.objectOriented'
           },
           {
-            text: '高级知识',
-            items: [{
-                text: '一.性能优化',
-                link: '/senior/performance/inde'
-              },
-              {
-                text: '二.代码规范',
-                link: '/senior/standard/1.base'
-              },
-              {
-                text: '三.前端监控',
-                link: '/senior/monitor/1.base'
-              },
-              {
-                text: '四.安全防范',
-                link: '/senior/security/1.xss'
-              },
-              {
-                text: '五.断点续传',
-                link: '/senior/fileLoadDown/1.base'
-              },
-              {
-                text: '六.设计模式',
-                link: '/senior/design/inde',
-              },
-              {
-                text: '七.跨域',
-                link: '/senior/crossDomain/inde',
-              },
-              {
-                text: '八.测试',
-                link: '/senior/crossDomain/inde',
-              },
-              {
-                text: '九.相关工具',
-                link: '/senior/utils/inde',
-              }
-            ]
+            text: '三.移动WebApp',
+            link: '/base/mobile/skill',
           },
           {
-            text: '原理知识',
-            items: [{
-                text: '一.Promise',
-                link: '/source/promise/inde'
-              },
-              {
-                text: '二.浏览器渲染机制',
-                link: '/source/browser/1.browser'
-              }
-            ]
+            text: '四.DOM事件',
+            link: '/base/dom/1.event'
           },
           {
-            text: '阅读书籍',
-            items: [{
-                text: '一.JavaScript高级程序设计',
-                link: '/read/book1/inde'
-              },
-              {
-                text: '二、编程艺术',
-                link: '/read/book2/inde'
-              },
-              {
-                text: '三、你不知道的JS',
-                link: '/read/book3/inde'
-              },
-              {
-                text: '四、JS设计与开发',
-                link: '/read/book4/inde'
-              },
-              {
-                text: '五、高性能JS', 
-                link: '/read/book5/inde'
-              }
-            ]
+            text: '五.ES6',
+            link: '/base/es6/1.let'
+          },
+          {
+            text: '六.网络请求',
+            link: '/base/6.http/1.http'
           }
+          ]
+        },
+        {
+          text: '专项知识',
+          items: [{
+            text: '一.性能优化',
+            link: '/special/performance/1.index'
+          },
+          {
+            text: '二.代码规范',
+            link: '/special/standard/1.index'
+          },
+          {
+            text: '三.前端监控',
+            link: '/special/monitor/1.index'
+          },
+          {
+            text: '四.安全防范',
+            link: '/special/security/1.xss'
+          },
+          {
+            text: '五.设计模式',
+            link: '/special/design/1.index',
+          },
+          {
+            text: '六.跨域方式',
+            link: '/special/cross/1.index',
+          },
+          {
+            text: '七.前端测试',
+            link: '/special/test/1.index',
+          },
+          ]
+        },
+        {
+          text: '高级知识',
+          items: [{
+            text: '一.微前端',
+            link: '/senior/micro/1.index'
+          },
+          {
+            text: '二.断点续传',
+            link: '/senior/file/1.index'
+          },
+          {
+            text: '三.相关工具',
+            link: '/senior/utils/1.index',
+          }
+          ]
+        },
+        {
+          text: '原理知识',
+          items: [{
+            text: '一.Promise',
+            link: '/source/promise/inde'
+          },
+          {
+            text: '二.浏览器渲染机制',
+            link: '/source/browser/1.browser'
+          }
+          ]
+        },
+        {
+          text: '阅读书籍',
+          items: [{
+            text: '一.JavaScript高级程序设计',
+            link: '/read/book1/inde'
+          },
+          {
+            text: '二、编程艺术',
+            link: '/read/book2/inde'
+          },
+          {
+            text: '三、你不知道的JS',
+            link: '/read/book3/inde'
+          },
+          {
+            text: '四、JS设计与开发',
+            link: '/read/book4/inde'
+          },
+          {
+            text: '五、高性能JS',
+            link: '/read/book5/inde'
+          }
+          ]
+        }
         ],
         sidebar: {
           '/base/1.stack/': [ //一、堆栈内存和闭包作用域
@@ -257,8 +225,8 @@ module.exports = {
             '9.utils',
             '10.ui',
             '11.data',
-            '12.skill',
-            '13.com',
+            '12.async',
+            '13.module',
             '14.data',
             '15.api'
           ],
@@ -317,8 +285,9 @@ module.exports = {
             '5.dns',
             '6.http',
           ],
+// 专项知识
           '/special/performance/': [ //性能优化
-            'inde',
+            '1.index',
             '1.CDN', //cdn
             '2.cache', //缓存
             '3.store',
@@ -333,16 +302,10 @@ module.exports = {
             '12.webpack'
           ],
           '/special/standard/': [
-            '1.base'
+            '1.index'
           ],
           '/special/monitor/': [ //前端监控
-            '1.base'
-          ],
-          // '/special/npm/': [
-          //   '1.recursionAndDynamics'
-          // ],
-          '/special/fileLoadDown/': [ //文件上传下载
-            '1.base'
+            '1.index'
           ],
           '/special/security/': [ //前端安全
             '1.xss',
@@ -351,7 +314,7 @@ module.exports = {
             '4.http'
           ],
           '/special/design/': [//设计模式
-            'inde',
+            '1.index',
             '1.factory',
             '2.abstract',
             '3.single',
@@ -376,8 +339,8 @@ module.exports = {
             '22.mediator',
             '23.interpreter'
           ],
-          '/special/crossDomain/': [//跨域
-            'inde',
+          '/special/cross/': [//跨域
+            '1.index',
             '1.demote',
             '2.cors',
             '3.nginx',
@@ -389,77 +352,19 @@ module.exports = {
             '9.postMessage',
             '10.webSocket',
           ],
-          '/senior/performance/': [ //性能优化
-            'inde',
-            '1.CDN', //cdn
-            '2.cache', //缓存
-            '3.store',
-            '4.render',
-            '5.api',
-            '6.form',
-            '7.checkBox',
-            '8.EventLoop',
-            '9.alert',
-            '10.serviceRender', //服务端渲染
-            '11.debounceAndThrottle', //防抖与节流
-            '12.webpack'
+          '/special/test/': [ //文件上传下载
+            '1.index'
           ],
-          '/senior/standard/': [
-            '1.base'
+
+// 高级知识
+          '/senior/micro/': [
+            '1.index'
           ],
-          '/senior/monitor/': [ //前端监控
-            '1.base'
+          '/senior/file/': [
+            '1.index'
           ],
-          // '/senior/npm/': [
-          //   '1.recursionAndDynamics'
-          // ],
-          '/senior/fileLoadDown/': [ //文件上传下载
-            '1.base'
-          ],
-          '/senior/security/': [ //前端安全
-            '1.xss',
-            '2.csrf',
-            '3.doos',
-            '4.http'
-          ],
-          '/senior/design/': [//设计模式
-            'inde',
-            '1.factory',
-            '2.abstract',
-            '3.single',
-            '4.prototype',
-            '5.made',
-            '6.adapter',
-            '7.decorator',
-            '8.proxy',
-            '9.appearance',
-            '10.pickup',
-            '11.combination',
-            '12.flyweight',
-            '13.strategy',
-            '14.module',
-            '15.observer',
-            '16.iterator',
-            '17.chain',
-            '18.command',
-            '19.memorandum',
-            '20.state',
-            '21.visitor',
-            '22.mediator',
-            '23.interpreter'
-          ],
-          '/senior/crossDomain/': [//跨域
-            'inde',
-            '1.demote',
-            '2.cors',
-            '3.nginx',
-            '4.http-proxy-middleware',
-            '5.jsonp',
-            '6.domain',
-            '7.name',
-            '8.hash',
-            '9.postMessage',
-            '10.webSocket',
+          '/senior/utils/': [
+            '1.index',
           ],
           '/read/book1/': [
             'inde',
