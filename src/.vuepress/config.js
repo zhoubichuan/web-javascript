@@ -1,102 +1,115 @@
 module.exports = {
   // 基础配置
-  base: '/Web-JavaScript/', // 部署站点的基础路径
-  description: 'JavaScript相关知识点',
+  base: "/Web-JavaScript/", // 部署站点的基础路径
+  description: "JavaScript相关知识点",
   locales: {
     // 默认标题
-    '/': {
-      title: 'JavaScript笔记',
-      description: ''
-    }
+    "/": {
+      title: "JavaScript笔记",
+      description: "",
+    },
   },
   markdown: {
-    lineNumbers: true // 代码块显示行号
+    lineNumbers: true, // 代码块显示行号
   },
   head: [
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js'
-    }],
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js'
-    }],
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js'
-    }],
-    ['script', {
-      src: 'https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js'
-    }],
-    // 添加链接 pwa 的 manifest 如果需要
     [
-      'link',
+      "script",
       {
-        rel: 'icon',
-        href: '/favicon.ico'
-      }
-    ],
-    [
-      'meta',
-      {
-        name: 'apple-mobile-web-app-capable',
-        content: 'yes'
-      }
-    ],
-    [
-      'meta',
-      {
-        name: 'apple-mobile-web-app-status-bar-style',
-        content: 'black'
-      }
-    ],
-    [
-      'meta',
-      {
-        name: 'msapplication-TileColor',
-        content: '#000000'
-      }
-    ]
-  ],
-  plugins: [
-    'demo-block',
-    // you can use this plugin multiple times
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'right',
-        defaultTitle: '',
+        src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js",
       },
     ],
     [
-      'vuepress-plugin-container',
+      "script",
       {
-        type: 'theorem',
-        before: info => `<div class="theorem"><p class="title">${info}</p>`,
-        after: '</div>',
+        src:
+          "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js",
+      },
+    ],
+    // 添加链接 pwa 的 manifest 如果需要
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "/favicon.ico",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "apple-mobile-web-app-capable",
+        content: "yes",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "apple-mobile-web-app-status-bar-style",
+        content: "black",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "msapplication-TileColor",
+        content: "#000000",
+      },
+    ],
+  ],
+  plugins: [
+    "demo-block",
+    // you can use this plugin multiple times
+    [
+      "vuepress-plugin-container",
+      {
+        type: "right",
+        defaultTitle: "",
+      },
+    ],
+    [
+      "vuepress-plugin-container",
+      {
+        type: "theorem",
+        before: (info) => `<div class="theorem"><p class="title">${info}</p>`,
+        after: "</div>",
       },
     ],
 
     // this is how VuePress Default Theme use this plugin
     [
-      'vuepress-plugin-container',
+      "vuepress-plugin-container",
       {
-        type: 'tip',
+        type: "tip",
         defaultTitle: {
-          '/': 'TIP',
-          '/zh/': '提示',
+          "/": "TIP",
+          "/zh/": "提示",
         },
       },
     ],
   ],
   port: 3009,
-  dest: 'dist', // 指定 vuepress build 的输出目录
+  dest: "dist", // 指定 vuepress build 的输出目录
   serviceWorker: true, // pwa
 
   // 主题配置
   themeConfig: {
     editLinks: true,
-    docsDir: 'src', // 假如文档不是放在仓库的根目录下
+    docsDir: "src", // 假如文档不是放在仓库的根目录下
     locales: {
-      '/': {
-        docsBranch: 'master', // 假如文档放在一个特定的分支下
+      "/": {
+        docsBranch: "master", // 假如文档放在一个特定的分支下
         editLinks: true, // 启用编辑
         editLinkText: '在github上编辑此页',
         lastUpdated: '上次更新', // 获取每个文件最后一次 git 提交的时间戳
@@ -230,60 +243,69 @@ module.exports = {
             '14.data',
             '15.api'
           ],
-          '/base/oop/': [ //二、面向对象程序设计
-            '1.objectOriented',
-            '2.constructor',
-            '3.prototype',
-            '4.function',
-            '5.this',
-            '6.origin',
-            '7.extends',
-            '8.jQuery',
-            '9.lodash'
+          "/base/oop/": [
+            //二、面向对象程序设计
+            "1.objectOriented",
+            "2.constructor",
+            "3.prototype",
+            "4.function",
+            "5.this",
+            "6.origin",
+            "7.extends",
+            "8.jQuery",
+            "9.lodash",
           ],
-          '/source/browser/': [ //三、同步异步编程及浏览器渲染机制
-            '1.browser',
-            '2.tree',
-            '3.reflow',
-            '4.async',
-            '5.eventLoop',
-            '6.microtaskMacrotask',
-            '7.crp',
-            '8.skeleton',
-            '9.test'
+          "/source/promise/": [
+            "1.index",
           ],
-          '/base/mobile/': [//移动端开发
-            'skill',
-            '1',
-            '2',
-            '3',
-            '4',
-            '5',
-            '6',
-            '7',
-            '8',
-            '9',
-            '10',
-            'bug',
-            'webpack',
-            'vscode',
-            'test',
-            'prem',
-            'i18n'
+          "/source/browser/": [
+            //三、同步异步编程及浏览器渲染机制
+            "1.browser",
+            "2.tree",
+            "3.reflow",
+            "4.async",
+            "5.eventLoop",
+            "6.microtaskMacrotask",
+            "7.crp",
+            "8.skeleton",
+            "9.test",
           ],
-          '/base/dom/': [ //四、DOM事件及设计模式
-            '1.event'
+          "/base/mobile/": [
+            //移动端开发
+            "skill",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "bug",
+            "webpack",
+            "vscode",
+            "test",
+            "prem",
+            "i18n",
           ],
-          '/base/es6/': [ //五、ES6+核心知识和源码分析
-            '1.let',
+          "/base/dom/": [
+            //四、DOM事件及设计模式
+            "1.event",
           ],
-          '/base/6.http/': [ //六、AJAX/HTTP前后端数据通信
-            '1.http',
-            '2.https',
-            '3.tcp',
-            '4.catch',
-            '5.dns',
-            '6.http',
+          "/base/es6/": [
+            //五、ES6+核心知识和源码分析
+            "1.scope",
+            "2.constant",
+            "3.deconstruction",
+            "4.string",
+            "5.function",
+            "6.object",
+            "7.class",
+            "8.general",
+            "9.collect",
+            "10.module"
           ],
 // 专项知识
           '/special/performance/': [ //性能优化
@@ -366,30 +388,36 @@ module.exports = {
           '/senior/utils/': [
             '1.index',
           ],
-          '/read/book1/': [
-            'inde',
-            'chapter1',
-            'chapter2',
-            'chapter3',
-            'chapter4',
-            'chapter5',
-            'chapter6',
-            'chapter7'
+          "/senior/crossDomain/": [
+            //跨域
+            "inde",
+            "1.demote",
+            "2.cors",
+            "3.nginx",
+            "4.http-proxy-middleware",
+            "5.jsonp",
+            "6.domain",
+            "7.name",
+            "8.hash",
+            "9.postMessage",
+            "10.webSocket",
           ],
-          '/read/book2/': [
-            'inde',
+          "/read/book1/": [
+            "inde",
+            "chapter1",
+            "chapter2",
+            "chapter3",
+            "chapter4",
+            "chapter5",
+            "chapter6",
+            "chapter7",
           ],
-          '/read/book3/': [
-            'inde',
-          ],
-          '/read/book4/': [
-            'inde',
-          ],
-          '/read/book5/': [
-            'inde',
-          ],
-        }
-      }
-    }
+          "/read/book2/": ["inde"],
+          "/read/book3/": ["inde"],
+          "/read/book4/": ["inde"],
+          "/read/book5/": ["inde"],
+        },
+      },
+    },
   },
-}
+};

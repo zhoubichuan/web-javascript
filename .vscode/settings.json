@@ -1,2 +1,6 @@
 {
+    "workbench.colorCustomizations": {
+        "titleBar.activeForeground": "#FAF9FE"
+    },
+    "winopacity.opacity": 100
 }
