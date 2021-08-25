@@ -116,40 +116,28 @@ module.exports = {
         nav: [{
           text: '基础知识',
           items: [{
-            text: '一.html',
+            text: '一.HTML & H5',
             link: '/base/1.html/1.三栏布局'
           },
           {
-            text: '二.css',
+            text: '二.CSS & CSS3',
             link: '/base/2.css/1.清除浮动'
           },
           {
-            text: '三.javascript',
+            text: '三.JavaScript',
             link: '/base/3.javascript/1.预解释'
           },
           {
-            text: '一.堆栈内存和闭包作用域',
-            link: '/base/1.stack/1.dataType'
-          },
-          {
-            text: '二.面向对象',
-            link: '/base/oop/1.objectOriented'
-          },
-          {
-            text: '三.移动WebApp',
+            text: '四.移动WebApp',
             link: '/base/mobile/skill',
-          },
-          {
-            text: '四.DOM事件',
-            link: '/base/dom/1.event'
           },
           {
             text: '五.ES6',
             link: '/base/es6/1.let'
           },
           {
-            text: '六.网络请求',
-            link: '/base/6.http/1.http'
+            text: '一.堆栈内存和闭包作用域',
+            link: '/base/1.stack/1.dataType'
           }
           ]
         },
@@ -183,6 +171,10 @@ module.exports = {
             text: '七.前端测试',
             link: '/special/test/1.index',
           },
+          {
+            text: '八.网络请求',
+            link: '/special/http/1.http'
+          }
           ]
         },
         {
@@ -279,7 +271,7 @@ module.exports = {
             '30.JS中的函数参数传递到底是按值传递还是按引用传递'
           ],
           '/base/1.stack/': [ //一、堆栈内存和闭包作用域
-            '1.dataType', //9 种数据类型区别及相互转换
+            '1.dataType',
             '2.lexicalAnalysis',
             '3.heapStack',
             '4.bottomLayerOperation',
@@ -291,20 +283,6 @@ module.exports = {
             '11.data',
             '12.async',
             '13.module',
-            '14.data',
-            '15.api'
-          ],
-          "/base/oop/": [
-            //二、面向对象程序设计
-            "1.objectOriented",
-            "2.constructor",
-            "3.prototype",
-            "4.function",
-            "5.this",
-            "6.origin",
-            "7.extends",
-            "8.jQuery",
-            "9.lodash",
           ],
           "/source/promise/": [
             "1.index",
@@ -340,10 +318,6 @@ module.exports = {
             "test",
             "prem",
             "i18n",
-          ],
-          "/base/dom/": [
-            //四、DOM事件及设计模式
-            "1.event",
           ],
           "/base/es6/": [
             //五、ES6+核心知识和源码分析
@@ -429,7 +403,13 @@ module.exports = {
           '/special/test/': [ // 测试
             '1.index'
           ],
-
+          '/special/http/': [ // 测试
+            '1.http',
+            '2.https',
+            '3.tcp',
+            '4.catch',
+            '5.dns'
+          ],
 // 高级知识
           '/senior/micro/': [
             '1.index'
