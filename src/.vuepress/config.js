@@ -169,7 +169,7 @@ module.exports = {
           },
           {
             text: '四.安全防范',
-            link: '/special/security/1.xss'
+            link: '/special/security/1.index'
           },
           {
             text: '五.设计模式',
@@ -381,6 +381,7 @@ module.exports = {
             '1.index'
           ],
           '/special/security/': [ //前端安全
+            '1.index',
             '1.xss',
             '2.csrf',
             '3.doos',
@@ -414,7 +415,7 @@ module.exports = {
           ],
           '/special/cross/': [//跨域
             '1.index',
-            '1.demote',
+            '1.browser',
             '2.cors',
             '3.nginx',
             '4.http-proxy-middleware',
@@ -425,7 +426,7 @@ module.exports = {
             '9.postMessage',
             '10.webSocket',
           ],
-          '/special/test/': [ //文件上传下载
+          '/special/test/': [ // 测试
             '1.index'
           ],
 
@@ -471,4 +472,4 @@ module.exports = {
       },
     },
   },
-};
+}
