@@ -212,19 +212,19 @@ module.exports = {
             link: '/read/book1/inde'
           },
           {
-            text: '二、编程艺术',
+            text: '二.编程艺术',
             link: '/read/book2/inde'
           },
           {
-            text: '三、你不知道的JS',
+            text: '三.你不知道的JS',
             link: '/read/book3/inde'
           },
           {
-            text: '四、JS设计与开发',
+            text: '四.JS设计与开发',
             link: '/read/book4/inde'
           },
           {
-            text: '五、高性能JS',
+            text: '五.高性能JS',
             link: '/read/book5/inde'
           }
           ]
