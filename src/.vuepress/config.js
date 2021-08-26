@@ -129,14 +129,14 @@ module.exports = {
           },
           {
             text: '四.移动WebApp',
-            link: '/base/mobile/skill',
+            link: '/base/mobile/1.index',
           },
           {
-            text: '五.ES6',
+            text: '五.ES6要点记录',
             link: '/base/es6/1.let'
           },
           {
-            text: '一.堆栈内存和闭包作用域',
+            text: ' 六.其他知识点',
             link: '/base/1.stack/1.dataType'
           }
           ]
@@ -272,15 +272,7 @@ module.exports = {
           ],
           '/base/1.stack/': [ //一、堆栈内存和闭包作用域
             '1.dataType',
-            '2.lexicalAnalysis',
             '3.heapStack',
-            '4.bottomLayerOperation',
-            '5.scope',
-            '7.closure',
-            '8.highLevelProgramming',
-            '9.utils',
-            '10.ui',
-            '11.data',
             '12.async',
             '13.module',
           ],
@@ -301,8 +293,8 @@ module.exports = {
           ],
           "/base/mobile/": [
             //移动端开发
-            "skill",
-            "1",
+            "1.index",
+            "1.page",
             "2",
             "3",
             "4",
@@ -312,12 +304,6 @@ module.exports = {
             "8",
             "9",
             "10",
-            "bug",
-            "webpack",
-            "vscode",
-            "test",
-            "prem",
-            "i18n",
           ],
           "/base/es6/": [
             //五、ES6+核心知识和源码分析
