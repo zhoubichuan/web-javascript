@@ -134,10 +134,6 @@ module.exports = {
           {
             text: '五.ES6要点记录',
             link: '/base/es6/1.let'
-          },
-          {
-            text: ' 六.其他知识点',
-            link: '/base/1.stack/1.dataType'
           }
           ]
         },
@@ -241,7 +237,7 @@ module.exports = {
           ],
           '/base/3.javascript/': [ //一、堆栈内存和闭包作用域
             '1.预解释', //9 种数据类型区别及相互转换
-            '2.闭包',
+            '2.heapStack',
             '3.this关键字',
             '4.call和apply深入',
             '5.作用域和作用域链',
@@ -257,7 +253,7 @@ module.exports = {
             '15.事件驱动和事件发射器',
             '16.拖拽和原生拖拽事件',
             '17.手机的 touch gesture 事件模型',
-            '18.Ajax',
+            '18.copy',
             '19.函数中参数的传递方式',
             '20.async',
             '21.nodeJS',
@@ -270,10 +266,6 @@ module.exports = {
             '28.bind实现原理',
             '29.数据类型检查常用的方法',
             '30.module'
-          ],
-          '/base/1.stack/': [ //一、堆栈内存和闭包作用域
-            '1.dataType',
-            '3.heapStack'
           ],
           "/source/promise/": [
             "1.index",
@@ -317,7 +309,7 @@ module.exports = {
             "9.collect",
             "10.module"
           ],
-// 专项知识
+          // 专项知识
           '/special/performance/': [ //性能优化
             '1.index',
             '1.CDN', //cdn
@@ -395,7 +387,7 @@ module.exports = {
             '4.catch',
             '5.dns'
           ],
-// 高级知识
+          // 高级知识
           '/senior/micro/': [
             '1.index'
           ],
