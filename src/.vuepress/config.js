@@ -259,6 +259,7 @@ module.exports = {
             '17.手机的 touch gesture 事件模型',
             '18.Ajax',
             '19.函数中参数的传递方式',
+            '20.async',
             '21.nodeJS',
             '22.Ajax 同源策略和跨域',
             '23.惰性函数',
@@ -268,13 +269,11 @@ module.exports = {
             '27.模拟new的实现',
             '28.bind实现原理',
             '29.数据类型检查常用的方法',
-            '30.JS中的函数参数传递到底是按值传递还是按引用传递'
+            '30.module'
           ],
           '/base/1.stack/': [ //一、堆栈内存和闭包作用域
             '1.dataType',
-            '3.heapStack',
-            '12.async',
-            '13.module',
+            '3.heapStack'
           ],
           "/source/promise/": [
             "1.index",
