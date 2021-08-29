@@ -133,7 +133,7 @@ module.exports = {
           },
           {
             text: '五.ES6要点记录',
-            link: '/base/es6/1.let'
+            link: '/base/es6/1.scope'
           }
           ]
         },
