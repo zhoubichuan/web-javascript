@@ -9,7 +9,7 @@ const sidebar = {
     ],
     '/base/3.javascript/': [
         '1.预解释',
-        '2.heapStack',
+        '2.stack',
         '3.this关键字',
         '4.call和apply深入',
         '5.作用域和作用域链',
@@ -20,7 +20,7 @@ const sidebar = {
         '10.正则表达式及实战',
         '11.JSON和JSON的解析',
         '12.事件、事件传播和委托',
-        '13.DOM二级事件兼容性问题解决',
+        '13.event',
         '14.事件原理和自定义事件',
         '15.事件驱动和事件发射器',
         '16.拖拽和原生拖拽事件',
@@ -155,6 +155,9 @@ const sidebar = {
         '10.webSocket',
     ],
     '/special/test/': [ // 测试
+        '1.index'
+    ],
+    '/special/regexp/': [ // 测试
         '1.index'
     ],
     '/special/http/': [ // 测试

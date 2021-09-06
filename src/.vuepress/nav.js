@@ -59,6 +59,10 @@ const nav = [{
     {
         text: '八.网络请求',
         link: '/special/http/1.http'
+    },
+    {
+        text: '九.正则相关',
+        link: '/special/regexp/1.index'
     }
     ]
 },
