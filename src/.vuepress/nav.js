@@ -13,15 +13,19 @@ const nav = [{
         link: '/base/3.javascript/1.预解释'
     },
     {
-        text: '四.开发工具',
+        text: '四.项目开发流程',
+        link: '/base/project/1.index',
+    },
+    {
+        text: '五.开发工具',
         link: '/base/4.utils/1.index',
     },
     {
-        text: '五.移动WebApp',
+        text: '六.移动WebApp',
         link: '/base/mobile/1.index',
     },
     {
-        text: '六.ES6要点记录',
+        text: '七.ES6要点记录',
         link: '/base/es6/1.scope'
     }
     ]
@@ -93,23 +97,23 @@ const nav = [{
 {
     text: '阅读书籍',
     items: [{
-        text: '一.JavaScript高级程序设计',
+        text: '一.《JavaScript高级程序设计（第4版）》',
         link: '/read/book1/1.index'
     },
     {
-        text: '二.编程艺术',
+        text: '二.《JavaScript DOM编程艺术》',
         link: '/read/book2/1.index'
     },
     {
-        text: '三.你不知道的JS',
+        text: '三.《你不知道的JavaScript》',
         link: '/read/book3/1.index'
     },
     {
-        text: '四.JS设计与开发',
+        text: '四.《JavaScript设计模式与开发实践》',
         link: '/read/book4/1.index'
     },
     {
-        text: '五.高性能JS',
+        text: '五.《高性能JavaScript》',
         link: '/read/book5/1.index'
     }
     ]

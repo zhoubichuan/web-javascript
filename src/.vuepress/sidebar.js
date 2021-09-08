@@ -39,6 +39,9 @@ const sidebar = {
         '29.数据类型',
         '30.module'
     ],
+    '/base/project/': [
+        '1.index'
+    ],
     '/base/4.utils/': [
         '1.index',
         '2.editor',
