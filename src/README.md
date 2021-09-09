@@ -1,7 +1,7 @@
 ---
 lang: zh-CN
 home: true
-heroImage: ""
+heroImage: ./home.png
 actionText: 先睹为快 →
 actionLink: /base/1.html/1.三栏布局.html
 pageClass: page_index
@@ -17,11 +17,11 @@ meta:
         <div class="features">
         <div class="feature">
             <h2>基础知识</h2> 
-            <p>掌握HTML5、CSS3、JavaScript、ES6</p>
+            <p>掌握HTML & H5、CSS & CSS3、JavaScript、ES6</p>
         </div>
         <div class="feature">
             <h2>专项知识</h2> 
-            <p>熟练掌握性能优化、代码规范、监控、安全、断点续传、设计模式、跨域、测试、相关工具</p>
+            <p>熟练掌握性能优化、代码规范、前端监控、安全防范、断点续传、设计模式、跨域方式、前端测试、网络请求、正则相关</p>
         </div>
         <div class="feature">
             <h2>高级知识</h2> 
