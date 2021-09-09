@@ -40,7 +40,8 @@ const sidebar = {
         '30.module'
     ],
     '/base/project/': [
-        '1.index'
+        '1.index',
+        '1.uml'
     ],
     '/base/4.utils/': [
         '1.index',
