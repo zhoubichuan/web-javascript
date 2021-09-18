@@ -1,10 +1,10 @@
 {
-  "name": "zhoubichuan",
+  "name": "web-javascript",
   "version": "1.0.0",
-  "description": "js笔记",
+  "description": "",
   "main": "index.js",
   "author": "zhoubichaun@icloud.com",
-  "hommepage": "https://github.com/zhoubichuan/Web-JavaScript/",
+  "hommepage": "https://github.com/zhoubichuan/web-javascript/",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -16,10 +16,13 @@
     "gitee": "bash gitee.sh"
   },
   "devDependencies": {
-    "vuepress": "^0.14.4",
-    "vuepress-plugin-container": "^2.1.4"
-  },
-  "dependencies": {
-    "vuepress-plugin-demo-block": "^0.7.2"
+    "@vuepress/plugin-active-header-links": "^1.8.2",
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-blog": "^1.9.4",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "@vuepress/plugin-nprogress": "^1.8.2",
+    "@vuepress/plugin-pwa": "^1.8.2",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-boxx": "0.0.7"
   }
 }

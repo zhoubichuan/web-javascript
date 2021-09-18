@@ -46,7 +46,9 @@ const sidebar = {
     '/base/4.utils/': [
         '1.index',
         '2.editor',
-        '3.test'
+        '3.test',
+        '4.抓包',
+        '5.chrome'
     ],
     "/source/promise/": [
         "1.index",
