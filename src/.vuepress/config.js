@@ -71,6 +71,7 @@ module.exports = {
     ],
   ],
   plugins: [
+    '@vuepress/medium-zoom',
     "demo-block",
     // you can use this plugin multiple times
     [
