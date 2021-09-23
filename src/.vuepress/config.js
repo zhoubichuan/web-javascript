@@ -65,6 +65,7 @@ module.exports = {
     ],
   ],
   plugins: [
+    '@vuepress/medium-zoom',
     "demo-block",
     [
       "vuepress-plugin-container",
