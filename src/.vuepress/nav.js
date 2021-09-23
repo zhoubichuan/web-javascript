@@ -10,15 +10,15 @@ const nav = [{
     },
     {
         text: '三.JavaScript',
-        link: '/base/3.javascript/1.预解释'
+        link: '/base/3.javascript/1.index'
+    },
+    {
+        text: '四.Dom',
+        link: '/base/4.dom/1.index',
     },
     {
         text: '四.项目开发流程',
         link: '/base/project/1.index',
-    },
-    {
-        text: '五.开发工具',
-        link: '/base/4.utils/1.index',
     },
     {
         text: '六.移动WebApp',

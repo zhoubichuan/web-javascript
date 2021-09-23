@@ -5,7 +5,6 @@ module.exports = {
   base: "/web-javascript/", // 部署站点的基础路径
   description: "星光不问赶路人，时光不负有心人",
   locales: {
-    // 默认标题
     "/": {
       title: "JavaScript学习笔记",
       description: "",
@@ -41,13 +40,8 @@ module.exports = {
       },
     ],
     // 添加链接 pwa 的 manifest 如果需要
-    [
-      "link",
-      {
-        rel: "icon",
-        href: "/favicon.ico",
-      },
-    ],
+    ['link', { rel: 'icon', href: `/favicon.ico` }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     [
       "meta",
       {
@@ -72,7 +66,6 @@ module.exports = {
   ],
   plugins: [
     "demo-block",
-    // you can use this plugin multiple times
     [
       "vuepress-plugin-container",
       {
@@ -88,8 +81,6 @@ module.exports = {
         after: "</div>",
       },
     ],
-
-    // this is how VuePress Default Theme use this plugin
     [
       "vuepress-plugin-container",
       {
@@ -104,8 +95,6 @@ module.exports = {
   port: 3009,
   dest: "dist", // 指定 vuepress build 的输出目录
   serviceWorker: true, // pwa
-
-  // 主题配置
   themeConfig: {
     editLinks: true,
     docsDir: "src", // 假如文档不是放在仓库的根目录下
