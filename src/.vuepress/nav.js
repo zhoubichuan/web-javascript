@@ -13,8 +13,16 @@ const nav = [{
         link: '/base/3.javascript/1.index'
     },
     {
-        text: '四.Dom',
+        text: '四.Dom事件',
         link: '/base/4.dom/1.index',
+    },
+    {
+        text: '四.数据结构',
+        link: '/base/5.structure/1.index',
+    },
+    {
+        text: '四.数据类型',
+        link: '/base/6.type/1.index',
     },
     {
         text: '四.项目开发流程',

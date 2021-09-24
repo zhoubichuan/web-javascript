@@ -9,14 +9,12 @@ const sidebar = {
     ],
     '/base/3.javascript/': [
         '1.index',
+        '1.grammar',
+        '2.morphology',
         '3.analysis',
         '4.context',
-        '5.data',
-        '6.basic',
-        '7.reference',
-        '9.function',
-        '10.prototype',
-        '12.copy',
+        '8.EventLoop',
+        '5.closure',
         '14.scope',
         '17.async',
     ],
@@ -32,6 +30,18 @@ const sidebar = {
         '17.手机的 touch gesture 事件模型',
         '22.Ajax 同源策略和跨域',
         '26.内存管理',
+    ],
+    '/base/5.structure/': [
+        '1.index',
+        '5.data',
+    ],
+    '/base/6.type/': [
+        '1.index',
+        '6.basic',
+        '7.reference',
+        '9.function',
+        '10.prototype',
+        '12.copy',
     ],
     '/base/project/': [
         '1.index',
@@ -89,7 +99,6 @@ const sidebar = {
         '5.api',
         '6.form',
         '7.checkBox',
-        '8.EventLoop',
         '9.alert',
         '10.serviceRender', //服务端渲染
         '11.debounceAndThrottle', //防抖与节流
