@@ -16,7 +16,7 @@ const sidebar = {
         '5.context',
         '6.closure',
         '7.async',
-        '8.eventloop',
+        '8.eventloop1',
     ],
     '/base/4.dom/': [
         '1.index',

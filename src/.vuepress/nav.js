@@ -13,7 +13,7 @@ const nav = [{
         link: '/base/3.javascript/1.index'
     },
     {
-        text: '四.Dom事件',
+        text: '四.dom相关基础',
         link: '/base/4.dom/1.index',
     },
     {
