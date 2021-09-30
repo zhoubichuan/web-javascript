@@ -13,27 +13,27 @@ const nav = [{
         link: '/base/3.javascript/1.index'
     },
     {
-        text: '四.dom相关基础',
+        text: '四.事件机制',
         link: '/base/4.dom/1.index',
     },
     {
-        text: '四.数据结构',
+        text: '五.数据结构',
         link: '/base/5.structure/1.index',
     },
     {
-        text: '四.数据类型',
+        text: '六.数据类型',
         link: '/base/6.type/1.index',
     },
     {
-        text: '四.项目开发流程',
+        text: '七.开发流程',
         link: '/base/project/1.index',
     },
     {
-        text: '六.移动WebApp',
+        text: '八.WebApp',
         link: '/base/mobile/1.index',
     },
     {
-        text: '七.ES6要点记录',
+        text: '九.ES6要点记录',
         link: '/base/es6/1.scope'
     }
     ]

@@ -34,7 +34,8 @@ const sidebar = {
     ],
     '/base/5.structure/': [
         '1.index',
-        '5.data',
+        '1.stack',
+        '2.queue'
     ],
     '/base/6.type/': [
         '1.index',
