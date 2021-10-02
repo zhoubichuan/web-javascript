@@ -60,7 +60,7 @@ const sidebar = {
         "1.index",
     ],
     "/source/browser/": [
-        //三、同步异步编程及浏览器渲染机制
+        '1.index',
         "1.browser",
         "2.tree",
         "3.reflow",
@@ -70,6 +70,9 @@ const sidebar = {
         "7.crp",
         "8.skeleton",
         "9.test",
+    ],
+    "/source/api/": [
+        "1.index",
     ],
     "/base/mobile/": [
         //移动端开发
@@ -101,15 +104,15 @@ const sidebar = {
     // 专项知识
     '/special/performance/': [ //性能优化
         '1.index',
-        '1.CDN', //cdn
-        '2.cache', //缓存
+        '1.cdn', //cdn
+        '2.canvas', //缓存
         '3.store',
-        '4.render',
+        '4.img',
         '5.api',
         '6.form',
-        '7.checkBox',
-        '9.alert',
-        '10.serviceRender', //服务端渲染
+        '7.seo',
+        '9.lazy',
+        '10.ssr', //服务端渲染
         '11.debounceAndThrottle', //防抖与节流
         '12.webpack'
     ],
@@ -172,6 +175,7 @@ const sidebar = {
         '1.index'
     ],
     '/special/http/': [ // 测试
+        '1.index',
         '1.http',
         '2.https',
         '3.tcp',
