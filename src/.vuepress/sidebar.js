@@ -102,9 +102,9 @@ const sidebar = {
         "10.module"
     ],
     // 专项知识
-    '/special/performance/': [ //性能优化
+    '/special/optimize/': [ //性能优化
         '1.index',
-        '1.cdn', //cdn
+        '1.cdn1', //cdn
         '2.canvas', //缓存
         '3.store',
         '4.img',

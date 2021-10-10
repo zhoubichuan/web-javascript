@@ -45,7 +45,7 @@ const nav = [
         items: [
             {
                 text: '一.性能优化',
-                link: '/special/performance/1.index'
+                link: '/special/optimize/1.index'
             },
             {
                 text: '二.代码规范',
