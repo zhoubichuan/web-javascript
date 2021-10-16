@@ -104,7 +104,7 @@ const sidebar = {
     // 专项知识
     '/special/optimize/': [ //性能优化
         '1.index',
-        '1.cdn1', //cdn
+        '1.cdn', //cdn
         '2.canvas', //缓存
         '3.store',
         '4.img',
