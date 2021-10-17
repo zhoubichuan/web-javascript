@@ -3,19 +3,19 @@ const nav = [
         text: '基础知识',
         items: [
             {
-                text: '一.HTML & H5',
+                text: '一.HTML部分',
                 link: '/base/1.html/1.三栏布局'
             },
             {
-                text: '二.CSS & CSS3',
+                text: '二.CSS部分',
                 link: '/base/2.css/1.清除浮动'
             },
             {
-                text: '三.JavaScript',
+                text: '三.JavaScript部分',
                 link: '/base/3.javascript/1.index'
             },
             {
-                text: '四.事件机制',
+                text: '四.浏览器部分',
                 link: '/base/4.dom/1.index',
             },
             {
@@ -31,11 +31,11 @@ const nav = [
                 link: '/base/project/1.index',
             },
             {
-                text: '八.WebApp',
+                text: '八.移动端部分',
                 link: '/base/mobile/1.index',
             },
             {
-                text: '九.ES6要点记录',
+                text: '九.ES6部分',
                 link: '/base/es6/1.scope'
             }
         ]
