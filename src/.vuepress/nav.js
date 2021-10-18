@@ -20,18 +20,14 @@ const nav = [
             },
             {
                 text: '五.数据类型',
-                link: '/base/6.type/1.index',
+                link: '/base/5.type/1.index',
             },
             {
                 text: '六.开发流程',
                 link: '/base/project/1.index',
             },
             {
-                text: '七.移动端部分',
-                link: '/base/mobile/1.index',
-            },
-            {
-                text: '八.ES6部分',
+                text: '七.ES6部分',
                 link: '/base/es6/1.scope'
             }
         ]
