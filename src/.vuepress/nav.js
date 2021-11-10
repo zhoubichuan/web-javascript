@@ -74,7 +74,7 @@ const nav = [
         ]
     },
     {
-        text: '高级知识',
+        text: '场景应用',
         items: [
             {
                 text: '一.微前端',
@@ -83,6 +83,10 @@ const nav = [
             {
                 text: '二.断点续传',
                 link: '/senior/file/1.index'
+            },
+            {
+                text: '三.视频播放',
+                link: '/senior/video/1.index'
             }
         ]
     },
