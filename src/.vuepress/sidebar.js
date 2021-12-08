@@ -184,7 +184,9 @@ const sidebar = {
     ],
     // 高级知识
     '/senior/micro/': [
-        '1.index'
+        '1.index',
+        '1.SingleSpa',
+        '2.qiankun'
     ],
     '/senior/file/': [
         '1.index'
