@@ -109,7 +109,7 @@ const sidebar = {
         '3.store',
         '4.img',
         '5.api',
-        '6.form',
+        '6.render',
         '7.seo',
         '9.lazy',
         '10.ssr', //服务端渲染
