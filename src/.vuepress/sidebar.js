@@ -114,7 +114,8 @@ const sidebar = {
         '9.lazy',
         '10.ssr', //服务端渲染
         '11.debounceAndThrottle', //防抖与节流
-        '12.webpack'
+        '12.webpack',
+        '13.pwa'
     ],
     '/special/standard/': [
         '1.index'
@@ -204,6 +205,22 @@ const sidebar = {
         "8.hash",
         "9.postMessage",
         "10.webSocket",
+    ],
+    '/senior/npm/': [
+        '1.index',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        '11',
+        '12',
+        '13',
+        '14',
     ],
     "/read/book1/": [
         "1.index",

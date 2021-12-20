@@ -91,6 +91,14 @@ const nav = [
             {
                 text: '二.断点续传',
                 link: '/senior/file/1.index'
+            },
+            {
+                text: '三.监控视频',
+                link: '/senior/video/1.index'
+            },
+            {
+                text: '三.包管理工具',
+                link: '/senior/npm/1.index'
             }
         ]
     },
