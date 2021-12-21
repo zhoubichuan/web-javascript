@@ -3,39 +3,31 @@ const nav = [
         text: '基础知识',
         items: [
             {
-                text: '一.HTML & H5',
+                text: '一.HTML & H5部分',
                 link: '/base/1.html/1.三栏布局'
             },
             {
-                text: '二.CSS & CSS3',
+                text: '二.CSS & CSS3部分',
                 link: '/base/2.css/1.清除浮动'
             },
             {
-                text: '三.JavaScript',
-                link: '/base/3.javascript/1.index'
+                text: '三.JavaScript部分',
+                link: '/base/3.js/1.index'
             },
             {
-                text: '四.事件机制',
+                text: '四.浏览器部分',
                 link: '/base/4.dom/1.index',
             },
             {
-                text: '五.数据结构',
-                link: '/base/5.structure/1.index',
+                text: '五.数据类型',
+                link: '/base/5.type/1.index',
             },
             {
-                text: '六.数据类型',
-                link: '/base/6.type/1.index',
-            },
-            {
-                text: '七.开发流程',
+                text: '六.开发流程',
                 link: '/base/project/1.index',
             },
             {
-                text: '八.WebApp',
-                link: '/base/mobile/1.index',
-            },
-            {
-                text: '九.ES6要点记录',
+                text: '七.ES6部分',
                 link: '/base/es6/1.scope'
             }
         ]
@@ -45,7 +37,7 @@ const nav = [
         items: [
             {
                 text: '一.性能优化',
-                link: '/special/performance/1.index'
+                link: '/special/optimize/1.index'
             },
             {
                 text: '二.代码规范',
@@ -82,7 +74,7 @@ const nav = [
         ]
     },
     {
-        text: '高级知识',
+        text: '场景应用',
         items: [
             {
                 text: '一.微前端',
@@ -99,6 +91,10 @@ const nav = [
             {
                 text: '三.包管理工具',
                 link: '/senior/npm/1.index'
+            },
+            {
+                text: '四.视频播放',
+                link: '/senior/video/1.index'
             }
         ]
     },

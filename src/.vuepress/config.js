@@ -13,57 +13,6 @@ module.exports = {
   markdown: {
     lineNumbers: true, // 代码块显示行号
   },
-  head: [
-    [
-      "script",
-      {
-        src: "https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js",
-      },
-    ],
-    [
-      "script",
-      {
-        src:
-          "https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js",
-      },
-    ],
-    [
-      "script",
-      {
-        src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js",
-      },
-    ],
-    [
-      "script",
-      {
-        src: "https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js",
-      },
-    ],
-    // 添加链接 pwa 的 manifest 如果需要
-    ['link', { rel: 'icon', href: `/favicon.ico` }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
-    [
-      "meta",
-      {
-        name: "apple-mobile-web-app-capable",
-        content: "yes",
-      },
-    ],
-    [
-      "meta",
-      {
-        name: "apple-mobile-web-app-status-bar-style",
-        content: "black",
-      },
-    ],
-    [
-      "meta",
-      {
-        name: "msapplication-TileColor",
-        content: "#000000",
-      },
-    ],
-  ],
   plugins: [
     '@vuepress/medium-zoom',
     "demo-block",
