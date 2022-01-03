@@ -3,7 +3,7 @@ const nav = require("./nav");
 module.exports = {
   // 基础配置
   base: "/web-javascript/", // 部署站点的基础路径
-  description: "星光不问赶路人，时光不负有心人",
+  description: "星光不问赶路人 时光不负有心人",
   locales: {
     "/": {
       title: "JavaScript学习笔记",

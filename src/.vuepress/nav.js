@@ -15,7 +15,7 @@ const nav = [
                 link: '/base/3.js/1.index'
             },
             {
-                text: '四.浏览器部分',
+                text: '四.浏览器',
                 link: '/base/4.dom/1.index',
             },
             {
@@ -40,7 +40,7 @@ const nav = [
                 link: '/special/optimize/1.index'
             },
             {
-                text: '二.代码规范',
+                text: '二.前端规范',
                 link: '/special/standard/1.index'
             },
             {
@@ -48,7 +48,7 @@ const nav = [
                 link: '/special/monitor/1.index'
             },
             {
-                text: '四.安全防范',
+                text: '四.前端安全',
                 link: '/special/security/1.index'
             },
             {
@@ -64,12 +64,16 @@ const nav = [
                 link: '/special/test/1.index',
             },
             {
-                text: '八.网络请求',
+                text: '八.前端网络',
                 link: '/special/http/1.index'
             },
             {
-                text: '九.正则相关',
+                text: '九.正则表达',
                 link: '/special/regexp/1.index'
+            },
+            {
+                text: '十.浏览器',
+                link: '/special/10.browser/1.index'
             }
         ]
     },
