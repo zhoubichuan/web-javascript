@@ -20,7 +20,7 @@ meta:
             <p>掌握HTML & H5、CSS & CSS3、JavaScript、ES6</p>
         </div>
         <div class="feature">
-            <h2>专项知识</h2> 
+            <h2>进阶知识</h2> 
             <p>熟练掌握性能优化、代码规范、前端监控、安全防范、断点续传、设计模式、跨域方式、前端测试、网络请求、正则相关</p>
         </div>
         <div class="feature">
@@ -28,12 +28,16 @@ meta:
             <p>掌握网络请求、WebApp、Sass</p>
         </div>
         <div class="feature">
-            <h2>原理知识</h2> 
-            <p>掌握浏览器、Promise等相关原理</p>
+            <h2>专项知识</h2> 
+            <p>熟练掌握性能优化、代码规范、前端监控、安全防范、断点续传、设计模式、跨域方式、前端测试、网络请求、正则相关</p>
         </div>
         <div class="feature">
-            <h2>阅读书籍</h2> 
+            <h2>场景知识</h2> 
             <p>《JavaScript高级程序设计（第4版）》、《JavaScript DOM编程艺术》、《你不知道的JavaScript》、《JavaScript设计模式与开发实践》、《高性能JavaScript》</p>
+        </div>
+        <div class="feature">
+            <h2>原理知识</h2> 
+            <p>掌握浏览器、Promise等相关原理</p>
         </div>
         </div>
     </div>
