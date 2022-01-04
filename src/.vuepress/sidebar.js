@@ -84,9 +84,22 @@ const sidebar = {
     "1.uml"
   ],
   "/3.senior/1.npm/": [
-    "1.index"
+    "1.index",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
   ],
-  "/3.senior/2.design//": [
+  "/3.senior/2.design/": [
     //设计模式
     "1.index",
     "1.factory",
@@ -191,7 +204,9 @@ const sidebar = {
     "1.index",
   ],
   "/5.scene/1.micro/": [
-    "1.index"
+    "1.index",
+    '1.singlespa',
+    '2.qiankun'
   ],
   "/5.scene/2.file/": [
     "1.index"
