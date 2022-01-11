@@ -40,7 +40,7 @@ const nav = [
                 link: '/2.advanced/es6/1.scope'
             },
             {
-                text: '六.前端开发流程',
+                text: '六.前端工程化',
                 link: '/2.advanced/project/1.index',
             }
         ]
@@ -49,7 +49,7 @@ const nav = [
         text: '高级知识',
         items: [
             {
-                text: '一.包管理工具',
+                text: '一.包管理器',
                 link: '/3.senior/1.npm/1.index'
             },
             {
@@ -108,10 +108,10 @@ const nav = [
     {
         text: '场景应用',
         items: [
-            {
-                text: '一.微前端',
-                link: '/5.scene/1.micro/1.index'
-            },
+            // {
+            //     text: '一.微前端',
+            //     link: '/5.scene/1.micro/1.index'
+            // },
             {
                 text: '二.断点续传',
                 link: '/5.scene/2.file/1.index'

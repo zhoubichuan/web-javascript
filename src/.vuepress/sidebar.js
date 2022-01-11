@@ -203,11 +203,11 @@ const sidebar = {
     // 测试
     "1.index",
   ],
-  "/5.scene/1.micro/": [
-    "1.index",
-    '1.singlespa',
-    '2.qiankun'
-  ],
+  // "/5.scene/1.micro/": [
+  //   "1.index",
+  //   '1.singlespa',
+  //   '2.qiankun'
+  // ],
   "/5.scene/2.file/": [
     "1.index"
   ],
