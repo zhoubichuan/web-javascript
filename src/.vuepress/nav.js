@@ -75,14 +75,14 @@ const nav = [
         ]
     },
     {
-        text: '专项知识',
+        text: '工程化基础',
         items: [
             {
-                text: '一.正则表达',
+                text: '一.脚手架',
                 link: '/4.special/1.regexp/1.index'
             },
             {
-                text: '二.前端规范',
+                text: '二.包管理',
                 link: '/4.special/2.standard/1.index'
             },
             {
@@ -130,11 +130,11 @@ const nav = [
                 link: '/6.source/1.promise/1.index'
             },
             {
-                text: '二.浏览器原理',
+                text: '二.浏览器',
                 link: '/6.source/browser/1.index'
             },
             {
-                text: '三.浏览器 API ',
+                text: '三.JavaScript引擎 ',
                 link: '/6.source/api/1.index'
             }
         ]

@@ -1,15 +1,21 @@
 const sidebar = {
   "/1.base/1.html/": [
     "1.index",
-    '2.元信息类标签',
-    '3.HTML5离线缓存原理',
-    '4.CanvasAPI',
-    '5.SVGAPI'
+    '1.element',
+    '2.attrs',
+    '3.events',
+    '4.code',
+
   ],
   "/1.base/2.css/": [
     "1.index",
-    "2.3d旋转色子",
-    "3.水平垂直居中"
+    "1.grammar",
+    "2.select",
+    "3.position",
+    "4.layout",
+    "5.style",
+    '6.animation',
+    '7.yong'
   ],
   "/1.base/3.javascript/": [
     "1.index",
