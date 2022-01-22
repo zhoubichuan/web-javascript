@@ -29,7 +29,22 @@ const sidebar = {
     "8.async",
     "9.eventloop",
   ],
-
+  "/1.base/4.es6/": [
+    "1.scope",
+    "2.constant",
+    "3.deconstruction",
+    "4.string",
+    "5.function",
+    "6.object",
+    "7.class",
+    "8.general",
+    "9.collect",
+    "10.module",
+  ],
+  "/1.base/5.project/": [
+    "1.index",
+    "1.uml"
+  ],
   "/2.advanced/1.h5/": [
     "1.index",
     "1.page",
@@ -73,37 +88,13 @@ const sidebar = {
     "10.prototype",
     "12.copy",
   ],
-  "/2.advanced/es6/": [
-    "1.scope",
-    "2.constant",
-    "3.deconstruction",
-    "4.string",
-    "5.function",
-    "6.object",
-    "7.class",
-    "8.general",
-    "9.collect",
-    "10.module",
-  ],
-  "/2.advanced/project/": [
+  "/3.senior/1.security/": [
+    //前端安全
     "1.index",
-    "1.uml"
-  ],
-  "/3.senior/1.npm/": [
-    "1.index",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "11",
-    "12",
-    "13",
-    "14",
+    "1.xss",
+    "2.csrf",
+    "3.doos",
+    "4.http",
   ],
   "/3.senior/2.design/": [
     //设计模式
@@ -172,25 +163,6 @@ const sidebar = {
     "1.index",
   ],
 
-  "/4.special/1.regexp/": [
-    // 测试
-    "1.index",
-  ],
-  "/4.special/2.standard/": [
-    "1.index"
-  ],
-  "/4.special/3.monitor/": [
-    //前端监控
-    "1.index",
-  ],
-  "/4.special/4.security/": [
-    //前端安全
-    "1.index",
-    "1.xss",
-    "2.csrf",
-    "3.doos",
-    "4.http",
-  ],
   "/4.special/5.cross/": [
     //跨域
     "1.index",
@@ -205,8 +177,42 @@ const sidebar = {
     "9.postMessage",
     "10.webSocket",
   ],
+
+  "/4.special/1.cli/": [
+    "1.index",
+  ],
+  "/4.special/2.package/": [
+    "1.index",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+  ],
+  "/4.special/3.dev/": [
+    "1.index"
+  ],
+  "/4.special/4.construct/": [
+    "1.index"
+  ],
+  "/4.special/5.standard/": [
+    "1.index"
+  ],
   "/4.special/6.test/": [
-    // 测试
+    "1.index",
+  ],
+  "/4.special/7.cicd/": [
+    "1.index",
+  ],
+  "/4.special/8.monitor/": [
     "1.index",
   ],
   // "/5.scene/1.micro/": [

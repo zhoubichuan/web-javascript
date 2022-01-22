@@ -13,6 +13,14 @@ const nav = [
             {
                 text: '三.JavaScript',
                 link: '/1.base/3.javascript/1.index'
+            },
+            {
+                text: '四.ECMAScript6',
+                link: '/1.base/4.es6/1.scope'
+            },
+            {
+                text: '五.前端工程化',
+                link: '/1.base/5.project/1.index',
             }
         ]
     },
@@ -35,22 +43,15 @@ const nav = [
                 text: '四.数据类型',
                 link: '/2.advanced/4.type/1.index',
             },
-            {
-                text: '五.ECMAScript6',
-                link: '/2.advanced/es6/1.scope'
-            },
-            {
-                text: '六.前端工程化',
-                link: '/2.advanced/project/1.index',
-            }
+
         ]
     },
     {
         text: '高级知识',
         items: [
             {
-                text: '一.包管理器',
-                link: '/3.senior/1.npm/1.index'
+                text: '一.前端安全',
+                link: '/3.senior/1.security/1.index'
             },
             {
                 text: '二.设计模式',
@@ -79,30 +80,32 @@ const nav = [
         items: [
             {
                 text: '一.脚手架',
-                link: '/4.special/1.regexp/1.index'
+                link: '/4.special/1.cli/1.index'
             },
             {
                 text: '二.包管理',
-                link: '/4.special/2.standard/1.index'
+                link: '/4.special/2.package/1.index'
             },
             {
-                text: '三.前端监控',
-                link: '/4.special/3.monitor/1.index'
+                text: '三.开发',
+                link: '/4.special/3.dev/1.index'
             },
             {
-                text: '四.前端安全',
-                link: '/4.special/4.security/1.index'
+                text: '四.构建',
+                link: '/4.special/4.construct/1.index'
             },
             {
-                text: '五.跨域方式',
-                link: '/4.special/5.cross/1.index',
+                text: '五.代码规范',
+                link: '/4.special/5.standard/1.index'
             },
             {
                 text: '六.前端测试',
                 link: '/4.special/6.test/1.index',
             },
-            
-            
+            {
+                text: '七.CI/CD',
+                link: '/4.special/7.cicd/1.index',
+            },
         ]
     },
     {
