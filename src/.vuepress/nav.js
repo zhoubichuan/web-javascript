@@ -16,7 +16,7 @@ const nav = [
             },
             {
                 text: '四.ECMAScript6',
-                link: '/1.base/4.es6/1.scope'
+                link: '/1.base/4.es6/1.index'
             },
             {
                 text: '五.前端工程化',

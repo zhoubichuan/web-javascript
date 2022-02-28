@@ -28,8 +28,11 @@ const sidebar = {
     "7.this",
     "8.async",
     "9.eventloop",
+    "10.dom",
+    "11.bom",
   ],
   "/1.base/4.es6/": [
+    "1.index",
     "1.scope",
     "2.constant",
     "3.deconstruction",
