@@ -48,19 +48,7 @@ const sidebar = {
     "1.index",
     "1.uml"
   ],
-  "/2.advanced/1.h5/": [
-    "1.index",
-    "1.page",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-  ],
+
   "/2.advanced/2.css3/": [
     "1.index",
   ],

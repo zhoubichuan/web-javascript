@@ -28,10 +28,6 @@ const nav = [
         text: '进阶知识',
         items: [
             {
-                text: '一.H5开发',
-                link: '/2.advanced/1.h5/1.index'
-            },
-            {
                 text: '二.CSS3',
                 link: '/2.advanced/2.css3/1.index'
             },
@@ -111,10 +107,6 @@ const nav = [
     {
         text: '场景应用',
         items: [
-            // {
-            //     text: '一.微前端',
-            //     link: '/5.scene/1.micro/1.index'
-            // },
             {
                 text: '二.断点续传',
                 link: '/5.scene/2.file/1.index'
