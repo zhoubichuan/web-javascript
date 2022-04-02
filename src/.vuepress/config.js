@@ -44,6 +44,9 @@ module.exports = {
   dest: "dist", // 指定 vuepress build 的输出目录
   serviceWorker: true, // pwa
   themeConfig: {
+    repo: 'https://github.com/zhoubichuan/web-javascript', // 源码地址
+    repoLabel: '查看源码', // (查看源码的)组件名称
+    docsBranch: 'master', // git 源仓库 仓库分支
     editLinks: true,
     docsDir: "src", // 假如文档不是放在仓库的根目录下
     locales: {

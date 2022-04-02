@@ -79,6 +79,20 @@ const sidebar = {
     "10.prototype",
     "12.copy",
   ],
+  "/2.advanced/5.cross/": [
+    //跨域
+    "1.index",
+    "1.browser",
+    "2.cors",
+    "3.nginx",
+    "4.http-proxy-middleware",
+    "5.jsonp",
+    "6.domain",
+    "7.name",
+    "8.hash",
+    "9.postMessage",
+    "10.webSocket",
+  ],
   "/3.senior/1.security/": [
     //前端安全
     "1.index",
@@ -154,20 +168,7 @@ const sidebar = {
     "1.index",
   ],
 
-  "/4.special/5.cross/": [
-    //跨域
-    "1.index",
-    "1.browser",
-    "2.cors",
-    "3.nginx",
-    "4.http-proxy-middleware",
-    "5.jsonp",
-    "6.domain",
-    "7.name",
-    "8.hash",
-    "9.postMessage",
-    "10.webSocket",
-  ],
+
 
   "/4.special/1.cli/": [
     "1.index",

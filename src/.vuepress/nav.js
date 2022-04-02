@@ -39,6 +39,10 @@ const nav = [
                 text: '四.数据类型',
                 link: '/2.advanced/4.type/1.index',
             },
+            {
+                text: '五.web跨域',
+                link: '/2.advanced/5.cross/1.index',
+            },
 
         ]
     },
@@ -46,7 +50,7 @@ const nav = [
         text: '高级知识',
         items: [
             {
-                text: '一.前端安全',
+                text: '一.web安全',
                 link: '/3.senior/1.security/1.index'
             },
             {
@@ -58,7 +62,7 @@ const nav = [
                 link: '/3.senior/3.browser/1.index'
             },
             {
-                text: '四.前端网络',
+                text: '四.web网络',
                 link: '/3.senior/4.network/1.index'
             },
             {
