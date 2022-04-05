@@ -15,6 +15,14 @@ const nav = [
                 link: '/1.base/3.javascript/1.index'
             },
             {
+                text: '四.Window',
+                link: '/1.base/4.window/1.index'
+            },
+            {
+                text: '五.Document',
+                link: '/1.base/5.document/1.index'
+            },
+            {
                 text: '四.ECMAScript6',
                 link: '/1.base/4.es6/1.index'
             },
