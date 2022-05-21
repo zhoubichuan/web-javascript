@@ -5,7 +5,6 @@ const sidebar = {
     '2.attrs',
     '3.events',
     '4.code',
-
   ],
   "/1.base/2.css/": [
     "1.index",
@@ -31,56 +30,10 @@ const sidebar = {
     "10.dom",
     "11.bom",
   ],
-  "/1.base/4.window/": [
-    "1.index",
-    "1.grammar",
-    "2.morphology",
-    "3.context",
-    "4.variableobj",
-    "5.scope",
-    "6.closure",
-    "7.this",
-    "8.async",
-    "9.eventloop",
-    "10.dom",
-    "11.bom",
-  ],
-  "/1.base/5.document/": [
-    "1.index",
-    "1.grammar",
-    "2.morphology",
-    "3.context",
-    "4.variableobj",
-    "5.scope",
-    "6.closure",
-    "7.this",
-    "8.async",
-    "9.eventloop",
-    "10.dom",
-    "11.bom",
-  ],
-  "/1.base/4.es6/": [
-    "1.index",
-    "1.scope",
-    "2.constant",
-    "3.deconstruction",
-    "4.string",
-    "5.function",
-    "6.object",
-    "7.class",
-    "8.general",
-    "9.collect",
-    "10.module",
-  ],
-  "/1.base/5.project/": [
-    "1.index",
-    "1.uml"
-  ],
-
-  "/2.advanced/2.css3/": [
+  "/2.advanced/1.h5/": [
     "1.index",
   ],
-  "/2.advanced/3.javascript/": [
+  "/2.advanced/2.js/": [
     "1.index",
     "1.grammar",
     "2.morphology",
@@ -92,7 +45,7 @@ const sidebar = {
     "8.async",
     "9.eventloop",
   ],
-  "/2.advanced/4.type/": [
+  "/2.advanced/3.type/": [
     "1.index",
     "1.number",
     "2.string",
@@ -107,20 +60,44 @@ const sidebar = {
     "10.prototype",
     "12.copy",
   ],
-  "/2.advanced/5.cross/": [
-    //跨域
+  "/2.advanced/4.window/": [
     "1.index",
-    "1.browser",
-    "2.cors",
-    "3.nginx",
-    "4.http-proxy-middleware",
-    "5.jsonp",
-    "6.domain",
-    "7.name",
-    "8.hash",
-    "9.postMessage",
-    "10.webSocket",
+    "1.grammar",
+    "2.morphology",
+    "3.context",
+    "4.variableobj",
+    "5.scope",
+    "6.closure",
+    "7.this",
+    "8.async",
+    "9.eventloop",
+    "10.dom",
+    "11.bom",
   ],
+  "/2.advanced/5.document/": [
+    "1.index",
+    "1.grammar",
+    "2.morphology",
+    "3.context",
+    "4.variableobj",
+    "5.scope",
+    "6.closure",
+    "7.this"
+  ],
+  "/2.advanced/6.es6/": [
+    "1.index",
+    "1.scope",
+    "2.constant",
+    "3.deconstruction",
+    "4.string",
+    "5.function",
+    "6.object",
+    "7.class",
+    "8.general",
+    "9.collect",
+    "10.module",
+  ],
+
   "/3.senior/1.security/": [
     //前端安全
     "1.index",
@@ -195,11 +172,34 @@ const sidebar = {
   "/3.senior/6.debugger/": [
     "1.index",
   ],
-
-
-
+  "/3.senior/7.cross/": [
+    //跨域
+    "1.index",
+    "1.browser",
+    "2.cors",
+    "3.nginx",
+    "4.http-proxy-middleware",
+    "5.jsonp",
+    "6.domain",
+    "7.name",
+    "8.hash",
+    "9.postMessage",
+    "10.webSocket",
+  ],
   "/4.special/1.cli/": [
     "1.index",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
   ],
   "/4.special/2.package/": [
     "1.index",
@@ -222,6 +222,10 @@ const sidebar = {
   ],
   "/4.special/4.construct/": [
     "1.index"
+  ],
+  "/4.special/5.project/": [
+    "1.index",
+    "1.uml"
   ],
   "/4.special/5.standard/": [
     "1.index"
@@ -247,7 +251,9 @@ const sidebar = {
     "1.index",
   ],
   "/6.source/1.promise/": [
-    "1.index"
+    "1.index",
+    "1",
+    "2"
   ],
   "/6.source/browser/": [
     "1.index",

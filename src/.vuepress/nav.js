@@ -3,62 +3,53 @@ const nav = [
         text: '基础知识',
         items: [
             {
-                text: '一.HTML',
+                text: '一.html',
                 link: '/1.base/1.html/1.index'
             },
             {
-                text: '二.CSS',
+                text: '二.css',
                 link: '/1.base/2.css/1.index'
             },
             {
-                text: '三.JavaScript',
+                text: '三.javascript',
                 link: '/1.base/3.javascript/1.index'
             },
-            {
-                text: '四.Window',
-                link: '/1.base/4.window/1.index'
-            },
-            {
-                text: '五.Document',
-                link: '/1.base/5.document/1.index'
-            },
-            {
-                text: '四.ECMAScript6',
-                link: '/1.base/4.es6/1.index'
-            },
-            {
-                text: '五.前端工程化',
-                link: '/1.base/5.project/1.index',
-            }
         ]
     },
     {
         text: '进阶知识',
         items: [
             {
-                text: '二.CSS3',
-                link: '/2.advanced/2.css3/1.index'
+                text: '一.h5',
+                link: '/2.advanced/1.h5/1.index'
             },
             {
-                text: '三.JS高级',
-                link: '/2.advanced/3.javascript/1.index'
+                text: '二.javascript',
+                link: '/2.advanced/2.js/1.index'
             },
             {
-                text: '四.数据类型',
-                link: '/2.advanced/4.type/1.index',
+                text: '三.数据类型',
+                link: '/2.advanced/3.type/1.index',
             },
             {
-                text: '五.web跨域',
-                link: '/2.advanced/5.cross/1.index',
+                text: '四.浏览器对象',
+                link: '/2.advanced/4.window/1.index'
             },
-
+            {
+                text: '五.文档对象',
+                link: '/2.advanced/5.document/1.index'
+            },
+            {
+                text: '七.es6',
+                link: '/2.advanced/6.es6/1.index'
+            }
         ]
     },
     {
         text: '高级知识',
         items: [
             {
-                text: '一.web安全',
+                text: '一.安全防范',
                 link: '/3.senior/1.security/1.index'
             },
             {
@@ -81,13 +72,17 @@ const nav = [
                 text: '六.前端调试',
                 link: '/3.senior/6.debugger/1.index'
             },
+            {
+                text: '七.跨域方式',
+                link: '/3.senior/7.cross/1.index',
+            },
         ]
     },
     {
-        text: '工程化基础',
+        text: '前端工程化',
         items: [
             {
-                text: '一.脚手架',
+                text: '一.工程化基础',
                 link: '/4.special/1.cli/1.index'
             },
             {
@@ -101,6 +96,10 @@ const nav = [
             {
                 text: '四.构建',
                 link: '/4.special/4.construct/1.index'
+            },
+            {
+                text: '五.开发流程',
+                link: '/4.special/5.project/1.index',
             },
             {
                 text: '五.代码规范',
@@ -141,7 +140,7 @@ const nav = [
                 link: '/6.source/browser/1.index'
             },
             {
-                text: '三.JavaScript引擎 ',
+                text: '三.js引擎 ',
                 link: '/6.source/api/1.index'
             }
         ]
