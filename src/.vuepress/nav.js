@@ -115,19 +115,19 @@ const nav = [
             },
         ]
     },
-    {
-        text: '场景应用',
-        items: [
-            {
-                text: '二.断点续传',
-                link: '/5.scene/2.file/1.index'
-            },
-            {
-                text: '三.监控视频',
-                link: '/5.scene/3.video/1.index'
-            }
-        ]
-    },
+    // {
+    //     text: '场景应用',
+    //     items: [
+    //         {
+    //             text: '二.断点续传',
+    //             link: '/5.scene/2.file/1.index'
+    //         },
+    //         {
+    //             text: '三.监控视频',
+    //             link: '/5.scene/3.video/1.index'
+    //         }
+    //     ]
+    // },
     {
         text: '原理知识',
         items: [
