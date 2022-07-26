@@ -60,30 +60,6 @@ const sidebar = {
     "10.prototype",
     "12.copy",
   ],
-  "/2.advanced/4.window/": [
-    "1.index",
-    "1.grammar",
-    "2.morphology",
-    "3.context",
-    "4.variableobj",
-    "5.scope",
-    "6.closure",
-    "7.this",
-    "8.async",
-    "9.eventloop",
-    "10.dom",
-    "11.bom",
-  ],
-  "/2.advanced/5.document/": [
-    "1.index",
-    "1.grammar",
-    "2.morphology",
-    "3.context",
-    "4.variableobj",
-    "5.scope",
-    "6.closure",
-    "7.this"
-  ],
   "/2.advanced/6.es6/": [
     "1.index",
     "1.scope",
@@ -97,17 +73,7 @@ const sidebar = {
     "9.collect",
     "10.module",
   ],
-
-  "/3.senior/1.security/": [
-    //前端安全
-    "1.index",
-    "1.xss",
-    "2.csrf",
-    "3.doos",
-    "4.http",
-  ],
   "/3.senior/2.design/": [
-    //设计模式
     "1.index",
     "1.factory",
     "2.abstract",
@@ -133,28 +99,6 @@ const sidebar = {
     "22.mediator",
     "23.interpreter",
   ],
-  "/3.senior/3.browser/": [
-    "1.index",
-    "1.compiler",
-    "2.garbage",
-    "3.context",
-    "4.clouser",
-    "5.v8",
-    "6.performance",
-    "16.拖拽和原生拖拽事件",
-    "17.手机的 touch gesture 事件模型",
-    "22.Ajax 同源策略和跨域",
-    "26.内存管理",
-  ],
-  "/3.senior/4.network/": [
-    // 测试
-    "1.index",
-    "1.http",
-    "2.https",
-    "3.tcp",
-    "4.catch",
-    "5.dns",
-  ],
   "/3.senior/5.optimize/": [
     "1.index",
     "1.cdn", //cdn
@@ -178,7 +122,7 @@ const sidebar = {
     "1.browser",
     "2.cors",
     "3.nginx",
-    "4.http-proxy-middleware",
+    "4.middleware",
     "5.jsonp",
     "6.domain",
     "7.name",
