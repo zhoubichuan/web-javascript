@@ -3,8 +3,16 @@ const nav = [
         text: '初级知识',
         items: [
             {
-                text: '一.js基础',
-                link: '/1.base/3.javascript/1.index'
+                text: '一.javascript',
+                link: '/1.base/1.js/1.index'
+            },
+            {
+                text: '二.dom基础',
+                link: '/1.base/2.dom/1.index'
+            },
+            {
+                text: '三.bom基础',
+                link: '/1.base/3.bom/1.index'
             },
         ]
     },
@@ -16,32 +24,32 @@ const nav = [
                 link: '/2.advanced/2.js/1.index'
             },
             {
-                text: '三.数据类型',
+                text: '二.数据类型',
                 link: '/2.advanced/3.type/1.index',
             },
             {
-                text: '七.ECMAScript6',
+                text: '三.ECMAScript6',
                 link: '/2.advanced/6.es6/1.index'
             }
         ]
     },
     {
-        text: '高级知识',
+        text: '专项知识',
         items: [
             {
-                text: '二.设计模式',
+                text: '一.设计模式',
                 link: '/3.senior/2.design/1.index',
             },
             {
-                text: '五.性能优化',
+                text: '二.性能优化',
                 link: '/3.senior/5.optimize/1.index'
             },
             {
-                text: '六.前端调试',
+                text: '三.前端调试',
                 link: '/3.senior/6.debugger/1.index'
             },
             {
-                text: '七.跨域方式',
+                text: '四.跨域方式',
                 link: '/3.senior/7.cross/1.index',
             },
         ]
@@ -60,7 +68,7 @@ const nav = [
     //     ]
     // },
     {
-        text: '原理知识',
+        text: '高级知识',
         items: [
             {
                 text: '一.Promise',

@@ -16,11 +16,11 @@ meta:
         <div id="large-header" class="large-header"></div>
         <div class="features">
         <div class="feature">
-            <h2>基础知识</h2> 
-            <p>掌握HTML & H5、CSS & CSS3、JavaScript、ES6</p>
+            <h2>初级知识</h2> 
+            <p>掌握javascript基础、认识dom以及bom</p>
         </div>
         <div class="feature">
-            <h2>进阶知识</h2> 
+            <h2>中级知识</h2> 
             <p>熟练掌握性能优化、代码规范、前端监控、安全防范、断点续传、设计模式、跨域方式、前端测试、网络请求、正则相关</p>
         </div>
         <div class="feature">
