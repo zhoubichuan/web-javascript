@@ -5,7 +5,6 @@ module.exports = {
   locales: {
     "/": {
       title: "JavaScript学习笔记",
-      description: "",
     },
   },
   markdown: {
