@@ -1,85 +1,94 @@
 const nav = [
     {
-        text: '基础知识',
+        text: '初级知识',
         items: [
             {
-                text: '一.HTML',
-                link: '/1.base/1.html/1.index'
+                text: '一.javascript',
+                link: '/1.base/1.js/1.index'
             },
             {
-                text: '二.CSS',
-                link: '/1.base/2.css/1.index'
+                text: '二.dom基础',
+                link: '/1.base/2.dom/1.index'
             },
             {
-                text: '三.JavaScript',
-                link: '/1.base/3.javascript/1.index'
+                text: '三.bom基础',
+                link: '/1.base/3.bom/1.index'
+            },
+        ]
+    },
+    {
+        text: '中级知识',
+        items: [
+            {
+                text: '一.js运行机制',
+                link: '/2.advanced/2.js/1.index'
             },
             {
-                text: '四.ECMAScript6',
-                link: '/1.base/4.es6/1.index'
+                text: '二.数据类型',
+                link: '/2.advanced/3.type/1.index',
             },
             {
-                text: '五.前端工程化',
-                link: '/1.base/5.project/1.index',
+                text: '三.ECMAScript6',
+                link: '/2.advanced/6.es6/1.index'
             }
         ]
     },
     {
-        text: '进阶知识',
+        text: '专项知识',
         items: [
             {
-                text: '一.H5开发',
-                link: '/2.advanced/1.h5/1.index'
+                text: '一.设计模式',
+                link: '/3.senior/2.design/1.index',
             },
             {
-                text: '二.CSS3',
-                link: '/2.advanced/2.css3/1.index'
+                text: '二.性能优化',
+                link: '/3.senior/5.optimize/1.index'
             },
             {
-                text: '三.JS高级',
-                link: '/2.advanced/3.javascript/1.index'
+                text: '三.前端调试',
+                link: '/3.senior/6.debugger/1.index'
             },
             {
-                text: '四.数据类型',
-                link: '/2.advanced/4.type/1.index',
+                text: '四.跨域方式',
+                link: '/3.senior/7.cross/1.index',
             },
-
         ]
     },
+    // {
+    //     text: '场景应用',
+    //     items: [
+    //         {
+    //             text: '二.断点续传',
+    //             link: '/5.scene/2.file/1.index'
+    //         },
+    //         {
+    //             text: '三.监控视频',
+    //             link: '/5.scene/3.video/1.index'
+    //         }
+    //     ]
+    // },
     {
         text: '高级知识',
         items: [
             {
-                text: '一.前端安全',
-                link: '/3.senior/1.security/1.index'
+                text: '一.Promise',
+                link: '/6.source/1.promise/1.index'
             },
             {
-                text: '二.设计模式',
-                link: '/3.senior/2.design/1.index',
+                text: '二.浏览器',
+                link: '/6.source/browser/1.index'
             },
             {
-                text: '三.浏览器',
-                link: '/3.senior/3.browser/1.index'
-            },
-            {
-                text: '四.前端网络',
-                link: '/3.senior/4.network/1.index'
-            },
-            {
-                text: '五.性能优化',
-                link: '/3.senior/5.optimize/1.index'
-            },
-            {
-                text: '六.前端调试',
-                link: '/3.senior/6.debugger/1.index'
-            },
+                text: '三.js引擎 ',
+                link: '/6.source/api/1.index'
+            }
         ]
     },
     {
-        text: '工程化基础',
+        text: '前端工程化',
         items: [
             {
-                text: '一.脚手架',
+                text: '一.工程化基础',
                 link: '/4.special/1.cli/1.index'
             },
             {
@@ -93,6 +102,10 @@ const nav = [
             {
                 text: '四.构建',
                 link: '/4.special/4.construct/1.index'
+            },
+            {
+                text: '五.开发流程',
+                link: '/4.special/5.project/1.index',
             },
             {
                 text: '五.代码规范',
@@ -109,41 +122,7 @@ const nav = [
         ]
     },
     {
-        text: '场景应用',
-        items: [
-            // {
-            //     text: '一.微前端',
-            //     link: '/5.scene/1.micro/1.index'
-            // },
-            {
-                text: '二.断点续传',
-                link: '/5.scene/2.file/1.index'
-            },
-            {
-                text: '三.监控视频',
-                link: '/5.scene/3.video/1.index'
-            }
-        ]
-    },
-    {
-        text: '原理知识',
-        items: [
-            {
-                text: '一.Promise',
-                link: '/6.source/1.promise/1.index'
-            },
-            {
-                text: '二.浏览器',
-                link: '/6.source/browser/1.index'
-            },
-            {
-                text: '三.JavaScript引擎 ',
-                link: '/6.source/api/1.index'
-            }
-        ]
-    },
-    {
-        text: '阅读书籍',
+        text: '书籍资料',
         items: [
             {
                 text: '一.《JavaScript高级程序设计（第4版）》',

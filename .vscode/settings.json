@@ -2,5 +2,6 @@
     "workbench.colorCustomizations": {
         "titleBar.activeForeground": "#FAF9FE"
     },
-    "winopacity.opacity": 100
+    "winopacity.opacity": 100,
+    "liveServer.settings.port": 5501
 }

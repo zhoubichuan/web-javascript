@@ -1,23 +1,5 @@
 const sidebar = {
-  "/1.base/1.html/": [
-    "1.index",
-    '1.element',
-    '2.attrs',
-    '3.events',
-    '4.code',
-
-  ],
-  "/1.base/2.css/": [
-    "1.index",
-    "1.grammar",
-    "2.select",
-    "3.position",
-    "4.layout",
-    "5.style",
-    '6.animation',
-    '7.yong'
-  ],
-  "/1.base/3.javascript/": [
+  "/1.base/1.js/": [
     "1.index",
     "1.grammar",
     "2.morphology",
@@ -31,40 +13,27 @@ const sidebar = {
     "10.dom",
     "11.bom",
   ],
-  "/1.base/4.es6/": [
+  "/1.base/2.dom/": [
     "1.index",
-    "1.scope",
-    "2.constant",
-    "3.deconstruction",
-    "4.string",
-    "5.function",
-    "6.object",
-    "7.class",
-    "8.general",
-    "9.collect",
-    "10.module",
+    // '1.element',
+    // '2.attrs',
+    // '3.events',
+    // '4.code',
   ],
-  "/1.base/5.project/": [
+  "/1.base/3.bom/": [
     "1.index",
-    "1.uml"
+    // "1.grammar",
+    // "2.select",
+    // "3.position",
+    // "4.layout",
+    // "5.style",
+    // '6.animation',
+    // '7.yong'
   ],
   "/2.advanced/1.h5/": [
     "1.index",
-    "1.page",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
   ],
-  "/2.advanced/2.css3/": [
-    "1.index",
-  ],
-  "/2.advanced/3.javascript/": [
+  "/2.advanced/2.js/": [
     "1.index",
     "1.grammar",
     "2.morphology",
@@ -76,7 +45,7 @@ const sidebar = {
     "8.async",
     "9.eventloop",
   ],
-  "/2.advanced/4.type/": [
+  "/2.advanced/3.type/": [
     "1.index",
     "1.number",
     "2.string",
@@ -91,16 +60,20 @@ const sidebar = {
     "10.prototype",
     "12.copy",
   ],
-  "/3.senior/1.security/": [
-    //前端安全
+  "/2.advanced/6.es6/": [
     "1.index",
-    "1.xss",
-    "2.csrf",
-    "3.doos",
-    "4.http",
+    "1.scope",
+    "2.constant",
+    "3.deconstruction",
+    "4.string",
+    "5.function",
+    "6.object",
+    "7.class",
+    "8.general",
+    "9.collect",
+    "10.module",
   ],
   "/3.senior/2.design/": [
-    //设计模式
     "1.index",
     "1.factory",
     "2.abstract",
@@ -126,28 +99,6 @@ const sidebar = {
     "22.mediator",
     "23.interpreter",
   ],
-  "/3.senior/3.browser/": [
-    "1.index",
-    "1.compiler",
-    "2.garbage",
-    "3.context",
-    "4.clouser",
-    "5.v8",
-    "6.performance",
-    "16.拖拽和原生拖拽事件",
-    "17.手机的 touch gesture 事件模型",
-    "22.Ajax 同源策略和跨域",
-    "26.内存管理",
-  ],
-  "/3.senior/4.network/": [
-    // 测试
-    "1.index",
-    "1.http",
-    "2.https",
-    "3.tcp",
-    "4.catch",
-    "5.dns",
-  ],
   "/3.senior/5.optimize/": [
     "1.index",
     "1.cdn", //cdn
@@ -165,14 +116,13 @@ const sidebar = {
   "/3.senior/6.debugger/": [
     "1.index",
   ],
-
-  "/4.special/5.cross/": [
+  "/3.senior/7.cross/": [
     //跨域
     "1.index",
     "1.browser",
     "2.cors",
     "3.nginx",
-    "4.http-proxy-middleware",
+    "4.middleware",
     "5.jsonp",
     "6.domain",
     "7.name",
@@ -180,9 +130,20 @@ const sidebar = {
     "9.postMessage",
     "10.webSocket",
   ],
-
   "/4.special/1.cli/": [
     "1.index",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
   ],
   "/4.special/2.package/": [
     "1.index",
@@ -205,6 +166,10 @@ const sidebar = {
   ],
   "/4.special/4.construct/": [
     "1.index"
+  ],
+  "/4.special/5.project/": [
+    "1.index",
+    "1.uml"
   ],
   "/4.special/5.standard/": [
     "1.index"
@@ -230,7 +195,9 @@ const sidebar = {
     "1.index",
   ],
   "/6.source/1.promise/": [
-    "1.index"
+    "1.index",
+    "1",
+    "2"
   ],
   "/6.source/browser/": [
     "1.index",
