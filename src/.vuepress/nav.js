@@ -20,7 +20,7 @@ const nav = [
         text: '中级知识',
         items: [
             {
-                text: '一.js运行机制',
+                text: '一.运行机制',
                 link: '/2.advanced/2.js/1.index'
             },
             {
