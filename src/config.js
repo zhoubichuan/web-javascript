@@ -4,14 +4,11 @@ import axios from "axios";
 import service from "@/util/request.js";
 import moment from 'moment'
 
-const qs = require('qs')
-
 export default {
   install(Vue) {
     Vue.prototype.$moment = moment;
     Vue.prototype._ = _;
     Vue.prototype.$service = service;
-    Vue.prototype.$qs = qs;
     Vue.prototype.$api = api;
     Vue.prototype.$awaitWarp = function (promise) {
       return promise
