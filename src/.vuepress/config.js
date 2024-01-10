@@ -19,7 +19,6 @@ module.exports = {
   beforeDevServer(app, server, compiler) {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
-
     httpRequest(app);
   },
   alias: {
@@ -30,12 +29,27 @@ module.exports = {
     plugins: [require("autoprefixer")],
   },
   stylus: { preferPathResolver: "webpack" },
+  less: {},
+  scss: {
+    data: `
+    @import "~@/assets/style/var.scss";
+    @import "~@/assets/style/variables.scss";
+    @import "~@/assets/style/reset.scss";
+    @import "~@/assets/style/mixins.scss";
+    `,
+  },
+  sass: { indentedSyntax: true },
+  dest: "web-javascript", // 指定 vuepress 的输出目录
+  markdown: {
+    toc: { includeLevel: [2, 3] },
+    lineNumbers: true, // 代码块显示行号
+  },
   plugins: [
     // 设置环境变量
     new Webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: "production",
-        BASE_API: "/",
+        NODE_ENV: "'production'",
+        BASE_API: "'/'",
       },
     }),
     new Webpack.DllReferencePlugin({
@@ -46,13 +60,6 @@ module.exports = {
       name: "[name]_[hash]",
       context: process.cwd(),
     }),
-  ],
-  dest: "web-javascript", // 指定 vuepress 的输出目录
-  markdown: {
-    toc: { includeLevel: [2, 3] },
-    lineNumbers: true, // 代码块显示行号
-  },
-  plugins: [
     [require("./demo-preview")],
     [
       "vuepress-plugin-anchor-toc",
@@ -60,20 +67,6 @@ module.exports = {
         showDepth: 1,
         customClass: "your-customClass",
         ignore: ["/", "/api/"],
-      },
-    ],
-    [
-      "@vuepress-reco/vuepress-plugin-kan-ban-niang",
-      {
-        theme: ["blackCat"],
-        clean: false,
-        info: "https://github.com/zhoubichuan",
-        // messages: {
-        //   welcome: "",
-        //   home: "心里的花，我想要带你回家",
-        //   theme: "好吧，希望你能喜欢我的其他小伙伴。",
-        //   close: "再见哦",
-        // },
       },
     ],
     // 只要把这个放进 config的plugins中就可以了
@@ -98,16 +91,6 @@ module.exports = {
           message: "有新的内容更新",
           buttonText: "刷新",
         },
-      },
-    ],
-    [
-      "dynamic-title",
-      {
-        // showIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-        showText: "(/≧▽≦/)欢迎回来~",
-        // hideIcon: 'https://www.typescriptlang.org/favicon-32x32.png?v=8944a05a8b601855de116c8a56d3b3ae',
-        hideText: "(●—●)bye bye~",
-        recoverTime: 1000,
       },
     ],
     [
@@ -144,7 +127,7 @@ module.exports = {
         locale: "zh", //语言
         // 其他的 Vssue 配置
         owner: "zhoubichuan", //github账户名
-        repo: "web-openlayers", //github一个项目的名称
+        repo: "web-javascript", //github一个项目的名称
         clientId: "Iv1.2923ba5d4de48a3c", //注册的Client ID
         clientSecret: "110210", //注册的Client Secret
         autoCreateIssue: true, // 自动创建评论，默认是false，最好开启，这样首次进入页面的时候就不用去点击创建评论的按钮了
@@ -154,7 +137,7 @@ module.exports = {
   ],
   // 主题配置
   themeConfig: {
-    repo: "https://github.com/zhoubichuan/web-openlayers", // 源码地址
+    repo: "https://github.com/zhoubichuan/web-javascript", // 源码地址
     repoLabel: "查看源码", // (查看源码的)组件名称
     docsBranch: "master", // git 源仓库 仓库分支
     editLinks: true, // 编辑链接
