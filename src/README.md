@@ -3,7 +3,7 @@ lang: zh-CN
 home: true
 heroImage: ./home.png
 actionText: 先睹为快 →
-actionLink: /base/1.html/1.三栏布局.html
+actionLink: /1.base/1.js/1.index.html
 pageClass: page_index
 footer: JavaScript相关知识
 meta:
