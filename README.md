@@ -1,4 +1,5 @@
-# JavaScript学习笔记
+# JavaScript 学习笔记
+
 ![](./src/.vuepress/public/home.png)
 
 - 基础知识

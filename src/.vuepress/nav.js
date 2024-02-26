@@ -3,7 +3,7 @@ const nav = [
         text: '初级知识',
         items: [
             {
-                text: '一.JavaScript',
+                text: '一.js基础',
                 link: '/1.base/1.js/1.index'
             },
             {
@@ -28,7 +28,7 @@ const nav = [
                 link: '/2.advanced/3.type/1.index',
             },
             {
-                text: '三.ECMAScript6',
+                text: '三.ES6重点',
                 link: '/2.advanced/6.es6/1.index'
             }
         ]
