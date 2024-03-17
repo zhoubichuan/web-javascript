@@ -35,7 +35,7 @@ const sidebar = {
   ],
   "/2.advanced/2.js/": [
     "1.index",
-    "1.grammar",
+    "1.compile",
     "2.morphology",
     "3.context",
     "4.variableobj",
