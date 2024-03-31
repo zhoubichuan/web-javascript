@@ -8,11 +8,11 @@ const nav = [
             },
             {
                 text: '二.dom基础',
-                link: '/1.base/2.dom/1.index'
+                link: '/web-browser/base/engine/1.index.html'
             },
             {
                 text: '三.bom基础',
-                link: '/1.base/3.bom/1.index'
+                link: '/web-browser/base/project/1.index.html'
             },
         ]
     },

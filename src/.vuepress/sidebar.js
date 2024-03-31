@@ -13,23 +13,6 @@ const sidebar = {
     "10.dom",
     "11.bom",
   ],
-  "/1.base/2.dom/": [
-    "1.index",
-    // '1.element',
-    // '2.attrs',
-    // '3.events',
-    // '4.code',
-  ],
-  "/1.base/3.bom/": [
-    "1.index",
-    // "1.grammar",
-    // "2.select",
-    // "3.position",
-    // "4.layout",
-    // "5.style",
-    // '6.animation',
-    // '7.yong'
-  ],
   "/2.advanced/1.h5/": [
     "1.index",
   ],
