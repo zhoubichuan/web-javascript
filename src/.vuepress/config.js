@@ -4,12 +4,26 @@ const Webpack = require("webpack");
 const bodyParser = require("body-parser");
 
 module.exports = {
-  title: "javascript学习笔记",
+  title: "JavaScript学习笔记",
   description: "风浪没平息 我宣告奔跑的意义",
   base: "/web-javascript/", // 部署站点的基础路径
   port: 3009,
   head: [
+    ['link', { rel: 'icon', href: '/home.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     ["script", { src: "/dll/vendor.dll.js" }],
+    [
+      "script",
+      {
+        src: "https://webapi.amap.com/maps?v=2.0&key=46c9ed4e2d25a0e0ee7c883fd5b1a0c8",
+      },
+    ],
+    [
+      "script",
+      {
+        src: "https://webapi.amap.com/ui/1.1/main.js?v=1.1.1",
+      },
+    ],
   ],
   define: {
     env: {
@@ -69,6 +83,7 @@ module.exports = {
         ignore: ["/", "/api/"],
       },
     ],
+    ['fulltext-search'],
     // 只要把这个放进 config的plugins中就可以了
     [
       "sakura",
