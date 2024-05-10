@@ -5,15 +5,20 @@
   "main": "index.js",
   "author": "zhoubichaun@icloud.com",
   "hommepage": "https://github.com/zhoubichuan/web-javascript/",
-  "private": true,
+  "private": false,
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
+    "publish": "gulp && cd lib && npm publish",
+    "build:comps": "gulp",
     "deploy": "bash deploy.sh",
     "github": "bash github.sh",
     "gitee": "bash gitee.sh",
-    "dll": "webpack -p --progress --config ./src/.vuepress/webpack.dll.conf.js"
+    "dll": "webpack -p --progress --config ./src/.vuepress/webpack.dll.conf.js",
+    "build:js": "node rollup.js",
+    "build:css": "npx gulp sass",
+    "build:all": "npm run build:js && npm run build:css"
   },
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "1.8.2",
@@ -40,15 +45,26 @@
     "node-sass": "4.14.1",
     "sass": "^1.69.5",
     "sass-loader": "7.3.1",
+    "voice-core": "^0.4.0",
     "vuepress-plugin-boxx": "0.0.7",
     "vuepress-plugin-dynamic-title": "1.0.0",
     "webpack": "4.29.6",
     "webpack-cli": "3.3.0"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-decoupled-document": "^39.0.1",
+    "@ckeditor/ckeditor5-vue2": "^3.0.1",
     "axios": "0.21.1",
+    "element-ui": "2.3.7",
+    "i18n": "0.15.1",
+    "jspdf": "^2.5.1",
     "lodash": "4.17.21",
     "moment": "2.29.4",
-    "vuepress": "1.9.7"
+    "qs": "6.11.2",
+    "vue-pdf": "4.2.0",
+    "vue3-sfc-loader": "^0.8.4",
+    "vuepress": "1.9.7",
+    "vuex": "3.1.0",
+    "web-elementui": "1.1.6"
   }
 }
