@@ -1,6 +1,6 @@
 {
-    "name": "周必川",
-    "short_name": "周必川",
+    "name": "JavaScript",
+    "short_name": "web-javascript",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#2196f3",
