@@ -6,14 +6,14 @@ const nav = [
                 text: '一.基础知识',
                 link: '/1.base/1.js/1.index'
             },
-            {
-                text: '二.dom基础',
-                link: '/web-browser/base/engine/1.index.html'
-            },
-            {
-                text: '三.bom基础',
-                link: '/web-browser/base/project/1.index.html'
-            },
+            // {
+            //     text: '二.dom基础',
+            //     link: '/web-browser/base/engine/1.index.html'
+            // },
+            // {
+            //     text: '三.bom基础',
+            //     link: '/web-browser/base/project/1.index.html'
+            // },
         ]
     },
     {
