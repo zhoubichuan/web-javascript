@@ -13,6 +13,12 @@ const sidebar = {
     "10.dom",
     "11.bom",
   ],
+  "/1.base/2.file/": [
+    "1.index"
+  ],
+  "/1.base/3.video/": [
+    "1.index",
+  ],
   "/2.advanced/1.h5/": [
     "1.index",
   ],
@@ -171,12 +177,6 @@ const sidebar = {
   //   '1.singlespa',
   //   '2.qiankun'
   // ],
-  "/5.scene/2.file/": [
-    "1.index"
-  ],
-  "/5.scene/3.video/": [
-    "1.index",
-  ],
   "/6.source/1.promise/": [
     "1.index",
     "1",

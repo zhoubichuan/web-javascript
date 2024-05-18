@@ -6,14 +6,14 @@ const nav = [
                 text: '一.基础知识',
                 link: '/1.base/1.js/1.index'
             },
-            // {
-            //     text: '二.dom基础',
-            //     link: '/web-browser/base/engine/1.index.html'
-            // },
-            // {
-            //     text: '三.bom基础',
-            //     link: '/web-browser/base/project/1.index.html'
-            // },
+            {
+                text: '二.Promise',
+                link: '/1.base/2.file/1.index'
+            },
+            {
+                text: '三.监控视频',
+                link: '/1.base/3.video/1.index'
+            }
         ]
     },
     {
@@ -54,32 +54,19 @@ const nav = [
             },
         ]
     },
-    // {
-    //     text: '场景应用',
-    //     items: [
-    //         {
-    //             text: '二.断点续传',
-    //             link: '/5.scene/2.file/1.index'
-    //         },
-    //         {
-    //             text: '三.监控视频',
-    //             link: '/5.scene/3.video/1.index'
-    //         }
-    //     ]
-    // },
     {
-        text: '高级知识',
+        text: 'JavaScript引擎',
         items: [
             {
-                text: '一.Promise',
+                text: '一.JavaScriptCore',
                 link: '/6.source/1.promise/1.index'
             },
             {
-                text: '二.浏览器',
+                text: '二.V8',
                 link: '/6.source/browser/1.index'
             },
             {
-                text: '三.js引擎 ',
+                text: '三.SpiderMonkey',
                 link: '/6.source/api/1.index'
             }
         ]
