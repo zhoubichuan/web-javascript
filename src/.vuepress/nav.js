@@ -3,7 +3,7 @@ const nav = [
         text: '初级知识',
         items: [
             {
-                text: '一.基础知识',
+                text: '一.语法知识',
                 link: '/1.base/1.js/1.index'
             },
             {
@@ -77,10 +77,6 @@ const nav = [
             {
                 text: '一.工程化基础',
                 link: '/4.special/1.cli/1.index'
-            },
-            {
-                text: '二.包管理',
-                link: '/4.special/2.package/1.index'
             },
             {
                 text: '三.开发',

@@ -15,6 +15,5 @@
   - [四.网络](./source/vuex3.x/1.index.html)
 - 前端工程化
   - [一.工程化基础](./source/vue-cli3.x/1.index.html)
-  - [二.包管理](./source/vue3.x/1.index.html)
   - [三.开发](./source/vue-router4.x/1.index.html)
   - [四.构建](./source/vuex4.x/1.index.html)
