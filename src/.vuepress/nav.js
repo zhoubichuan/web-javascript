@@ -1,17 +1,17 @@
 const nav = [
     {
-        text: '初级知识',
+        text: '基础知识',
         items: [
             {
-                text: '一.语法知识',
+                text: '一.ECMAScript',
                 link: '/1.base/1.js/1.index'
             },
             {
-                text: '二.Promise',
+                text: '二.DOM',
                 link: '/1.base/2.file/1.index'
             },
             {
-                text: '三.监控视频',
+                text: '三.BOM',
                 link: '/1.base/3.video/1.index'
             }
         ]
