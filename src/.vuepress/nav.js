@@ -11,7 +11,7 @@ const nav = [
                 link: '/1.base/2.file/1.index'
             },
             {
-                text: '三.BOM',
+                text: '三.ECMAScript6',
                 link: '/1.base/3.video/1.index'
             }
         ]

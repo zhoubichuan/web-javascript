@@ -4,6 +4,7 @@ const sidebar = {
     "1.syntax",
     "2.expression",
     "3.statement",
+    "4.implement",
     "4.datatype",
     "5.var",
     "6.function",
