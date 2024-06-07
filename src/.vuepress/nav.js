@@ -7,11 +7,11 @@ const nav = [
                 link: '/1.base/1.js/1.index'
             },
             {
-                text: '二.DOM',
+                text: '二.ECMAScript6',
                 link: '/1.base/2.file/1.index'
             },
             {
-                text: '三.ECMAScript6',
+                text: '三.JavaScript',
                 link: '/1.base/3.video/1.index'
             }
         ]
