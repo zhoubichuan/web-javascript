@@ -1,23 +1,33 @@
 const sidebar = {
-  "/1.base/1.js/": [
+  "/1.base/1.ECMAScript/": [
     "1.index",
     "1.syntax",
     "2.expression",
     "3.statement",
-    "4.implement",
-    "4.datatype",
-    "5.var",
-    "6.function",
-    "7.require",
-    "8.async",
-    "9.eventloop",
-    "10.dom",
-    "11.bom",
+    "4.type",
+    "5.global",
+    "6.sync",
+    "7.async",
+    "8.memory",
+    "9.bug",
+    "10.var",
+    "11.function",
+    "12.require",
   ],
-  "/1.base/2.file/": [
-    "1.index"
+  "/1.base/2.ECMAScript6/": [
+    "1.index",
+    "1.scope",
+    "2.constant",
+    "3.deconstruction",
+    "4.string",
+    "5.function",
+    "6.object",
+    "7.class",
+    "8.general",
+    "9.collect",
+    "10.module",
   ],
-  "/1.base/3.video/": [
+  "/1.base/3.JavaScript/": [
     "1.index",
   ],
   "/2.advanced/1.h5/": [
@@ -50,19 +60,9 @@ const sidebar = {
     "11.transform",
     "12.copy",
   ],
-  "/2.advanced/6.es6/": [
-    "1.index",
-    "1.scope",
-    "2.constant",
-    "3.deconstruction",
-    "4.string",
-    "5.function",
-    "6.object",
-    "7.class",
-    "8.general",
-    "9.collect",
-    "10.module",
-  ],
+  // "/2.advanced/6.es6/": [
+  //   "1.index",
+  // ],
   "/3.senior/2.design/": [
     "1.index",
     "1.factory",

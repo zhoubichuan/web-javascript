@@ -4,15 +4,15 @@ const nav = [
         items: [
             {
                 text: '一.ECMAScript',
-                link: '/1.base/1.js/1.index'
+                link: '/1.base/1.ECMAScript/1.index'
             },
             {
                 text: '二.ECMAScript6',
-                link: '/1.base/2.file/1.index'
+                link: '/1.base/2.ECMAScript6/1.index'
             },
             {
                 text: '三.JavaScript',
-                link: '/1.base/3.video/1.index'
+                link: '/1.base/3.JavaScript/1.index'
             }
         ]
     },
@@ -27,10 +27,10 @@ const nav = [
                 text: '二.数据类型',
                 link: '/2.advanced/3.type/1.index',
             },
-            {
-                text: '三.ES6重点',
-                link: '/2.advanced/6.es6/1.index'
-            }
+            // {
+            //     text: '三.ES6重点',
+            //     link: '/2.advanced/6.es6/1.index'
+            // }
         ]
     },
     {

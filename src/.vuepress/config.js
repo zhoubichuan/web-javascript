@@ -83,6 +83,7 @@ module.exports = {
         ignore: ["/", "/api/"],
       },
     ],
+    ['flowchart'],
     ['fulltext-search'],
     // 只要把这个放进 config的plugins中就可以了
     [
