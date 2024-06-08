@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2.promise 的实现 | JavaScript学习笔记</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/web-javascript/home.png">
+    <link rel="manifest" href="/web-javascript/manifest.json">
+    <script src="/web-javascript/dll/vendor.dll.js"></script>
+    <script src="https://webapi.amap.com/maps?v=2.0&amp;key=46c9ed4e2d25a0e0ee7c883fd5b1a0c8"></script>
+    <script src="https://webapi.amap.com/ui/1.1/main.js?v=1.1.1"></script>
+    <meta name="description" content="个人总结的vuepress学习技术文档-语法">
+    <meta name="keywords" content="vuepress,最新技术文档,vuepress语法,markdown语法">
+    
+    <link rel="preload" href="/web-javascript/assets/css/0.styles.b166fd3a.css" as="style"><link rel="preload" href="/web-javascript/assets/js/app.fde11f56.js" as="script"><link rel="preload" href="/web-javascript/assets/js/3.e9ec0dc9.js" as="script"><link rel="preload" href="/web-javascript/assets/js/91.59df2706.js" as="script"><link rel="preload" href="/web-javascript/assets/js/6.8c68cd55.js" as="script"><link rel="prefetch" href="/web-javascript/assets/js/10.3d96434f.js"><link rel="prefetch" href="/web-javascript/assets/js/100.b0ed6155.js"><link rel="prefetch" href="/web-javascript/assets/js/101.dc267205.js"><link rel="prefetch" href="/web-javascript/assets/js/102.0493cbb1.js"><link rel="prefetch" href="/web-javascript/assets/js/103.8829c4e7.js"><link rel="prefetch" href="/web-javascript/assets/js/104.ac24de7b.js"><link rel="prefetch" href="/web-javascript/assets/js/105.d7cc7e91.js"><link rel="prefetch" href="/web-javascript/assets/js/106.64c2874c.js"><link rel="prefetch" href="/web-javascript/assets/js/107.6171a281.js"><link rel="prefetch" href="/web-javascript/assets/js/108.d5de37d9.js"><link rel="prefetch" href="/web-javascript/assets/js/109.0eaabd58.js"><link rel="prefetch" href="/web-javascript/assets/js/11.4bc148a1.js"><link rel="prefetch" href="/web-javascript/assets/js/110.54358ac6.js"><link rel="prefetch" href="/web-javascript/assets/js/111.1cd47a27.js"><link rel="prefetch" href="/web-javascript/assets/js/112.6adf47e8.js"><link rel="prefetch" href="/web-javascript/assets/js/113.7c286af0.js"><link rel="prefetch" href="/web-javascript/assets/js/114.1ed77562.js"><link rel="prefetch" href="/web-javascript/assets/js/115.e800131d.js"><link rel="prefetch" href="/web-javascript/assets/js/116.7a08a977.js"><link rel="prefetch" href="/web-javascript/assets/js/117.b7750d0f.js"><link rel="prefetch" href="/web-javascript/assets/js/118.63edb3c5.js"><link rel="prefetch" href="/web-javascript/assets/js/119.480df94f.js"><link rel="prefetch" href="/web-javascript/assets/js/12.c81deadb.js"><link rel="prefetch" href="/web-javascript/assets/js/120.43603cfb.js"><link rel="prefetch" href="/web-javascript/assets/js/121.a242451b.js"><link rel="prefetch" href="/web-javascript/assets/js/122.4f88ef38.js"><link rel="prefetch" href="/web-javascript/assets/js/123.3b4efa83.js"><link rel="prefetch" href="/web-javascript/assets/js/124.965c175e.js"><link rel="prefetch" href="/web-javascript/assets/js/125.d8d7d160.js"><link rel="prefetch" href="/web-javascript/assets/js/126.46fa8356.js"><link rel="prefetch" href="/web-javascript/assets/js/127.31b247e7.js"><link rel="prefetch" href="/web-javascript/assets/js/128.e70b7655.js"><link rel="prefetch" href="/web-javascript/assets/js/129.75490ff0.js"><link rel="prefetch" href="/web-javascript/assets/js/13.63558203.js"><link rel="prefetch" href="/web-javascript/assets/js/130.ed05c582.js"><link rel="prefetch" href="/web-javascript/assets/js/131.a152fa13.js"><link rel="prefetch" href="/web-javascript/assets/js/132.e60c9b6f.js"><link rel="prefetch" href="/web-javascript/assets/js/133.ff946997.js"><link rel="prefetch" href="/web-javascript/assets/js/134.c9f45569.js"><link rel="prefetch" href="/web-javascript/assets/js/135.4e3894db.js"><link rel="prefetch" href="/web-javascript/assets/js/136.b04fded3.js"><link rel="prefetch" href="/web-javascript/assets/js/137.0816b3a5.js"><link rel="prefetch" href="/web-javascript/assets/js/138.11c83628.js"><link rel="prefetch" href="/web-javascript/assets/js/139.c149c95c.js"><link rel="prefetch" href="/web-javascript/assets/js/14.e1215395.js"><link rel="prefetch" href="/web-javascript/assets/js/140.2a17534c.js"><link rel="prefetch" href="/web-javascript/assets/js/141.4b90c23d.js"><link rel="prefetch" href="/web-javascript/assets/js/142.e3e59bfe.js"><link rel="prefetch" href="/web-javascript/assets/js/143.1a081b14.js"><link rel="prefetch" href="/web-javascript/assets/js/144.26349aea.js"><link rel="prefetch" href="/web-javascript/assets/js/145.01bb5c16.js"><link rel="prefetch" href="/web-javascript/assets/js/146.86dcc3e1.js"><link rel="prefetch" href="/web-javascript/assets/js/147.6df473fe.js"><link rel="prefetch" href="/web-javascript/assets/js/148.51e5923d.js"><link rel="prefetch" href="/web-javascript/assets/js/149.724a109e.js"><link rel="prefetch" href="/web-javascript/assets/js/15.6fcffc63.js"><link rel="prefetch" href="/web-javascript/assets/js/150.221457cb.js"><link rel="prefetch" href="/web-javascript/assets/js/151.39a7c0e0.js"><link rel="prefetch" href="/web-javascript/assets/js/152.5a3ff90a.js"><link rel="prefetch" href="/web-javascript/assets/js/153.33ab628b.js"><link rel="prefetch" href="/web-javascript/assets/js/154.d4d21f21.js"><link rel="prefetch" href="/web-javascript/assets/js/155.883a89e9.js"><link rel="prefetch" href="/web-javascript/assets/js/156.61fe0c46.js"><link rel="prefetch" href="/web-javascript/assets/js/157.ff0269d0.js"><link rel="prefetch" href="/web-javascript/assets/js/158.702ac5d4.js"><link rel="prefetch" href="/web-javascript/assets/js/159.60396c9f.js"><link rel="prefetch" href="/web-javascript/assets/js/16.01c60035.js"><link rel="prefetch" href="/web-javascript/assets/js/160.3cf38ca9.js"><link rel="prefetch" href="/web-javascript/assets/js/161.144f862e.js"><link rel="prefetch" href="/web-javascript/assets/js/162.c6135a26.js"><link rel="prefetch" href="/web-javascript/assets/js/163.a78e4af6.js"><link rel="prefetch" href="/web-javascript/assets/js/164.00b248f7.js"><link rel="prefetch" href="/web-javascript/assets/js/165.8b6f209f.js"><link rel="prefetch" href="/web-javascript/assets/js/166.5ff30056.js"><link rel="prefetch" href="/web-javascript/assets/js/167.c9117f17.js"><link rel="prefetch" href="/web-javascript/assets/js/168.83db32f4.js"><link rel="prefetch" href="/web-javascript/assets/js/169.3cf08148.js"><link rel="prefetch" href="/web-javascript/assets/js/17.226eb645.js"><link rel="prefetch" href="/web-javascript/assets/js/170.3a4b9c56.js"><link rel="prefetch" href="/web-javascript/assets/js/171.f8048890.js"><link rel="prefetch" href="/web-javascript/assets/js/172.79570713.js"><link rel="prefetch" href="/web-javascript/assets/js/173.47efbc87.js"><link rel="prefetch" href="/web-javascript/assets/js/174.a3a3c34d.js"><link rel="prefetch" href="/web-javascript/assets/js/175.f52ac529.js"><link rel="prefetch" href="/web-javascript/assets/js/176.5df6f196.js"><link rel="prefetch" href="/web-javascript/assets/js/177.513c7509.js"><link rel="prefetch" href="/web-javascript/assets/js/178.e97526cf.js"><link rel="prefetch" href="/web-javascript/assets/js/179.0a317aaa.js"><link rel="prefetch" href="/web-javascript/assets/js/18.4f5fde73.js"><link rel="prefetch" href="/web-javascript/assets/js/180.5306a25b.js"><link rel="prefetch" href="/web-javascript/assets/js/181.c92953ca.js"><link rel="prefetch" href="/web-javascript/assets/js/182.47b1b4e7.js"><link rel="prefetch" href="/web-javascript/assets/js/183.ea4f68f9.js"><link rel="prefetch" href="/web-javascript/assets/js/184.87886b58.js"><link rel="prefetch" href="/web-javascript/assets/js/185.25b26634.js"><link rel="prefetch" href="/web-javascript/assets/js/186.66da0657.js"><link rel="prefetch" href="/web-javascript/assets/js/187.1e4edcdf.js"><link rel="prefetch" href="/web-javascript/assets/js/188.f8acb9b2.js"><link rel="prefetch" href="/web-javascript/assets/js/189.92b4cdbc.js"><link rel="prefetch" href="/web-javascript/assets/js/19.c54f8865.js"><link rel="prefetch" href="/web-javascript/assets/js/190.152990fe.js"><link rel="prefetch" href="/web-javascript/assets/js/191.57390d64.js"><link rel="prefetch" href="/web-javascript/assets/js/20.4c159499.js"><link rel="prefetch" href="/web-javascript/assets/js/21.39abd75f.js"><link rel="prefetch" href="/web-javascript/assets/js/22.702df168.js"><link rel="prefetch" href="/web-javascript/assets/js/23.3f90a9f6.js"><link rel="prefetch" href="/web-javascript/assets/js/24.681846cb.js"><link rel="prefetch" href="/web-javascript/assets/js/25.3c0b6997.js"><link rel="prefetch" href="/web-javascript/assets/js/26.288097af.js"><link rel="prefetch" href="/web-javascript/assets/js/27.33f65827.js"><link rel="prefetch" href="/web-javascript/assets/js/28.277ab29e.js"><link rel="prefetch" href="/web-javascript/assets/js/29.4fbf0464.js"><link rel="prefetch" href="/web-javascript/assets/js/30.ce72c211.js"><link rel="prefetch" href="/web-javascript/assets/js/31.9425f16b.js"><link rel="prefetch" href="/web-javascript/assets/js/32.a38237cb.js"><link rel="prefetch" href="/web-javascript/assets/js/33.115a64c2.js"><link rel="prefetch" href="/web-javascript/assets/js/34.b068c0aa.js"><link rel="prefetch" href="/web-javascript/assets/js/35.4eed012f.js"><link rel="prefetch" href="/web-javascript/assets/js/36.85818e6c.js"><link rel="prefetch" href="/web-javascript/assets/js/37.8e5c78bd.js"><link rel="prefetch" href="/web-javascript/assets/js/38.a3199d1f.js"><link rel="prefetch" href="/web-javascript/assets/js/39.816920cb.js"><link rel="prefetch" href="/web-javascript/assets/js/4.fc2e2d66.js"><link rel="prefetch" href="/web-javascript/assets/js/40.a860f82b.js"><link rel="prefetch" href="/web-javascript/assets/js/41.f004b18d.js"><link rel="prefetch" href="/web-javascript/assets/js/42.0dcdaa92.js"><link rel="prefetch" href="/web-javascript/assets/js/43.200c403c.js"><link rel="prefetch" href="/web-javascript/assets/js/44.540fb2d7.js"><link rel="prefetch" href="/web-javascript/assets/js/45.fc20a73a.js"><link rel="prefetch" href="/web-javascript/assets/js/46.94f5a25e.js"><link rel="prefetch" href="/web-javascript/assets/js/47.887bb34f.js"><link rel="prefetch" href="/web-javascript/assets/js/48.bf41293d.js"><link rel="prefetch" href="/web-javascript/assets/js/49.ccf1e6a4.js"><link rel="prefetch" href="/web-javascript/assets/js/5.27c78a36.js"><link rel="prefetch" href="/web-javascript/assets/js/50.e4145924.js"><link rel="prefetch" href="/web-javascript/assets/js/51.b2e93787.js"><link rel="prefetch" href="/web-javascript/assets/js/52.f1c90b66.js"><link rel="prefetch" href="/web-javascript/assets/js/53.b86786bc.js"><link rel="prefetch" href="/web-javascript/assets/js/54.ba2cd897.js"><link rel="prefetch" href="/web-javascript/assets/js/55.8c2a68b2.js"><link rel="prefetch" href="/web-javascript/assets/js/56.3172f26c.js"><link rel="prefetch" href="/web-javascript/assets/js/57.826b26d5.js"><link rel="prefetch" href="/web-javascript/assets/js/58.36dfd0ce.js"><link rel="prefetch" href="/web-javascript/assets/js/59.284711d6.js"><link rel="prefetch" href="/web-javascript/assets/js/60.5e619ab2.js"><link rel="prefetch" href="/web-javascript/assets/js/61.aacfb2d4.js"><link rel="prefetch" href="/web-javascript/assets/js/62.a9fdf7cb.js"><link rel="prefetch" href="/web-javascript/assets/js/63.8b9da16d.js"><link rel="prefetch" href="/web-javascript/assets/js/64.25bb64eb.js"><link rel="prefetch" href="/web-javascript/assets/js/65.fa2e1163.js"><link rel="prefetch" href="/web-javascript/assets/js/66.daea2a0f.js"><link rel="prefetch" href="/web-javascript/assets/js/67.036de67c.js"><link rel="prefetch" href="/web-javascript/assets/js/68.37d44853.js"><link rel="prefetch" href="/web-javascript/assets/js/69.b6640f2f.js"><link rel="prefetch" href="/web-javascript/assets/js/7.5d69f916.js"><link rel="prefetch" href="/web-javascript/assets/js/70.8f762fdd.js"><link rel="prefetch" href="/web-javascript/assets/js/71.e0793ab5.js"><link rel="prefetch" href="/web-javascript/assets/js/72.125d7fc0.js"><link rel="prefetch" href="/web-javascript/assets/js/73.14511582.js"><link rel="prefetch" href="/web-javascript/assets/js/74.ae9f9554.js"><link rel="prefetch" href="/web-javascript/assets/js/75.3947c1ad.js"><link rel="prefetch" href="/web-javascript/assets/js/76.1c807d34.js"><link rel="prefetch" href="/web-javascript/assets/js/77.998c52a8.js"><link rel="prefetch" href="/web-javascript/assets/js/78.9b1cb513.js"><link rel="prefetch" href="/web-javascript/assets/js/79.262f9b0e.js"><link rel="prefetch" href="/web-javascript/assets/js/8.49b39b40.js"><link rel="prefetch" href="/web-javascript/assets/js/80.6f457889.js"><link rel="prefetch" href="/web-javascript/assets/js/81.9f3db715.js"><link rel="prefetch" href="/web-javascript/assets/js/82.5f71d7c2.js"><link rel="prefetch" href="/web-javascript/assets/js/83.407b32c5.js"><link rel="prefetch" href="/web-javascript/assets/js/84.93479de7.js"><link rel="prefetch" href="/web-javascript/assets/js/85.41a9668a.js"><link rel="prefetch" href="/web-javascript/assets/js/86.7d99a0b5.js"><link rel="prefetch" href="/web-javascript/assets/js/87.362754e7.js"><link rel="prefetch" href="/web-javascript/assets/js/88.afff279d.js"><link rel="prefetch" href="/web-javascript/assets/js/89.27a29f1a.js"><link rel="prefetch" href="/web-javascript/assets/js/9.a6ec67f3.js"><link rel="prefetch" href="/web-javascript/assets/js/90.02edbd00.js"><link rel="prefetch" href="/web-javascript/assets/js/92.b538f883.js"><link rel="prefetch" href="/web-javascript/assets/js/93.d4025256.js"><link rel="prefetch" href="/web-javascript/assets/js/94.c12791dc.js"><link rel="prefetch" href="/web-javascript/assets/js/95.9113b12a.js"><link rel="prefetch" href="/web-javascript/assets/js/96.1b52665f.js"><link rel="prefetch" href="/web-javascript/assets/js/97.416133ba.js"><link rel="prefetch" href="/web-javascript/assets/js/98.e75cd60e.js"><link rel="prefetch" href="/web-javascript/assets/js/99.df1f83cd.js"><link rel="prefetch" href="/web-javascript/assets/js/vendors~flowchart.ed6a2ace.js">
+    <link rel="stylesheet" href="/web-javascript/assets/css/0.styles.b166fd3a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/web-javascript/" class="home-link router-link-active"><!----> <span class="site-name">JavaScript学习笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/1.base/1.ECMAScript/1.index.html" class="nav-link">
+  一.ECMAScript
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/1.base/2.ECMAScript6/1.index.html" class="nav-link">
+  二.ECMAScript6
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/1.base/3.JavaScript/1.index.html" class="nav-link">
+  三.JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中级知识" class="dropdown-title"><span class="title">中级知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="中级知识" class="mobile-dropdown-title"><span class="title">中级知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/2.advanced/2.js/1.index.html" class="nav-link">
+  一.运行机制
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/2.advanced/3.type/1.index.html" class="nav-link">
+  二.数据类型
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专项知识" class="dropdown-title"><span class="title">专项知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="专项知识" class="mobile-dropdown-title"><span class="title">专项知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/2.design/1.index.html" class="nav-link">
+  一.设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/5.optimize/1.index.html" class="nav-link">
+  二.性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/6.debugger/1.index.html" class="nav-link">
+  三.前端调试
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/7.cross/1.index.html" class="nav-link">
+  四.跨域方式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript引擎" class="dropdown-title"><span class="title">JavaScript引擎</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript引擎" class="mobile-dropdown-title"><span class="title">JavaScript引擎</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/6.source/1.promise/1.index.html" class="nav-link">
+  一.JavaScriptCore
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/6.source/browser/1.index.html" class="nav-link">
+  二.V8
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/6.source/api/1.index.html" class="nav-link">
+  三.SpiderMonkey
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端工程化" class="dropdown-title"><span class="title">前端工程化</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端工程化" class="mobile-dropdown-title"><span class="title">前端工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/1.cli/1.index.html" class="nav-link">
+  一.工程化基础
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/3.dev/1.index.html" class="nav-link">
+  三.开发
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/4.construct/1.index.html" class="nav-link">
+  四.构建
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/5.project/1.index.html" class="nav-link">
+  五.开发流程
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/5.standard/1.index.html" class="nav-link">
+  五.代码规范
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/6.test/1.index.html" class="nav-link">
+  六.前端测试
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/7.cicd/1.index.html" class="nav-link">
+  七.CI/CD
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍资料" class="dropdown-title"><span class="title">书籍资料</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍资料" class="mobile-dropdown-title"><span class="title">书籍资料</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book1/1.index.html" class="nav-link">
+  一.《JavaScript高级程序设计（第4版）》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book2/1.index.html" class="nav-link">
+  二.《JavaScript DOM编程艺术》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book3/1.index.html" class="nav-link">
+  三.《你不知道的JavaScript》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book4/1.index.html" class="nav-link">
+  四.《JavaScript设计模式与开发实践》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book5/1.index.html" class="nav-link">
+  五.《高性能JavaScript》
+</a></li></ul></div></div> <a href="https://github.com/zhoubichuan/web-javascript" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="基础知识" class="dropdown-title"><span class="title">基础知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="基础知识" class="mobile-dropdown-title"><span class="title">基础知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/1.base/1.ECMAScript/1.index.html" class="nav-link">
+  一.ECMAScript
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/1.base/2.ECMAScript6/1.index.html" class="nav-link">
+  二.ECMAScript6
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/1.base/3.JavaScript/1.index.html" class="nav-link">
+  三.JavaScript
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="中级知识" class="dropdown-title"><span class="title">中级知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="中级知识" class="mobile-dropdown-title"><span class="title">中级知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/2.advanced/2.js/1.index.html" class="nav-link">
+  一.运行机制
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/2.advanced/3.type/1.index.html" class="nav-link">
+  二.数据类型
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="专项知识" class="dropdown-title"><span class="title">专项知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="专项知识" class="mobile-dropdown-title"><span class="title">专项知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/2.design/1.index.html" class="nav-link">
+  一.设计模式
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/5.optimize/1.index.html" class="nav-link">
+  二.性能优化
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/6.debugger/1.index.html" class="nav-link">
+  三.前端调试
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/3.senior/7.cross/1.index.html" class="nav-link">
+  四.跨域方式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript引擎" class="dropdown-title"><span class="title">JavaScript引擎</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript引擎" class="mobile-dropdown-title"><span class="title">JavaScript引擎</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/6.source/1.promise/1.index.html" class="nav-link">
+  一.JavaScriptCore
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/6.source/browser/1.index.html" class="nav-link">
+  二.V8
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/6.source/api/1.index.html" class="nav-link">
+  三.SpiderMonkey
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端工程化" class="dropdown-title"><span class="title">前端工程化</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端工程化" class="mobile-dropdown-title"><span class="title">前端工程化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/1.cli/1.index.html" class="nav-link">
+  一.工程化基础
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/3.dev/1.index.html" class="nav-link">
+  三.开发
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/4.construct/1.index.html" class="nav-link">
+  四.构建
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/5.project/1.index.html" class="nav-link">
+  五.开发流程
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/5.standard/1.index.html" class="nav-link">
+  五.代码规范
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/6.test/1.index.html" class="nav-link">
+  六.前端测试
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/4.special/7.cicd/1.index.html" class="nav-link">
+  七.CI/CD
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="书籍资料" class="dropdown-title"><span class="title">书籍资料</span> <span class="arrow down"></span></button> <button type="button" aria-label="书籍资料" class="mobile-dropdown-title"><span class="title">书籍资料</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book1/1.index.html" class="nav-link">
+  一.《JavaScript高级程序设计（第4版）》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book2/1.index.html" class="nav-link">
+  二.《JavaScript DOM编程艺术》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book3/1.index.html" class="nav-link">
+  三.《你不知道的JavaScript》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book4/1.index.html" class="nav-link">
+  四.《JavaScript设计模式与开发实践》
+</a></li><li class="dropdown-item"><!----> <a href="/web-javascript/7.read/book5/1.index.html" class="nav-link">
+  五.《高性能JavaScript》
+</a></li></ul></div></div> <a href="https://github.com/zhoubichuan/web-javascript" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_2-promise-的实现"><a href="#_2-promise-的实现" class="header-anchor">#</a> 2.promise 的实现</h1> <h2 id="promise-源码解析"><a href="#promise-源码解析" class="header-anchor">#</a> promise 源码解析</h2> <h3 id="_1、这里先考虑-promise-同步代码-then-只有一个的情况"><a href="#_1、这里先考虑-promise-同步代码-then-只有一个的情况" class="header-anchor">#</a> 1、这里先考虑 Promise 同步代码，then 只有一个的情况</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>let Promise = require(&quot;./Promise&quot;);//用自己写的Promise
+let fs = require(&quot;fs&quot;);
+function getDate(url){
+    return new Promise(function(resolve,reject){
+        let date = fs.readFileSync(url,&quot;utf8&quot;);
+            !date ? reject(&quot;失败&quot;) : resolve(date);
+    });
+}
+getDate(&quot;one.txt&quot;)
+    .then(function(success){
+        console.log(&quot;1&quot;,success);
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+
+//结果
+//1 two.txt
+
+/*思路(这里先考虑Promise同步代码，then只有一个的情况)：
+ 分成两个部分：
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>Promise+高阶函数和 then+2 个回调函数,Promise 函数的原型上放 then;</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor){
+executor();
+}
+Promise.prototype.then = function(callback1，callback2){
+callback1()
+callback2()
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Promise 部分回调函数的参数是两个函数，所以</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor){
+executor(function(){},function(){});
+}
+Promise.prototype.then = function(onFulfilled，onRejected){
+onFulfilled()
+onRejected()
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>Promise 负责将计算出的数据存起来，then 负责判断传过来的值是成功的还是失败的
+Promise 部分应该将数据存储在 this 中，这样执行 then 的时候可以直接在 this 上找到数据
+then 部分判断成功失败的依据应该是 Promise 部分是执行的成功还是失败，所以 Promise 部分执行成功失败时要将对应的状态存储到 this 中</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor){
+let self = this;
+self.value = undefined;
+self.reason = undefined;
+self.status = &quot;pending&quot;;
+executor(
+function(value){
+self.value = value;
+self.status = resolved;
+},
+function(reason){
+self.reason = reason;
+self.status = rejected;
+});
+}
+Promise.prototype.then = function(onFulfilled，onRejected){
+if(self.status === &quot;resolved&quot;){
+onFulfilled(resolved)
+}
+if(self.status === &quot;rejected&quot;){
+onRejected(rejected)
+}
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>**/</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor){
+    let self = this;//this将数据在Promise和then之间传递
+    //this中添加数据
+    self.value = undefined;
+    self.reason = undefined;
+    self.status = &quot;pending&quot;;
+    executor(
+        function(value){
+            self.value = value;
+            self.status = &quot;resolved&quot;;
+        },
+        function(reason){
+            self.reason = reason;
+            self.status = &quot;rejected&quot;;
+        });
+}
+Promise.prototype.then = function(onFulfilled,onRejected){
+    let self = this//拿到this中的值
+    if(self.status === &quot;resolved&quot;){
+        onFulfilled(self.value)
+    }
+    if(self.status === &quot;rejected&quot;){
+        onRejected(self.reason)
+    }
+}
+module.exports = Promise;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="_2-prome-部分代码异步"><a href="#_2-prome-部分代码异步" class="header-anchor">#</a> 2.Prome 部分代码异步</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>let Promise = require(&quot;./Promise&quot;)
+let fs = require(&quot;fs&quot;);
+function getDate(url){
+    return new Promise(function(resolve,reject){
+        let date = fs.readFile(url,&quot;utf8&quot;,function(err,date){
+            err ? reject(err) : resolve(date);
+        });
+    });
+}
+getDate(&quot;one.txt&quot;)
+    .then(function(success){
+        console.log(&quot;1&quot;,success);
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+getDate(&quot;two.txt&quot;)
+    .then(function(success){
+        console.log(&quot;2&quot;,success);
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+getDate(&quot;three.txt&quot;)
+    .then(function(success){
+        console.log(&quot;3&quot;,success)
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+//结果
+//1 two.txt
+//2 three.txt
+//3 ﻿恭喜你完成了本次的训练！！！
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><p>/*思路（Promise 部分异步函数，then 部分一个，支持多个 Promise+then）：
+Promise 部分执行时有异步代码，所以可能存在 Promise 还没执行完就走 then 了，
+这时 status 还是 pending 状态，所以我们要将执行 then 时 pending 状态下的,
+onFulfilled 和 onRejected 存储到 this 中，当 Promise 部分的异步代码走完之前 this 中有 then 中要执行的代码，
+这时判断状态然后执行相应的 then 中要执行的代码</p> <ul><li>*/</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor){
+    let self = this;
+    self.value = undefined;
+    self.reason = undefined;
+    self.status = &quot;pending&quot;;
+    //this上存储then中要执行的函数
+    self.onResolvedCallbacks =[];
+    self.onRejectedCallbacks =[];
+    executor(
+        function(value){
+            self.value = value;
+            self.status = &quot;resolved&quot;;
+            self.onResolvedCallbacks.forEach(function(fn){//根据条件执行then中的函数
+                fn();
+            });
+        },
+        function(reason){
+            self.reason = reason;
+            self.status = &quot;rejected&quot;;
+            self.onRejectedCallbacks.forEach(function(fn){//根据条件执行then中的函数
+                fn()
+            });
+        });
+}
+Promise.prototype.then = function(onFulfilled,onRejected){
+    let self = this;
+    if(self.status === &quot;resolved&quot;){
+        onFulfilled(self.value)
+    }
+    if(self.status === &quot;rejected&quot;){
+        onRejected(self.reason)
+    }
+    if(self.status === &quot;pending&quot;){//存储这个状态要执行的函数,放到一个函数中，当Promise部分调用的时候执行，确保其中的参数是最新的
+        self.onResolvedCallbacks.push(function(){onFulfilled(self.value)});
+        self.onRejectedCallbacks.push(function(){onRejected(self.reason)});
+    }
+}
+module.exports = Promise;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h3 id="_3-实现-then-的链式调用"><a href="#_3-实现-then-的链式调用" class="header-anchor">#</a> 3.实现 then 的链式调用</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>let Promise = require(&quot;./Promise&quot;);
+let fs = require(&quot;fs&quot;);
+function getDate(url){
+    return new Promise(function(resolved,rejected){
+        let date = fs.readFile(url,&quot;utf8&quot;,function(err,date){
+            err ? rejected(err) : resolved(date);
+        });
+    });
+}
+getDate(&quot;one.txt&quot;)
+    .then(function(success){
+        console.log(&quot;1&quot;,success);
+        return &quot;yy&quot;;
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+    .then(function(success){
+        console.log(&quot;2&quot;,success);
+        return &quot;yy&quot;;
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+    .then(function(success){
+        console.log(&quot;3&quot;,success)
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+//结果
+//1 two.txt
+//2 three.txt
+//3 ﻿恭喜你完成了本次的训练！！！
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><p>/*思路（then 的链式调用）：
+执行 then 时返回一个新的 Promise</p> <ul><li>*/</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor){
+    let self = this;
+    self.value = undefined;
+    self.reason = undefined;
+    self.status = &quot;pending&quot;;
+    self.onResolvedCallbacks =[];
+    self.onRejectedCallbacks =[];
+    function resolved(value){
+        self.value = value;
+        self.status = &quot;resolved&quot;;
+        self.onResolvedCallbacks.forEach(function(fn){
+            fn();
+        });
+    }
+    function rejected(reason){
+        self.reason = reason;
+        self.status = &quot;rejected&quot;;
+        self.onRejectedCallbacks.forEach(function(fn){
+            fn()
+        });
+    }
+    executor(resolved,rejected);
+
+}
+Promise.prototype.then = function(onFulfilled,onRejected){
+    let self = this;
+    let promise2;
+    if(self.status === &quot;resolved&quot;){
+        promise2 = new Promise(function(resolved,rejected){
+            onFulfilled(self.value)
+        });
+    }
+    if(self.status === &quot;rejected&quot;){
+        promise2 = new Promise(function(resolved,rejected){
+            onRejected(self.reason)
+        })
+    }
+    if(self.status === &quot;pending&quot;){
+        promise2 = new Promise(function(resolved,rejected){
+            self.onResolvedCallbacks.push(function(){
+                resolved(onFulfilled(self.value));
+            });
+            self.onRejectedCallbacks.push(function(){
+                rejected(onRejected(self.reason));
+            });
+        });
+    }
+    return promise2;//返回一个新的Promise实现了链式调用
+}
+module.exports = Promise;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br></div></div><h3 id="_4-promise-then-部分也是-promise"><a href="#_4-promise-then-部分也是-promise" class="header-anchor">#</a> 4.promise then 部分也是 promise</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>let Promise = require(&quot;./Promise&quot;)
+let fs = require(&quot;fs&quot;);
+function getDate(url){
+    return new Promise(function(resolve,reject){
+        let date = fs.readFile(url,&quot;utf8&quot;,function(err,date){
+            err ? reject(err) : resolve(date);
+        });
+    });
+}
+getDate(&quot;one.txt&quot;)
+    .then(function(success){
+        console.log(&quot;1&quot;,success);
+        return getDate(success);
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+    .then(function(success){
+        console.log(&quot;2&quot;,success);
+        return getDate(success);
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+    .then(function(success){
+        console.log(&quot;3&quot;,success)
+    },function(fail){
+        console.log(&quot;1&quot;,fail);
+    })
+//结果
+//1 two.txt
+//2 three.txt
+//3 ﻿恭喜你完成了本次的训练！！！
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><p>/*思路（then 中有 promise 的情况）：
+执行 then 时得到 then 中 Pomise 的 then 的内容然后判断是放到成功还是失败的回调函数中</p> <ul><li>*/</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor){
+    let self = this;
+    self.value = undefined;
+    self.reason = undefined;
+    self.status = &quot;pending&quot;;
+    self.onResolvedCallbacks =[];
+    self.onRejectedCallbacks =[];
+    function resolved(value){
+        self.value = value;
+        self.status = &quot;resolved&quot;;
+        self.onResolvedCallbacks.forEach(function(fn){
+            fn();
+        });
+    }
+    function rejected(reason){
+        self.reason = reason;
+        self.status = &quot;rejected&quot;;
+        self.onRejectedCallbacks.forEach(function(fn){
+            fn()
+        });
+    }
+    executor(resolved,rejected);
+
+}
+function resolvePromise(x,resolved,rejected){
+    try{
+        let then = x.then;
+        if(typeof then === &quot;function&quot;){//x是一个promise
+            then.call(x,function(y){
+                resolved(y)
+            },function(err){//失败
+                rejected(err)
+            })
+        }else{
+            resolved(x)
+        }
+    }catch(e){
+        rejected(e)
+    }
+}
+Promise.prototype.then = function(onFulfilled,onRejected){
+    let self = this;
+    let promise2;
+    if(self.status === &quot;resolved&quot;){
+        promise2 = new Promise(function(resolved,rejected){
+            onFulfilled(self.value)
+        });
+    }
+    if(self.status === &quot;rejected&quot;){
+        promise2 = new Promise(function(resolved,rejected){
+            onRejected(self.reason)
+        })
+    }
+    if(self.status === &quot;pending&quot;){
+        promise2 = new Promise(function(resolved,rejected){
+            self.onResolvedCallbacks.push(function(){
+                let x = onFulfilled(self.value)
+                resolvePromise(x,resolved,rejected)
+            });
+            self.onRejectedCallbacks.push(function(){
+                let x = onRejected(self.reason)
+                resolvePromise(x,resolved,rejected)
+            });
+        });
+    }
+    return promise2;
+}
+module.exports = Promise;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br></div></div><h3 id="_5、最终的得到的代码"><a href="#_5、最终的得到的代码" class="header-anchor">#</a> 5、最终的得到的代码</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>function Promise(executor) { // executor是一个执行函数
+    let self = this;
+    self.status = 'pending';
+    self.value = undefined; // 默认成功的值
+    self.reason = undefined; // 默认失败的原因
+    self.onResolvedCallbacks = []; // 存放then成功的回调
+    self.onRejectedCallbacks = []; // 存放then失败的回调
+    function resolve(value) { // 成功状态
+        if (self.status === 'pending') {
+            self.status = 'resolved';
+            self.value = value;
+            self.onResolvedCallbacks.forEach(function (fn) {
+                fn();
+            });
+        }
+    }
+    function reject(reason) { // 失败状态
+        if (self.status === 'pending') {
+            self.status = 'rejected';
+            self.reason = reason;
+            self.onRejectedCallbacks.forEach(function (fn) {
+                fn();
+            })
+        }
+    }
+    try {
+        executor(resolve, reject)
+    } catch (e) { // 捕获的时候发生异常,就直接失败了
+        reject(e);
+    }
+}
+function resolvePromise(promise2, x, resolve, reject) {
+    // 有可能这里返回的x是别人的promise
+    // 尽可能允许其他乱写
+    if (promise2 === x) { //这里应该报一个类型错误，有问题
+        return reject(new TypeError('循环引用了'))
+    }
+    // 看x是不是一个promise,promise应该是一个对象
+    let called; // 表示是否调用过成功或者失败
+    if (x !== null &amp;&amp; (typeof x === 'object' || typeof x === 'function')) {
+        // 可能是promise {},看这个对象中是否有then方法，如果有then我就认为他是promise了
+        try { // {then:1}
+            let then = x.then;
+            if (typeof then === 'function') {
+                // 成功
+                then.call(x, function (y) {
+                    if (called) return
+                    called = true
+                    // y可能还是一个promise，在去解析直到返回的是一个普通值
+                    resolvePromise(promise2, y, resolve, reject)
+                }, function (err) { //失败
+                    if (called) return
+                    called = true
+                    reject(err);
+                })
+            } else {
+                resolve(x)
+            }
+        } catch (e) {
+            if (called) return
+            called = true;
+            reject(e);
+        }
+    } else { // 说明是一个普通值1
+        resolve(x); // 表示成功了
+    }
+}
+Promise.prototype.then = function (onFulfilled, onRjected) {
+    //成功和失败默认不穿给一个函数
+    onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : function (value) {
+        return value;
+    }
+    onRjected = typeof onRjected === 'function' ? onRjected : function (err) {
+        throw err;
+    }
+    let self = this;
+    let promise2; //返回的promise
+    if (self.status === 'resolved') {
+        promise2 = new Promise(function (resolve, reject) {
+            // 当成功或者失败执行时有异常那么返回的promise应该处于失败状态
+            // x可能是一个promise 也有可能是一个普通的值
+            setTimeout(function () {
+                try {
+                    let x = onFulfilled(self.value);
+                    // x可能是别人promise，写一个方法统一处理
+                    resolvePromise(promise2, x, resolve, reject);
+                } catch (e) {
+                    reject(e);
+                }
+            })
+        })
+    }
+    if (self.status === 'rejected') {
+        promise2 = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                try {
+                    let x = onRjected(self.reason);
+                    resolvePromise(promise2, x, resolve, reject);
+                } catch (e) {
+                    reject(e);
+                }
+            })
+
+        })
+    }
+    // 当调用then时可能没成功 也没失败
+    if (self.status === 'pending') {
+        promise2 = new Promise(function (resolve, reject) {
+            // 此时没有resolve 也没有reject
+            self.onResolvedCallbacks.push(function () {
+                setTimeout(function () {
+                    try {
+                        let x = onFulfilled(self.value);
+                        resolvePromise(promise2, x, resolve, reject);
+                    } catch (e) {
+                        reject(e)
+                    }
+                })
+            });
+            self.onRejectedCallbacks.push(function () {
+                setTimeout(function () {
+                    try {
+                        let x = onRjected(self.reason);
+                        resolvePromise(promise2, x, resolve, reject);
+                    } catch (e) {
+                        reject(e);
+                    }
+                })
+            });
+        })
+    }
+    return promise2;
+}
+// 捕获错误的方法
+Promise.prototype.catch = function (callback) {
+    return this.then(null, callback)
+}
+// 解析全部方法
+// let arr = [];
+// arr[1] = 100;
+// console.log(arr.length)
+Promise.all = function (promises) {
+    //promises是一个promise的数组
+    return new Promise(function (resolve, reject) {
+        let arr = []; //arr是最终返回值的结果
+        let i = 0; // 表示成功了多少次
+        function processData(index, y) {
+            arr[index] = y;
+            if (++i === promises.length) {
+                resolve(arr);
+            }
+        }
+        for (let i = 0; i &lt; promises.length; i++) {
+            promises[i].then(function (y) {
+                processData(i, y)
+            }, reject)
+        }
+    })
+}
+// 只要有一个promise成功了 就算成功。如果第一个失败了就失败了
+Promise.race = function (promises) {
+    return new Promise(function (resolve, reject) {
+        for (var i = 0; i &lt; promises.length; i++) {
+            promises[i].then(resolve,reject)
+        }
+    })
+}
+// 生成一个成功的promise
+Promise.resolve = function(value){
+    return new Promise(function(resolve,reject){
+        resolve(value);
+    })
+}
+// 生成一个失败的promise
+Promise.reject = function(reason){
+    return new Promise(function(resolve,reject){
+        reject(reason);
+    })
+}
+Promise.defer = Promise.deferred = function () {
+    let dfd = {};
+    dfd.promise = new Promise(function (resolve, reject) {
+        dfd.resolve = resolve;
+        dfd.reject = reject;
+    });
+    return dfd
+}
+// mjs
+module.exports = Promise;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/zhoubichuan/web-javascript/edit/master/src/2.advanced/6.es6/2.promise.md" target="_blank" rel="noopener noreferrer">在github上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2024/6/8下午5:21:40</span></div></footer> <!----> </main></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/web-javascript/assets/js/app.fde11f56.js" defer></script><script src="/web-javascript/assets/js/3.e9ec0dc9.js" defer></script><script src="/web-javascript/assets/js/91.59df2706.js" defer></script><script src="/web-javascript/assets/js/6.8c68cd55.js" defer></script>
+  </body>
+</html>
