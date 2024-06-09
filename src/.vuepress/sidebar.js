@@ -13,6 +13,7 @@ const sidebar = {
     "10.var",
     "11.function",
     "12.require",
+    "13.new",
   ],
   "/1.base/2.ECMAScript6/": [
     "1.index",
@@ -26,6 +27,8 @@ const sidebar = {
     "8.general",
     "9.collect",
     "10.module",
+    "11.promise",
+
   ],
   "/1.base/3.JavaScript/": [
     "1.index",
