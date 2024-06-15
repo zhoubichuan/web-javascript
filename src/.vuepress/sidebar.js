@@ -17,18 +17,21 @@ const sidebar = {
   ],
   "/1.base/2.ECMAScript6/": [
     "1.index",
-    "1.scope",
-    "2.constant",
-    "3.deconstruction",
+    "1.let",
+    "2.const",
+    "3....",
     "4.string",
     "5.function",
     "6.object",
+    "6.array",
     "7.class",
     "8.general",
     "9.collect",
     "10.module",
     "11.promise",
-
+    "12.async",
+    "13.proxy",
+    "14.module"
   ],
   "/1.base/3.JavaScript/": [
     "1.index",
