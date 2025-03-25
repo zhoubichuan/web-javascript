@@ -37,12 +37,12 @@ exports.stringify = stringify;
 let qs = require("./qs");
 
 const assert = require("assert");
-assert(qs.parse("name=zfpx").name == "zfpx", "姓名必须是zfpx");
-assert(qs.parse("name=zfpx&age=9").age == 9, "年龄必须是9");
+assert(qs.parse("name=aaa").name == "aaa", "姓名必须是aaa");
+assert(qs.parse("name=aaa&age=9").age == 9, "年龄必须是9");
 
-assert(qs.stringify({ name: "zfpx" }) == "name=zfpx", "一个字段不同");
+assert(qs.stringify({ name: "aaa" }) == "name=aaa", "一个字段不同");
 assert(
-  qs.stringify({ name: "zfpx", age: 9 }) == "name=zfpx&age=9",
+  qs.stringify({ name: "aaa", age: 9 }) == "name=aaa&age=9",
   "两个字段不同"
 );
 ```
