@@ -35,6 +35,7 @@ const sidebar = {
   ],
   "/1.base/3.JavaScript/": [
     "1.index",
+    "1.global",
   ],
   "/2.advanced/1.h5/": [
     "1.index",
