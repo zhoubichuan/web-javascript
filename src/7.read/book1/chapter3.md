@@ -36,7 +36,7 @@ meta:
     async function asyncCount(){
       let emitter = new Emitter(5)
       for await(const x of emitter){
-        conosle.log(x)
+        console.log(x)
       }
     }
     asyncCount()
@@ -62,7 +62,7 @@ meta:
     }
     let b = new Baz()
     console.log(b instanceof Bar)  // true
-    console.log(Baz[Symbol.hasInstace](b)) //false
+    console.log(Baz[Symbol.hasInstance](b)) //false
     ```
   - Symbol.isConcatSpreadable:一个布尔值，如果是true,则意味着对象应该用Array.prototype.concat()打平其数组元素。
   - Symbol.iterator:一个方法，该方法返回对象默认的迭代器。由for-of语句使用
@@ -178,9 +178,9 @@ meta:
     }
 
     let bar = new Bar()
-    conosle,.log(bar.toString()) //[object Bar]
+    console.log(bar.toString()) //[object Bar]
     ```
-  - Symbol.unscopables:一个对象，该对象所有的以及继承的属性，都会从关联对象的witch环境绑定中排除。设置这个符号并让其映射对应属性的键值为true,就可以阻止该属性出现在with环境绑定中
+  - Symbol.unscopables:一个对象，该对象所有的以及继承的属性，都会从关联对象的 with 环境绑定中排除。设置这个符号并让其映射对应属性的键值为true,就可以阻止该属性出现在with环境绑定中
     ```js
     let o = { foo: 'bar'}
     
@@ -197,7 +197,7 @@ meta:
     }
     ```
     ::: warning
-    不推荐使用witch,因此也不推荐使用Symbol.unscopables
+    不推荐使用 with，因此也不推荐使用Symbol.unscopables
     :::
 - Object 类型
   - hasOwnProperty:用于判断当前对象实例（不是原型）上是否存在给定的属性。要检查的属性名必须是字符串（如o.hasOwnProperty('name')）或符号。
@@ -232,5 +232,3 @@ meta:
     }
     ```
     
-
-
